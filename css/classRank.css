@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+.practice-class{
+    position: relative;
+    display: block;
+    margin-top: 130px;
+}
+.normal-class{
+    margin-top: 50px;
+}
+.class-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.slide-nav{
+    display: flex;
+    align-items: center;
+}
+.moreBt{
+    font-weight: 500;
+    color: #555;
+    margin-right: 15px;
+}
+.slide-prev,.slide-next{
+    border: none;
+    font-size: 22px;
+    background-color: #fff;
+    cursor: pointer;
+}
+.slide-prev{
+    margin-right: 15px;
+}
+.sw-class .swiper-slide{
+    border-radius: 5px;
+    overflow: hidden;
+    /* box-shadow: 0 0 5px #999; */
+    border: #ccc solid 1px;
+    /* margin: 5px; */
+    /* visibility: visible; */
+}
+.class-img{
+    display: block;
+    height: 170px;
+    overflow: hidden;
+}
+.sw-class img{
+    width: 100%;
+    transition: all 0.5s;
+}
+.sw-class .swiper-slide:hover img{
+    transform: scale(1.1);
+}
+.rank{
+    position: absolute;
+    top: 3px;
+    left: 15px;
+    font-size: 38px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 0 5px #333;
+}
+.mark{
+    position: absolute;
+    right: 13px;
+    top: 15px;
+    width: 20px;
+    height: 25px;
+    background: url("../images/icon/mark.png")no-repeat;
+    background-size: cover;
+}
+.mark.active{
+    background: url("../images/icon/mark-active.png")no-repeat;
+    background-size: cover;
+}
+/* .mark > i{
+    font-size: 24px;
+    color: #FF370B;
+}
+.mark-active{
+    display: none;
+}
+.mark-active.active{
+    display: block;
+} */
+.class-title{
+    font-size: 15px;
+    font-weight: 600;
+    padding: 8px 10px 15px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.class-instructor-wrap{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px 10px;
+}
+.instructor-spec{
+    font-size: 13px;
+    color: #ff4100;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.instructor-info{
+    display: flex;
+    font-size: 13px;
+    color: #666;
+}
+.instructor-info-line{
+    width: 1px;
+    height: 80%;
+    background-color: #999;
+    margin: 3px 5px
+}
+/*  */
+@media screen and (max-width:1231px) {
+    .class-img{
+        height: 140px;
+    }
+    .instructor-spec{
+        font-size: 11px;
+        width: 0%;
+        /* display: none; */
+    }
+    
+}
+@media screen and (max-width:767px) {
+    .class-img{
+        height: 120px;
+    } 
+}
+@media screen and (max-width:520px) {
+    .class-img{
+        height: 110px;
+    }    
+    .class-title{
+        font-size: 13px;
+        padding: 8px 10px 10px;
+    }
+    .instructor-info{
+        font-size: 11px;
+    }
+    .instructor-spec{
+        font-size: 11px;
+        width: 0%;
+        /* display: none; */
+    }
+    .rank{
+        font-size: 32px;
+    }
+    .mark{
+        width: 16px;
+        height: 20px;
+    }
+}
+@media screen and (max-width:480px) {
+    .moreBt{
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .slide-prev,.slide-next{
+        font-size: 18px;
+    }
+}

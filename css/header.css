@@ -1,0 +1,935 @@
+@charset "utf-8";
+
+.header {
+  position: relative;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  height: 76px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 5px 0px;
+  z-index: 999;
+  border-bottom: #fff solid 1px;
+}
+.header > .inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+.header-left {
+  height: 100%;
+  width: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#cateBar{
+  display: none;
+}
+.logo {
+  height: 50%;
+}
+.logo img {
+  height: 100%;
+}
+.menu {
+  /* position: relative; */
+  width: 100%;
+  display: flex;
+  gap: 35px;
+  font-weight: 700;
+  padding-left: 35px;
+}
+.category {
+  /* position: absolute; */
+  display: flex;
+  width: 100%;
+  /* display: none; */
+  padding: 25px 0;
+}
+.class-cate-title {
+  margin-right: 15px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.class-cate-title > i {
+  padding-left: 6px;
+}
+.class-cate-list {
+  margin-right: 25px;
+  background-color: #e9e9e9;
+  border-radius: 5px;
+}
+.class-cate-list > li {
+  width: 192px;
+  height: 40px;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+.class-cate-list > li:hover {
+  background-color: #d7d7d7;
+  border-radius: 5px;
+}
+.class-cate-list > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px 25px;
+}
+.cate-background {
+  position: fixed;
+  width: 100%;
+  height: 100vw;
+  /* display: none; */
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.5s;
+}
+.cate-background.active {
+  /* display: block; */
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.cate-wrap {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  left: 0;
+  top: 76px;
+  overflow: hidden;
+  visibility: hidden;
+  z-index: 99;
+}
+/* .cate-wrap.active{
+    top: 76px;
+    visibility: visible;
+} */
+.cate-box {
+  position: absolute;
+  height: 490px;
+  width: 100%;
+  left: 0;
+  bottom: calc(490px + 76px);
+  visibility: visible;
+  background-color: #fff;
+  transition: all 0.5s;
+  /* box-shadow: #ccc 0 5px 5px 0px; */
+}
+.cate-box.active {
+  visibility: visible;
+  bottom: 10px;
+}
+.header-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  width: 130px;
+}
+/*  */
+.search {
+  margin-right: 35px;
+  cursor: pointer;
+
+  height: 30%;
+}
+.search-move {
+  position: relative;
+  width: 30%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 50px;
+}
+
+#searchDelete {
+  position: fixed;
+  width: 100%;
+  top: 76px;
+  left: 0;
+  background-color: #fff;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+#searchAfter {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background: url(../images/btnSearch.png) no-repeat;
+  cursor: pointer;
+  font-size: 0;
+  display: block;
+  border: 0;
+}
+#searchList {
+  position: relative;
+  display: block;
+  left: 0;
+  top: 0;
+  margin-left: 80px;
+}
+#searchDelete p {
+  text-align: left;
+  display: block;
+  margin-left: 36%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+#searchNow {
+  margin-bottom: 50px;
+}
+#li {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 33%;
+  margin-right: 33%;
+  width: 50%;
+}
+#li li {
+  padding: 0;
+  display: inline-block;
+  text-align: left;
+}
+#li li span {
+  color: #ff370b;
+}
+#popularKeywords {
+  line-height: 30px;
+}
+#popularKeywords #li li {
+  text-align: left;
+  width: 100%;
+}
+#popularKeywords p:first-child {
+  text-align: left;
+  display: block;
+  margin-left: 36%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  position: relative;
+}
+#searchBar {
+  position: relative;
+  display: block;
+  width: 30vw;
+  height: 45px;
+  background-color: #f6f6f6;
+  border-radius: 40px;
+  padding-left: 20px;
+  padding-right: 45px;
+  line-height: 40px;
+  font-size: 13px;
+  border: 0;
+}
+#searchShow {
+  top: 50%;
+  left: 0;
+  position: relative;
+  display: block;
+  transform: translateY(-50%);
+}
+#searchXmark {
+  position: absolute;
+  display: block;
+  top: -10px;
+  right: -30px;
+}
+#iconContainer {
+  width: 100% !important;
+  position: absolute;
+  top: 76px;
+  right: 30px;
+  margin-left: 20px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+  border-radius: 0 0 10px 10px;
+}
+#userInfoMid {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  padding: 0 10px;
+  line-height: 35px;
+}
+#logOut {
+  color: #ff370b;
+  margin-top: 40px;
+  cursor: pointer;
+}
+#noticeNone {
+  padding: 5px 0;
+  font-size: 16px;
+}
+#noticeNone li p{
+  font-size: 14px;
+}
+#teachList {
+  padding: 10px 0;
+}
+#teachList li {
+  font-size: 14px;
+  line-height: 30px;
+}
+#loginText {
+  width: 60px;
+}
+@media screen and (max-width: 768px) {
+  #searchList{
+    position: relative;
+    display: block;
+    left: 0;
+    top: 0;
+    margin-left: 66px;
+  }
+  #cateBarClick {
+    width: 768px;
+    height: 100%;
+    position: relative;
+    display: block;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 5px 5px 0px;
+    border-radius: 5px;
+    z-index: 99999;
+    padding-bottom: 20px;
+    padding-top: 25px;
+  }
+  #cateBarClickMenuTop {
+    position: relative;
+    display: flex;
+    padding-top: 20px;
+    margin-bottom: 70px;
+  
+  }
+  #cateBarClickMenuTop h2{
+    position: relative;
+    left: 40%;
+    transform: translateX(-45%);
+  }
+  #catelistHard{
+    display: none;
+  }
+  .catelistHard{
+    margin-bottom: 5px;
+  }
+  #cateLeft {
+    width: 12px;
+    height: 27px;
+    padding-top: 7px;
+    margin-left: 40px;
+  }
+  #cateAll{
+    margin-left: 30px;
+  }
+  
+  #cateline{
+    border: 0.5px solid #eee;
+    margin: 10px 0;
+  }
+  #cateNomal{
+    position: relative;
+    display: block;
+  }
+  #cateNomalListLeft{
+    display: block;
+    float: left;
+    width: 100px;
+    line-height: 25px;
+  }
+  #cateNomalListRight{
+    margin-left: 40%;
+    width: 200px;
+    line-height: 25px;
+  }
+  #cateHardList{
+    display: none;
+  }
+  #catelisthard{
+    margin-bottom: 50px;
+  }
+  #cateAllList{
+    display: flex;
+    position: relative;
+    display: none;
+    margin-bottom: 50px;
+  }
+  #cateLeft img{
+    width: 100%;
+    height: 100%;
+  }
+  #cateBar {
+    position: relative;
+    display: none;
+  }
+
+  .logo {
+    height: 50%;
+    /* margin: auto; */
+    left: 65%;
+    display: block;
+    position: relative;
+    padding-left: 10px;
+  }
+  #cateBar {
+    display: block;
+    padding-left: 40px;
+  }
+  #searchDelete {
+    position: fixed;
+    width: 100%;
+    top: 70px;
+    left: 0;
+    background-color: #fff;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .header-left {
+    height: 100%;
+    width: 43%;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .header-right {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    width: 130px;
+
+  }
+  #searchAfter {
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background: url(../images/btnSearch.png) no-repeat center;
+    cursor: pointer;
+    font-size: 0;
+    display: block;
+    border: 0;
+  }
+  #searchDelete p {
+    text-align: left;
+    display: block;
+    margin-left: 27%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  #popularKeywords p:first-child {
+    text-align: left;
+    display: block;
+    margin-left: 27%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #searchNow {
+    margin-bottom: 50px;
+  }
+  #li {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20%;
+    margin-right: 33%;
+    width: 50%;
+  }
+  #li li {
+    padding: 0;
+    display: inline-block;
+    text-align: left;
+  }
+  #li li span {
+    color: #ff370b;
+  }
+  #popularKeywords {
+    line-height: 30px;
+  }
+  #popularKeywords #li li {
+    text-align: left;
+    width: 100%;
+  }
+
+  #searchBar {
+    position: relative;
+    display: block;
+    width: 50vw;
+    height: 45px;
+    background-color: #f6f6f6;
+    border-radius: 40px;
+    padding-left: 20px;
+    padding-right: 45px;
+    line-height: 40px;
+    font-size: 13px;
+    border: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #searchShow {
+    top: 50%;
+    left: 0;
+    position: relative;
+    display: block;
+    transform: translateY(-50%);
+  }
+  #searchXmark {
+    position: absolute;
+    display: block;
+    top: -10px;
+    right: -100px;
+  }
+
+  #iconContainer {
+    width: 768px !important;
+    position: absolute;
+    top: 0;
+    right: -31px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+    border-radius: 0 0 10px 10px;
+  }
+  #userInfo {
+    display: flex !important;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+  }
+
+  #userInfoNotice {
+    padding-left: 15px;
+    font-size: 18px;
+  }
+  #userInfoSecond {
+    width: 100%;
+    display: block;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    line-height: 25px;
+    font-size: 15px;
+  }
+  #userInfoSecond i {
+    font-size: 50px;
+    margin-bottom: 5px;
+  }
+  #myTeach {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #teachList {
+    margin-bottom: 15px;
+  }
+  #teachList p {
+    float: right;
+    text-align: center;
+    font-size: 14px;
+  }
+  #teachList li {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    text-align: center;
+  }
+
+  #notice {
+    width: 100%;
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+  }
+  #line {
+    border: 1px solid #e9e9e9;
+    margin-bottom: 10px;
+  }
+  #noticeNone {
+    width: 100%;
+    position: relative;
+    display: block;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+  #InterestedList p {
+    margin-bottom: 10px;
+  }
+  #noticeNone li {
+    padding: 3px 0;
+  }
+  #InterestedList {
+    margin-left: 15px;
+    font-size: 18px;
+    line-height: 35px;
+  }
+  #logOut {
+    position: absolute;
+    display: inline-block;
+    bottom: 20px;
+    right: 50px;
+    color: #ff370b;
+    cursor: pointer;
+  }
+  #userInfoDelete {
+    text-align: center;
+    font-size: 30px;
+    color: #777777;
+  }
+  #userInfoNickName,
+  #xhqslqkznl {
+    text-align: center;
+    font-size: 25px;
+  }
+  #userInfoDelete,
+  #xhqslqkznl {
+    text-align: center;
+    margin: auto 0;
+  }
+  #userInfoMid {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0 50px;
+  }
+  #QandA {
+    margin-bottom: 70px;
+  }
+  .hidden {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 320px) {
+
+  #cateBarClick {
+    width: 320px;
+    height: 100%;
+    position: relative;
+    display: block;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 5px 5px 0px;
+    border-radius: 5px;
+    z-index: 99999;
+    padding-bottom: 20px;
+    padding-top: 5px;
+  }
+  #cateBarClickMenuTop {
+    position: relative;
+    display: flex;
+    padding-top: 20px;
+    margin-bottom: 70px;
+  
+  }
+  #cateAll h3{
+    font-size: 14px;
+  }
+  #cateNomalListLeft li,#cateNomalListRight li{
+    font-size: 13px;
+  }
+
+  .catelistHard{
+    font-size: 14px;
+    padding-left: 5px;
+  }
+  #cateBarClickMenuTop h2{
+    position: relative;
+    left: 40%;
+    transform: translateX(-45%);
+    padding-top: 5px;
+  }
+  #catelistHard{
+    display: none;
+  }
+  #cateLeft {
+    width: 12px;
+    height: 30px;
+    padding-top: 7px;
+    margin-left: 15px;
+  }
+  #cateAll{
+    margin-left: 20px;
+  }
+  
+  #cateline{
+    border: 0.5px solid #eee;
+    margin: 10px 0;
+  }
+  #cateNomal{
+    position: relative;
+    display: block;
+  }
+  #cateNomalListLeft{
+    display: block;
+    float: left;
+    width: 100px;
+  }
+  #cateNomalListRight{
+    margin-left:50%;
+    width: 200px;
+  }
+  #cateHardList{
+    display: none;
+  }
+  #catelisthard{
+    margin-bottom: 50px;
+  }
+  #cateAllList{
+    display: flex;
+    position: relative;
+    display: none;
+    margin-bottom: 50px;
+    padding-left: 5px;
+  }
+  #cateLeft img{
+    width: 100%;
+    height: 100%;
+  }
+  #cateBar {
+    position: relative;
+    display: none;
+  }
+
+  .container {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    display: block;
+  }
+  .logo {
+    height: 50%;
+    /* margin: auto; */
+    left: 77%;
+    display: block;
+    position: relative;
+    padding-left: 10px;
+  }
+  .header-left {
+    height: 70%;
+    width: 15%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+  }
+  #cateBar {
+    display: block;
+    padding: 0;
+  }
+  #searchShow {
+    top: 60%;
+    left: 0;
+    position: relative;
+    display: block;
+    transform: translateY(-50%);
+  }
+  .header-right {
+    width: 105px;
+    font-size: 12px;
+    right: -30px;
+    gap: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  .search {
+    margin-right: 0;
+    cursor: pointer;
+    height: 27%;
+  }
+  #iconContainer {
+    width: 320px !important;
+    position: absolute;
+    top: 0;
+    right: 11px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+    border-radius: 0 0 10px 10px;
+  }
+  #userInfo {
+    display: flex !important;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  #searchBar {
+    position: relative;
+    display: block;
+    width: 85vw;
+    height: 35px;
+    background-color: #f6f6f6;
+    border-radius: 40px;
+    padding-left: 20px;
+    padding-right: 45px;
+    line-height: 40px;
+    font-size: 13px;
+    border: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #searchAfter {
+    position: absolute;
+    right: -70px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background: url(../images/btnSearch.png) no-repeat center;
+    background-size: 15px 15px;
+    cursor: pointer;
+    display: block;
+    border: 0;
+  }
+  #searchDelete p {
+    text-align: left;
+    display: block;
+    margin-left: 10%;
+    margin-top: 20px;
+    margin-bottom: 17px;
+  }
+  #popularKeywords p:first-child {
+    text-align: left;
+    display: block;
+    margin-left: 10%;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  #searchList {
+    position: relative;
+    display: block;
+    left: 0;
+    top: 0;
+    margin-left: 25px;
+  }
+  #li {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2%;
+    margin-right: 33%;
+    width: 100%;
+  }
+  #userInfoNotice {
+    padding-left: 15px;
+    font-size: 18px;
+  }
+  #userInfoSecond {
+    width: 100%;
+    display: block;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    line-height: 25px;
+    margin-bottom: 20px;
+  }
+  #userInfoSecond i {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+  #myTeach {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+  #teachList {
+    margin-bottom: 15px;
+  }
+  #teachList p {
+    float: right;
+    text-align: center;
+    font-size: 12px;
+  }
+  #teachList li {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    font-size: 12px;
+
+  }
+
+  #notice {
+    width: 100%;
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+  #line {
+    border: 1px solid #e9e9e9;
+    margin-bottom: 10px;
+  }
+  #noticeNone {
+    width: 100%;
+    position: relative;
+    display: block;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+  #noticeNone li {
+    padding: 3px 0;
+  }
+  #noticeNone li p{
+    font-size: 12px;
+  }
+  #InterestedList {
+    margin-left: 15px;
+    font-size: 15px;
+    line-height: 35px;
+  }
+  #InterestedList p {
+    margin-bottom: 10px;
+  }
+  #logOut {
+    position: absolute;
+    display: inline-block;
+    bottom: 20px;
+    right: 20px;
+    color: #ff370b;
+    cursor: pointer;
+  }
+  #userInfoDelete {
+    text-align: center;
+    font-size: 30px;
+    color: #777777;
+  }
+  #userInfoNickName,
+  #xhqslqkznl {
+    text-align: center;
+    font-size: 15px;
+  }
+  #userInfoDelete,
+  #xhqslqkznl {
+    text-align: center;
+    margin: auto 0;
+    font-size: 15px;
+  }
+  #userInfoMid {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0 10px;
+    font-size: 15px;
+  }
+  #QandA {
+    margin-bottom: 70px;
+  }
+  #userInfoNotice {
+    padding-left: 15px;
+    font-size: 14px;
+  }
+}

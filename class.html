@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO -->
+    <meta name="author" content="아트로크" />
+    <meta name="title" content="아트로크:: 빠르고 쉬운 실시간 온라인 미술강의 사이트" />
+    <meta name="keywords" content="강의, 온라인강의, 실기강의, 소묘, 미술강사, 입시미술, 취미미술, 미술강의, 입시디자인, 기초디자인, 포토샵, 수공예, 아동미술" />
+    <meta name="description" content="사람과 자연 모두에 건강한 먹을거리와 생활용품을 생산·공급 합니다" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="아트로크:: 빠르고 쉬운 실시간 온라인 미술강의 사이트" />
+    <meta property="og:description" content="사람과 자연 모두에 건강한 먹을거리와 생활용품을 생산·공급 합니다" />
+    <meta property="og:site_name" content="한살림 장보기" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shop.hansalim.or.kr" />
+    <meta property="og:image" content="https://shop.hansalim.or.kr/shopping/resources/shopping/web/images/common/hansalim_sns_logo.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="아트로크:: 빠르고 쉬운 실시간 온라인 미술강의 사이트" />
+    <meta name="twitter:description" content="사람과 자연 모두에 건강한 먹을거리와 생활용품을 생산·공급 합니다" />
+    <meta name="twitter:image" content="https://shop.hansalim.or.kr/shopping/resources/shopping/web/images/common/hansalim_sns_logo.png" />
+    <link rel="icon" type="image/png" href="images/favicon/favicon-48x48.png" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>아트로크</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/class/class.css" />
+    <link rel="stylesheet" href="css/class/class_responsive.css" />
+    <script src="js/class.js"></script>
+
+    <!-- Swiper 적용 -->
+    <!-- link Swiper's css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <div class="inner">
+          <div class="header-left">
+            <div class="logo">
+              <a href="#">
+                <img src="images/logo/logo.png" alt="로고이미지" />
+              </a>
+            </div>
+            <ul class="menu">
+              <li class="open-cate">
+                <a href="#"> 강의 카테고리<i class="fa-solid fa-angle-down"></i></a>
+              </li>
+              <li>
+                <a href="#">커뮤니티</a>
+              </li>
+              <li>
+                <a href="#">뉴스</a>
+              </li>
+              <li>
+                <a href="#">강사진소개</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-right">
+            <!-- 검색창 -->
+            <div class="search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <!-- 로그인 -->
+            <ul class="user-section">
+              <!-- 로그인 버튼 -->
+              <li id="login-btn">
+                <a href="#"> 로그인 </a>
+              </li>
+              <!-- 로그인했을떄 유저메뉴 -->
+              <li id="user-profile">
+                <!-- 유저 아이디 출력 -->
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="cate-background"></div>
+        <div class="cate-wrap">
+          <div class="cate-box">
+            <div class="inner">
+              <ul class="category">
+                <!-- 일반 강의 카테고리 -->
+                <li class="class-cate-title">일반 강의<i class="fa-solid fa-angle-right"></i></li>
+                <li>
+                  <ul class="class-cate-list">
+                    <li><a href="#">소묘</a></li>
+                    <li><a href="#">수채화</a></li>
+                    <li><a href="#">유화</a></li>
+                    <li><a href="#">아크릴화</a></li>
+                    <li><a href="#">디지털 드로잉</a></li>
+                    <li><a href="#">조소/모델링</a></li>
+                    <li><a href="#">만화/애니메이션</a></li>
+                    <li><a href="#">아동 미술</a></li>
+                    <li><a href="#">공예</a></li>
+                    <li><a href="#">포토샵/일러스트레이터</a></li>
+                    <li><a href="#">이모티콘</a></li>
+                  </ul>
+                </li>
+                <!-- 실기 강의 카테고리 -->
+                <li class="class-cate-title">실기 강의<i class="fa-solid fa-angle-right"></i></li>
+                <li>
+                  <ul class="class-cate-list">
+                    <li><a href="#">소묘</a></li>
+                    <li><a href="#">서양화</a></li>
+                    <li><a href="#">동양화</a></li>
+                    <li><a href="#">디자인</a></li>
+                    <li><a href="#">조소</a></li>
+                    <li><a href="#">만화/애니메이션</a></li>
+                    <li><a href="#">포토샵/일러스트레이터</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="inner">
+        <div class="class">
+          <!-- 클래스  -->
+          <div class="class-main-img">
+            <!-- Swiper -->
+            <div class="swiper sw-main-img">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+              </div>
+              <div class="swiper-button-next nmBtn"><i class="fa-solid fa-chevron-right"></i></div>
+              <div class="swiper-button-prev pmBtn"><i class="fa-solid fa-chevron-left"></i></div>
+            </div>
+          </div>
+          <div class="class-info side_padding">
+            <div class="top-info">
+              <h1>어색한 구도는 안녕! 사물배치로 보여주는 기초 디자인의 정석</h1>
+            </div>
+            <div class="bottom-info">
+              <!-- 강의 기본 정보 -->
+              <div class="left-info">
+                <!-- 강사 프로필 -->
+                <div class="tpi">
+                  <!-- 강사프로필 이미지 -->
+                  <div class="tpii"><img src="images/teacher_img/teacher_mini_profile.png" alt="강사 프로필 이미지" /></div>
+                  <!-- 강사 프로필 이름 -->
+                  <div class="tpin">이 삭</div>
+                </div>
+                <!-- 강사 수업 정보 -->
+                <div class="tci">
+                  <!-- 강의 분류 -->
+                  <p><i class="fa-solid fa-pencil"></i>디자인 실기</p>
+                  <!-- 강의 난이도 -->
+                  <p><i class="fa-solid fa-stairs"></i>중급</p>
+                  <!-- 강의 시간 및 기간 -->
+                  <p><i class="fa-regular fa-clock"></i>월, 수, 토, 일 2시간</p>
+                </div>
+              </div>
+              <!-- 결재 정보 -->
+              <div class="right-info">
+                <div class="ptdiv">
+                  한 달 수강
+                  <p class="opc-won">346,000원</p>
+                  <p class="spc-won">294,100원</p>
+                </div>
+                <div class="class_kit_set">
+                  <select id="pakage_list">
+                    <option value="0">기본 (0원)</option>
+                    <option value="385,000">미술용품 set! 패키지 (+385,000원)</option>
+                  </select>
+                  <div class="i_about_pakage"><img src="images/icon/i-icon.png" alt="패키지 정보 아이콘" /></div>
+                </div>
+                <div class="btn_wrap">
+                  <button class="pBtn">수강신청하기</button>
+                  <button class="fBtn">무료체험하기</button>
+                </div>
+                <div class="etx_icon_button">
+                  <ul>
+                    <li>
+                      <!-- 소식알림 -->
+                      <button class="class_alram"><i class="fa-regular fa-bell"></i><span>소식받기</span></button>
+                    </li>
+                    <li>
+                      <!-- 북마크 -->
+                      <button class="class_bookmark">
+                        <i class="fa-regular fa-bookmark"></i
+                        ><span>
+                          <!-- 북마크 숫자 출력 -->
+                          1020
+                        </span>
+                      </button>
+                    </li>
+                    <li>
+                      <!-- 공유하기 -->
+                      <button class="class_share"><i class="fa-regular fa-paper-plane"></i><span>공유하기</span></button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="class-scroll-info side_padding">
+            <div class="menu omall">
+              <ul class="menuList">
+                <li>클래스 소개</li>
+                <li>준비물</li>
+                <li>커리큘럼</li>
+                <li>강사 소개</li>
+              </ul>
+            </div>
+            <!-- 목표 -->
+            <div class="class_s_goal omall">
+              <div class="class_menu_title">목표 및 주제</div>
+              <div class="goal">
+                <ul class="goalList">
+                  <li>
+                    <div class="img-wrap">
+                      <img src="images/class_img/1-1.png" alt="목표1" />
+                    </div>
+                    <div class="text-wrap">
+                      입시 미술도구 마스터 하기
+                      <p>사선붓, 청설모붓 등 효율적인 도구 다루는 법을 배우고, 기본적인 색상 만드는법을 배워요</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img-wrap">
+                      <img src="images/class_img/1-2.png" alt="목표1" />
+                    </div>
+                    <div class="text-wrap">
+                      1시간 이내로 개체 하나 완성하기
+                      <p>저는 나무 조각, 안경 등 다양한 사물을 선택해, 1시간 내에 완성할 수 있도록 단계별로 지도해 드립니다.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img-wrap">
+                      <img src="images/class_img/1-3.png" alt="목표1" />
+                    </div>
+                    <div class="text-wrap">
+                      1시간30분 이내로 기초디자인 밑그림완성하기
+                      <p>사물의 특징과 원근감을 잘 살리는 배치 방법을 익히고, 이를 통해 빠르게 그림을 완성하는 기술을 학습합니다.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="img-wrap">
+                      <img src="images/class_img/1-4.png" alt="목표1" />
+                    </div>
+                    <div class="text-wrap">
+                      4시간 이내로 기초디자인 양식 완성!
+                      <p>실제 실기 시험에서 주어지는 4시간 내에 작품을 완성할 수 있도록, 꾸준한 성장을 목표로 케어해 드립니다.</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- 추천 대상 -->
+            <div class="recommend_age omall">
+              <div class="class_menu_title">추천대상</div>
+              <div class="recommend">
+                <ul class="recommendList">
+                  <li>디자인과 입시 정보가 필요한 학생</li>
+                  <li>입시 미술 수강비용이 부담되는 학생</li>
+                  <li>주거지에서 학원의 거리가 먼 학생</li>
+                </ul>
+              </div>
+            </div>
+            <!-- 준비물 -->
+            <div class="supplies_wrap omall">
+              <div class="class_menu_title">준비물</div>
+              <div class="supplies">
+                <ul class="suppliesList">
+                  <li>HB 연필</li>
+                  <li>미술용 지우개</li>
+                  <li>4절지, 3절지 도화지</li>
+                  <li>팔레트</li>
+                  <li>신한 수채화 물감 32색</li>
+                  <li>포스터물감 화이트</li>
+                  <li>세필붓 6호, 4호 사선붓 6호, 청설모붓 9또는 9호</li>
+                  <li>프리즈마 색연필 72색</li>
+                  <li>(기타)커터칼, 수건, 휴지</li>
+                </ul>
+              </div>
+            </div>
+            <!--클래스 소개 영역 -->
+            <div class="class_itd omall"></div>
+            <!-- 클래스 구성 -->
+            <div class="class_formation omall">
+              <div class="class_menu_title">클래스 구성</div>
+              <div class="formation">
+                <ul class="formationList">
+                  <li>
+                    <div class="img-wrap">
+                      <img src="" alt="구성1" />
+                    </div>
+                    <div class="text-wrap">구성1</div>
+                  </li>
+                  <li>
+                    <div class="img-wrap">
+                      <img src="" alt="구성1" />
+                    </div>
+                    <div class="text-wrap">구성1</div>
+                  </li>
+                  <li>
+                    <div class="img-wrap">
+                      <img src="" alt="구성1" />
+                    </div>
+                    <div class="text-wrap">구성1</div>
+                  </li>
+                  <li>
+                    <div class="img-wrap">
+                      <img src="" alt="구성1" />
+                    </div>
+                    <div class="text-wrap">구성1</div>
+                  </li>
+                  <li>
+                    <div class="img-wrap">
+                      <img src="" alt="구성1" />
+                    </div>
+                    <div class="text-wrap">구성1</div>
+                  </li>
+                  <li>
+                    <div class="img-wrap">
+                      <img src="" alt="구성1" />
+                    </div>
+                    <div class="text-wrap">구성1</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- 커리큘럼 -->
+            <div class="curriculum_wrap omall">
+              <div class="class_menu_title">커리큘럼</div>
+              <div class="curriculum">
+                <ul class="curriculumList">
+                  <!-- 커리큘럼 리스트 -->
+                  <div class="title">FIRST-DAY!</div>
+                  <!-- 수업 첫날 -->
+                  <li>
+                    <div class="c_left">
+                      <div class="img_wrap"></div>
+                      <div class="t-text_wrap">
+                        <ul>
+                          <div class="chapter-title"></div>
+                          <li><span>1.</span> 안녕하세요 기초디자인 강사 '이 삭' 입니다</li>
+                          <li><span>2.</span> 기초디자인에 대한 간단히 알아볼까요?</li>
+                          <li><span>3.</span> 준비물은 이렇게 준비해요!</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="c_right">
+                      <div class="s-text_wrap">
+                        <ul>
+                          <li><span>1.</span>간단한 자기 소개 하기</li>
+                          <li><span>2.</span>구체적인 개인수강목표 정하기</li>
+                          <li><span>3.</span>준비물 준비하기</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- 수업 준비물 사용법 -->
+                  <li>
+                    <div class="c_left">
+                      <div class="img_wrap"></div>
+                      <div class="t-text_wrap">
+                        <ul>
+                          <div class="chapter-title"></div>
+                          <li><span>1.</span> 안녕하세요 기초디자인 강사 '이 삭' 입니다</li>
+                          <li><span>2.</span> 기초디자인에 대한 간단히 알아볼까요?</li>
+                          <li><span>3.</span> 준비물은 이렇게 준비해요!</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="c_right">
+                      <div class="s-text_wrap">
+                        <ul>
+                          <li><span>1.</span>간단한 자기 소개 하기</li>
+                          <li><span>2.</span>구체적인 개인수강목표 정하기</li>
+                          <li><span>3.</span>준비물 준비하기</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- 사물의 성절 학습 -->
+                  <li>
+                    <div class="c_left">
+                      <div class="img_wrap"></div>
+                      <div class="t-text_wrap">
+                        <ul>
+                          <div class="chapter-title"></div>
+                          <li><span>1.</span> 안녕하세요 기초디자인 강사 '이 삭' 입니다</li>
+                          <li><span>2.</span> 기초디자인에 대한 간단히 알아볼까요?</li>
+                          <li><span>3.</span> 준비물은 이렇게 준비해요!</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="c_right">
+                      <div class="s-text_wrap">
+                        <ul>
+                          <li><span>1.</span>간단한 자기 소개 하기</li>
+                          <li><span>2.</span>구체적인 개인수강목표 정하기</li>
+                          <li><span>3.</span>준비물 준비하기</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- 모방으로 시작하는 첫걸음! (개체) -->
+                  <li>
+                    <div class="c_left">
+                      <div class="img_wrap"></div>
+                      <div class="t-text_wrap">
+                        <ul>
+                          <div class="chapter-title"></div>
+                          <li><span>1.</span> 안녕하세요 기초디자인 강사 '이 삭' 입니다</li>
+                          <li><span>2.</span> 기초디자인에 대한 간단히 알아볼까요?</li>
+                          <li><span>3.</span> 준비물은 이렇게 준비해요!</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="c_right">
+                      <div class="s-text_wrap">
+                        <ul>
+                          <li><span>1.</span>간단한 자기 소개 하기</li>
+                          <li><span>2.</span>구체적인 개인수강목표 정하기</li>
+                          <li><span>3.</span>준비물 준비하기</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- 어려워도 괜찮아, 잘하고 있어 (개체) -->
+                  <li>
+                    <div class="c_left">
+                      <div class="img_wrap"></div>
+                      <div class="t-text_wrap">
+                        <ul>
+                          <div class="chapter-title"></div>
+                          <li><span>1.</span> 안녕하세요 기초디자인 강사 '이 삭' 입니다</li>
+                          <li><span>2.</span> 기초디자인에 대한 간단히 알아볼까요?</li>
+                          <li><span>3.</span> 준비물은 이렇게 준비해요!</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="c_right">
+                      <div class="s-text_wrap">
+                        <ul>
+                          <li><span>1.</span>간단한 자기 소개 하기</li>
+                          <li><span>2.</span>구체적인 개인수강목표 정하기</li>
+                          <li><span>3.</span>준비물 준비하기</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- 할수있는 만큼 다해보는거야! 기초디자인 시작 -->
+                  <li>
+                    <div class="c_left">
+                      <div class="img_wrap"></div>
+                      <div class="t-text_wrap">
+                        <ul>
+                          <div class="chapter-title"></div>
+                          <li><span>1.</span> 안녕하세요 기초디자인 강사 '이 삭' 입니다</li>
+                          <li><span>2.</span> 기초디자인에 대한 간단히 알아볼까요?</li>
+                          <li><span>3.</span> 준비물은 이렇게 준비해요!</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="c_right">
+                      <div class="s-text_wrap">
+                        <ul>
+                          <li><span>1.</span>간단한 자기 소개 하기</li>
+                          <li><span>2.</span>구체적인 개인수강목표 정하기</li>
+                          <li><span>3.</span>준비물 준비하기</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- 실전에도 강해지는 나! -->
+                  <li>
+                    <div class="c_left">
+                      <div class="img_wrap"></div>
+                      <div class="t-text_wrap">
+                        <ul>
+                          <div class="chapter-title"></div>
+                          <li><span>1.</span> 안녕하세요 기초디자인 강사 '이 삭' 입니다</li>
+                          <li><span>2.</span> 기초디자인에 대한 간단히 알아볼까요?</li>
+                          <li><span>3.</span> 준비물은 이렇게 준비해요!</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="c_right">
+                      <div class="s-text_wrap">
+                        <ul>
+                          <li><span>1.</span>간단한 자기 소개 하기</li>
+                          <li><span>2.</span>구체적인 개인수강목표 정하기</li>
+                          <li><span>3.</span>준비물 준비하기</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="inner">
+          <div class="ft-top">
+            <div class="ft-top-left">
+              <div class="ft-logo">
+                <a href="#">
+                  <img src="images/logo/logo.png" alt="로고 이미지" />
+                </a>
+              </div>
+              <ul class="intro-list">
+                <li><a href="#"> 회사소개 </a></li>
+                <li class="intro-PI"><a href="#"> 개인정보처리방침 </a></li>
+                <li><a href="#"> 이용약관 </a></li>
+                <li><a href="#"> 이용안내 </a></li>
+              </ul>
+            </div>
+            <div class="ft-top-right">
+              <div class="cs-title">고객 센터</div>
+              <div class="cs-info">오전 10시 ~ 오후 6시 (주말, 공휴일 제외)</div>
+              <div class="cs-btns">
+                <button class="csBtn"><a href="#"> QnA </a></button>
+                <button class="csBtn"><a href="#"> 1:1 문의 </a></button>
+              </div>
+            </div>
+          </div>
+          <div class="ft-bottom">
+            <div class="ft-bot-left">
+              <ul class="company-info">
+                <li>대표 : 가나다</li>
+                <li>주소 : 대구광역시 중구 109-2 4층</li>
+              </ul>
+              <ul class="company-info">
+                <li>이메일 : asd123@artroke.co.kr</li>
+                <li>사업자등록번호 : 123-45-67890</li>
+              </ul>
+            </div>
+            <div class="ft-bot-right">
+              <ul class="sns-list">
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

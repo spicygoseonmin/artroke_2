@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://js.tosspayments.com/v1/payment-widget"></script>
+
+    <!-- SEO -->
+    <meta name="author" content="아트로크" />
+    <meta name="title" content="아트로크:: 빠르고 쉬운 실시간 온라인 미술강의 사이트" />
+    <meta name="keywords" content="강의, 온라인강의, 실기강의, 소묘, 미술강사, 입시미술, 취미미술, 미술강의, 입시디자인, 기초디자인, 포토샵, 수공예, 아동미술" />
+    <meta name="description" content="사람과 자연 모두에 건강한 먹을거리와 생활용품을 생산·공급 합니다" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="아트로크:: 빠르고 쉬운 실시간 온라인 미술강의 사이트" />
+    <meta property="og:description" content="사람과 자연 모두에 건강한 먹을거리와 생활용품을 생산·공급 합니다" />
+    <meta property="og:site_name" content="한살림 장보기" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shop.hansalim.or.kr" />
+    <meta property="og:image" content="https://shop.hansalim.or.kr/shopping/resources/shopping/web/images/common/hansalim_sns_logo.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="아트로크:: 빠르고 쉬운 실시간 온라인 미술강의 사이트" />
+    <meta name="twitter:description" content="사람과 자연 모두에 건강한 먹을거리와 생활용품을 생산·공급 합니다" />
+    <meta name="twitter:image" content="https://shop.hansalim.or.kr/shopping/resources/shopping/web/images/common/hansalim_sns_logo.png" />
+    <link rel="icon" type="image/png" href="images/favicon/favicon-48x48.png" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>아트로크</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/my_menu.css" />
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script src="js/my_menu.js"></script>
+    <script src="js/my_menu_jq.js"></script>
+    <!-- <script src="js/my_menu_pay.js"></script> -->
+    <!-- Swiper 적용 -->
+    <!-- link Swiper's css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- 헤더 -->
+      <header class="header">
+        <div class="inner">
+          <div class="header-left">
+            <div class="logo">
+              <a href="#">
+                <img src="images/logo/logo.png" alt="로고이미지" />
+              </a>
+            </div>
+            <ul class="menu">
+              <li class="open-cate">
+                <a href="#"> 강의 카테고리<i class="fa-solid fa-angle-down"></i></a>
+              </li>
+              <li>
+                <a href="#">커뮤니티</a>
+              </li>
+              <li>
+                <a href="#">뉴스</a>
+              </li>
+              <li>
+                <a href="#">강사진소개</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-right">
+            <!-- 검색창 -->
+            <div class="search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <!-- 로그인 -->
+            <ul class="user-section">
+              <!-- 로그인 버튼 -->
+              <li id="login-btn">
+                <a href="#" id="loginText"> 로그인 </a>
+              </li>
+              <i class="fa-solid fa-user" id="loginIcon" style="display: none"></i>
+              <!-- 로그인했을떄 유저메뉴 -->
+              <li id="user-profile">
+                <!-- 유저 아이디 출력 -->
+              </li>
+            </ul>
+            <!-- 아이콘 클릭 시 나타나는 컨테이너 -->
+            <div id="iconContainer" style="display: none">
+              <!-- 컨테이너 내용 -->
+              <div id="userInfoTop">
+                <div id="userInfo">
+                  <i class="fa-solid fa-chevron-left" id="userInfoDelete"></i>
+                  <div id="userInfoNickName">
+                    <!-- JS로 닉네임 출력 -->
+                  </div>
+                  <i class="fa-solid fa-gear" id="xhqslqkznl"></i>
+                </div>
+                <div id="userInfoSecond">
+                  <i class="fa-solid fa-user"></i>
+                  <div id="userInfoId">
+                    <!-- JS로 아이디 출력 -->
+                  </div>
+                  <div id="userInfoEmail">
+                    <!-- JS로 이메일 출력 -->
+                  </div>
+                </div>
+              </div>
+              <div id="userInfoMid">
+                <div id="userInfoNotice">
+                  <ul>
+                    <li id="notice">알림<i class="fa-solid fa-chevron-down"></i></li>
+                    <ul id="noticeNone" style="display: none">
+                      <li><p>알림내용</p></li>
+                      <li><p>알림내용</p></li>
+                      <li><p>알림내용</p></li>
+                    </ul>
+                  </ul>
+                  <ul>
+                    <li id="myTeach">나의 강좌<i class="fa-solid fa-chevron-down"></i></li>
+                    <ul id="teachList" style="display: none">
+                      <li>
+                        수강 강의 이름
+                        <p>다시보기</p>
+                      </li>
+                      <li>
+                        수강 강의 이름
+                        <p>다시보기</p>
+                      </li>
+                    </ul>
+                  </ul>
+                </div>
+                <div id="InterestedList">
+                  <p>관심목록</p>
+                  <div id="QandA">문의 / 답변</div>
+                </div>
+                <div id="logOut">
+                  <p>로그아웃</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cate-background"></div>
+        <div class="cate-wrap">
+          <div class="cate-box">
+            <div class="inner">
+              <ul class="category">
+                <!-- 일반 강의 카테고리 -->
+                <li class="class-cate-title">일반 강의<i class="fa-solid fa-angle-right"></i></li>
+                <li>
+                  <ul class="class-cate-list">
+                    <li><a href="#">소묘</a></li>
+                    <li><a href="#">수채화</a></li>
+                    <li><a href="#">유화</a></li>
+                    <li><a href="#">아크릴화</a></li>
+                    <li><a href="#">디지털 드로잉</a></li>
+                    <li><a href="#">조소/모델링</a></li>
+                    <li><a href="#">만화/애니메이션</a></li>
+                    <li><a href="#">아동 미술</a></li>
+                    <li><a href="#">공예</a></li>
+                    <li><a href="#">포토샵/일러스트레이터</a></li>
+                    <li><a href="#">이모티콘</a></li>
+                  </ul>
+                </li>
+                <!-- 실기 강의 카테고리 -->
+                <li class="class-cate-title">실기 강의<i class="fa-solid fa-angle-right"></i></li>
+                <li>
+                  <ul class="class-cate-list">
+                    <li><a href="#">소묘</a></li>
+                    <li><a href="#">서양화</a></li>
+                    <li><a href="#">동양화</a></li>
+                    <li><a href="#">디자인</a></li>
+                    <li><a href="#">조소</a></li>
+                    <li><a href="#">만화/애니메이션</a></li>
+                    <li><a href="#">포토샵/일러스트레이터</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- 메인 -->
+      <div class="my_page">
+        <div class="inner">
+          <!-- 닉네임또는 본명 -->
+          <div class="log_nicknamr">
+            <!-- js로 출력 -->
+          </div>
+          <!-- 메뉴 -->
+          <div class="my_menu">
+            <ul class="my_menuList">
+              <li>
+                <span><img src="images/icon/my_page/project_submit_icon.png" alt="과제제출_모바일_아이콘" /></span>수강 중인 목록
+              </li>
+              <li>
+                <span><img src="images/icon/my_page/check_icon.png" alt="과제제출_모바일_아이콘" /></span>과제 제출
+              </li>
+              <li>
+                <span><img src="images/icon/my_page/comment_icon.png" alt="문의답변_모바일_아이콘" /></span>문의 / 답변
+              </li>
+              <li>
+                <span><img src="images/icon/my_page/bookmark_list_icon.png" alt="관심목록_모바일_아이콘" /></span>관심 목록
+              </li>
+              <li>
+                <span><img src="images/icon/my_page/pay_icon.png" alt="결재수단_모바일_아이콘" /></span>결재 수단
+              </li>
+              <li>
+                <span><img src="images/icon/my_page/point_icon.png" alt="포인트_모바일_아이콘" /></span>포인트
+              </li>
+            </ul>
+          </div>
+          <div class="menu_page">
+            <!-- 수강중인 목록 -->
+            <div class="scl mp">
+              <!-- 옵션 -->
+              <div class="option">
+                <!-- 전체 -->
+                <!-- 수강완료한 강좌 제외 -->
+                <select name="" id="">
+                  <option value="">전체</option>
+                  <option value=""></option>
+                </select>
+                <select name="" id="">
+                  <option value="">전체</option>
+                  <option value="">수강완료한 강좌 제외</option>
+                </select>
+              </div>
+              <div class="sclList">
+                <ul>
+                  <li>
+                    <div class="top">
+                      <div class="class_title">팀플로 성장하는 발상과 표현 클래스 5기 <span>수강중</span></div>
+                      <div class="class_s_day">2024. 10. 14 ~ 2025. 01. 01</div>
+                    </div>
+                    <div class="bottom">
+                      <div class="class_s_t">디자인실기 | 이진수</div>
+                      <div class="class_sd_day">2일 후 수강</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="top">
+                      <div class="class_title">팀플로 성장하는 발상과 표현 클래스 5기 <span>수강중</span></div>
+                      <div class="class_s_day">2024. 10. 14 ~ 2025. 01. 01</div>
+                    </div>
+                    <div class="bottom">
+                      <div class="class_s_t">디자인실기 | 이진수</div>
+                      <div class="class_sd_day">2일 후 수강</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="top">
+                      <div class="class_title">팀플로 성장하는 발상과 표현 클래스 5기 <span>수강중</span></div>
+                      <div class="class_s_day">2024. 10. 14 ~ 2025. 01. 01</div>
+                    </div>
+                    <div class="bottom">
+                      <div class="class_s_t">디자인실기 | 이진수</div>
+                      <div class="class_sd_day">2일 후 수강</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="notice">
+                <div class="notice_title">수강 유의 사항</div>
+                <div class="notice_txt">
+                  <p>수강 중도 포기 및 환불, 또는</p>
+                  <p>(한 달 기준)과제 제출 미완 빈도 및 출석 일수가 25%미만일 경우 수강완료가 표기되지 않습니다.</p>
+                  <p>또한 이로 인해 수강완료가 되지 않을 경우 수강완료 기념 포인트는 지급되지 않음을 알립니다.</p>
+                </div>
+              </div>
+            </div>
+            <!-- 과제 제출 -->
+            <div class="sct mp">
+              <!-- 옵션 -->
+              <div class="option">
+                <!-- 전체 -->
+                <!-- 제출 완료한 과제 제외 -->
+                <select name="" id="">
+                  <option value="">전체</option>
+                  <option value="">남은 제출 기간 순</option>
+                </select>
+                <select name="" id="">
+                  <option value="">전체</option>
+                  <option value="">과제 제출한 강좌 제외</option>
+                </select>
+              </div>
+              <div class="sctList">
+                <ul>
+                  <li>
+                    <div class="top">
+                      <div class="class_title">팀플로 성장하는 발상과 표현 클래스 5기 <span>과제제출 미완</span></div>
+                      <div class="class_s_day">2025. 12. 01 까지 제출</div>
+                    </div>
+                    <!-- 제출란 -->
+                    <div class="middle">
+                      <div class="work_title">과제: 식물의 구조를 응용하여 발상과 디자인 스케치 구상하기</div>
+                      <a href="#">
+                        <div class="download_icon"><i class="fa-solid fa-file-arrow-down"></i></div>
+                        <div class="download_title">디자인 주제 사진 및 예시작</div>
+                      </a>
+                    </div>
+                    <div class="bottom">
+                      <div class="class_s_t">디자인실기 | 이진수</div>
+                      <div class="class_sd_submit">제출하기</div>
+                    </div>
+                    <div class="submit_project_work">
+                      <div class="submit_project_work_wrap">
+                        <form class="project_work_form" enctype="multipart/form-data">
+                          <div class="form_wrap">
+                            <label for="title">제목</label>
+                            <input type="text" class="title" name="title" required />
+                            <label for="memo">메모</label>
+                            <input type="text" class="memo" name="memo" />
+                            <label for="work">이미지 제출</label>
+                            <input type="file" class="work" name="work" accept="image/*" required />
+                            <button type="submit" class="p_w_sub_btn">과제 제출하기</button>
+                          </div>
+                          <div class="img_thumbnail">
+                            <ul class="thumbnail_list">
+                              <!-- js 출력 -->
+                            </ul>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="top">
+                      <div class="class_title">팀플로 성장하는 발상과 표현 클래스 5기 <span>과제제출 미완</span></div>
+                      <div class="class_s_day">2025. 12. 01 까지 제출</div>
+                    </div>
+                    <!-- 제출란 -->
+                    <div class="middle">
+                      <div class="work_title">과제: 식물의 구조를 응용하여 발상과 디자인 스케치 구상하기</div>
+                      <a href="#">
+                        <div class="download_icon"><i class="fa-solid fa-file-arrow-down"></i></div>
+                        <div class="download_title">디자인 주제 사진 및 예시작</div>
+                      </a>
+                    </div>
+                    <div class="bottom">
+                      <div class="class_s_t">디자인실기 | 이진수</div>
+                      <div class="class_sd_submit">제출하기</div>
+                    </div>
+                    <div class="submit_project_work">
+                      <form class="project_work_form">
+                        <label for="title">제목</label>
+                        <input type="text" class="title" name="title" required />
+                        <label for="memo">메모</label>
+                        <input type="text" class="memo" name="memo" />
+                        <label for="work">이미지 제출</label>
+                        <input type="file" class="work" name="work" required />
+                        <button type="submit">과제 제출하기</button>
+                      </form>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="top">
+                      <div class="class_title">팀플로 성장하는 발상과 표현 클래스 5기 <span>과제제출 미완</span></div>
+                      <div class="class_s_day">2025. 12. 01 까지 제출</div>
+                    </div>
+                    <!-- 제출란 -->
+                    <div class="middle">
+                      <div class="work_title">과제: 식물의 구조를 응용하여 발상과 디자인 스케치 구상하기</div>
+                      <a href="#">
+                        <div class="download_icon"><i class="fa-solid fa-file-arrow-down"></i></div>
+                        <div class="download_title">디자인 주제 사진 및 예시작</div>
+                      </a>
+                    </div>
+                    <div class="bottom">
+                      <div class="class_s_t">디자인실기 | 이진수</div>
+                      <div class="class_sd_submit">제출하기</div>
+                    </div>
+                    <div class="submit_project_work">
+                      <form class="project_work_form">
+                        <label for="title">제목</label>
+                        <input type="text" class="title" name="title" required />
+                        <label for="memo">메모</label>
+                        <input type="text" class="memo" name="memo" />
+                        <label for="work">이미지 제출</label>
+                        <input type="file" class="work" name="work" required />
+                        <button type="submit">과제 제출하기</button>
+                      </form>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- 문의 / 답변 -->
+            <div class="qnal mp"></div>
+            <!-- 관심목록 -->
+            <div class="als mp"></div>
+            <!-- 결재 수단 -->
+            <div class="mpls mp">
+              <div class="mpls_wrap">
+                <!-- 결재수단 등록 -->
+                <div class="top">
+                  <div class="payList">
+                    <!-- 결제 UI, 이용약관 UI 영역 -->
+                    <div id="payment-method"></div>
+                    <div id="agreement"></div>
+                    <!-- 결제하기 버튼 -->
+                    <button id="payment-button">결재 수단 등록</button>
+                  </div>
+                </div>
+                <div class="bottom"></div>
+              </div>
+            </div>
+            <!-- 포인트 -->
+            <div class="pointL mp">
+              <div class="point_wrap">
+                <div class="point_title">보유포인트</div>
+                <div class="total_h_point">0p</div>
+              </div>
+              <div class="point_explain">
+                <span class="point_icon"><img src="images/icon/point_icon.png" alt="포인트_인포_아이콘" /></span>
+                <p>포인트를 사용할수 있는 곳은?</p>
+              </div>
+              <!-- 포인트 슬라이드 -->
+              <div class="point_mh_s">
+                <div class="swiper sw_point">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/banner/point_banner_1.png" alt="카카오_포인트_베너" /></div>
+                    <div class="swiper-slide"><img src="images/banner/point_banner_2.png" alt="토스_포인트_배너" /></div>
+                    <div class="swiper-slide"><img src="images/banner/point_banner_3.png" alt="친구초대_포인트_배너" /></div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 푸터 -->
+      <footer class="footer">
+        <div class="inner">
+          <div class="ft-top">
+            <div class="ft-top-left">
+              <div class="ft-logo">
+                <a href="#">
+                  <img src="images/logo/logo.png" alt="로고 이미지" />
+                </a>
+              </div>
+              <ul class="intro-list">
+                <li><a href="#"> 회사소개 </a></li>
+                <li class="intro-PI"><a href="#"> 개인정보처리방침 </a></li>
+                <li><a href="#"> 이용약관 </a></li>
+                <li><a href="#"> 이용안내 </a></li>
+              </ul>
+            </div>
+            <div class="ft-top-right">
+              <div class="cs-title">고객 센터</div>
+              <div class="cs-info">오전 10시 ~ 오후 6시 (주말, 공휴일 제외)</div>
+              <div class="cs-btns">
+                <button class="csBtn"><a href="#"> QnA </a></button>
+                <button class="csBtn"><a href="#"> 1:1 문의 </a></button>
+              </div>
+            </div>
+          </div>
+          <div class="ft-bottom">
+            <div class="ft-bot-left">
+              <ul class="company-info">
+                <li>대표 : 가나다</li>
+                <li>주소 : 대구광역시 중구 109-2 4층</li>
+              </ul>
+              <ul class="company-info">
+                <li>이메일 : asd123@artroke.co.kr</li>
+                <li>사업자등록번호 : 123-45-67890</li>
+              </ul>
+            </div>
+            <div class="ft-bot-right">
+              <ul class="sns-list">
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,454 @@
+@charset "utf-8";
+
+/* 클래스 전체 영역 */
+.omall {
+  margin: 100px 0;
+}
+.class_menu_title {
+  font-weight: 700;
+  font-size: 26px;
+  padding-bottom: 30px;
+}
+/* 클래스 메인 영역 */
+.class {
+  padding-top: 90px;
+}
+/* 클래스 메인 이미지 영역 */
+.sw-main-img {
+  width: 100%;
+  height: 50vw;
+  max-height: 410px;
+  background-color: rgb(248, 248, 248);
+  background-color: #000000ee;
+}
+.swiper-wrapper {
+  padding: 6px;
+}
+.swiper-slide {
+  max-height: calc(100% - 12px);
+  text-align: center;
+  font-size: 18px;
+  background: #383838;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+/* 클래스 메인이미지 이전/ 다음 버튼 */
+.pmBtn,
+.nmBtn {
+  background-color: #fff;
+  height: 50px !important;
+  width: 50px !important;
+  border-radius: 50%;
+  font-size: 30px;
+}
+.pmBtn:hover,
+.nmBtn:hover {
+  background-color: #f0f0f0;
+}
+.pmBtn > i,
+.nmBtn > i {
+  color: #000;
+  font-size: 25px;
+}
+.pmBtn:hover > i,
+.nmBtn:hover > i {
+  color: #ff370b;
+  font-size: 25px;
+}
+.pmBtn:after,
+.nmBtn:after {
+  display: none;
+}
+/* 클래스 기본 정보 영역 */
+.class-info {
+  width: 100%;
+}
+/* 기본정보 (상) 제목 */
+.class-info > .top-info {
+  height: 53px;
+  margin: 10px 0;
+  width: 100%;
+}
+.class-info > .top-info > h1 {
+  font-size: 25px;
+  text-align: center;
+  width: 100%;
+}
+
+/* 기본정보 (하) 클래스 정보*/
+.bottom-info {
+  border-top: 1px solid #e9e9e9;
+  width: 100%;
+  display: flex;
+}
+
+/* 기본정보 왼쪽 */
+.bottom-info > .left-info {
+  width: 100%;
+  height: 190px;
+  border-right: 1px solid #ccc;
+}
+
+/* 강사 정보 */
+.bottom-info > .left-info > .tpi {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  gap: 10px;
+  /* border-top: 1px solid #e9e9e9;
+  border-bottom: 1px solid #e9e9e9; */
+}
+.bottom-info > .left-info > .tpi > .tpii {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.bottom-info > .left-info > .tpi > .tpii > img {
+  border-radius: 50%;
+  width: 100%;
+  box-shadow: inset 0px 0px 2px 2px #00000021;
+}
+
+/* 수업 정보 */
+.bottom-info > .left-info > .tci {
+  width: 100%;
+  height: 50%;
+  background-color: rgb(255, 255, 255);
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: #5f5f5f;
+}
+.bottom-info > .left-info > .tci > p {
+  display: flex;
+  gap: 8px;
+  align-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* 기본정보 오른쪽 (결재 정보)*/
+.bottom-info > .right-info {
+  height: 190px;
+  width: 70%;
+  padding: 5px;
+  padding-left: 20px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+/* 결재 수강비 */
+
+.bottom-info > .right-info > .ptdiv {
+  width: 100%;
+  height: 50px;
+  background-color: #f1f1f19d;
+  border: none;
+  border-radius: 3px 3px 0 0;
+  font-size: 15px;
+  /* font-weight: 600; */
+  color: #0c0c0c;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  padding-left: 5px;
+  border-bottom: 1px solid #ccc;
+}
+.opc-won {
+  text-decoration: line-through;
+  padding-left: 5px;
+  color: #7a7a7a;
+}
+.spc-won {
+  font-weight: 500;
+  padding-left: 5px;
+}
+.class_kit_set {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.class_kit_set > #pakage_list {
+  width: calc(100% - 30px);
+  height: 30px;
+  border: 1px solid #ccc;
+}
+.class_kit_set > #pakage_list:focus {
+  border: 1px solid #999999;
+  outline: none;
+}
+.i_about_pakage {
+  width: 20px;
+  height: 20px;
+}
+.i_about_pakage > img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+.i_about_pakage:hover > img {
+  width: 100%;
+  height: 100%;
+  opacity:1;
+}
+.bottom-info > .right-info > .btn_wrap {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+}
+.bottom-info > .right-info > .btn_wrap > .pBtn {
+  width: 70%;
+  height: 50px;
+  background-color: #ff370b;
+  border: none;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+.bottom-info > .right-info > .btn_wrap > .fBtn {
+  width: 30%;
+  height: 50px;
+  background-color: #000000;
+  border: none;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+}
+/* 아이콘 리스트 */
+.etx_icon_button {
+  width: 100%;
+  margin-top: 13px;
+  /* background-color: aquamarine; */
+}
+.etx_icon_button > ul {
+  display: flex;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+.etx_icon_button > ul > li > button {
+  border: none;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.etx_icon_button > ul > li > button > i {
+  font-size: 20px;
+}
+.etx_icon_button > ul > li > button > span {
+  font-size: 11px;
+}
+
+/* 클래스 소개 메뉴 영역 */
+.class-scroll-info {
+  width: 100%;
+}
+.class-scroll-info > .menu {
+  padding: 0 !important;
+}
+.class-scroll-info > .menu > .menuList {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3px 3vw 6px;
+  margin: 10px 0;
+  border-top: 2px solid #000;
+  box-shadow: 0 1px 2px 0px #dfdfdf33;
+}
+.class-scroll-info > .menu > .menuList > li {
+  background-color: rgba(255, 255, 255, 0.979);
+  padding: 3px 0;
+  position: relative;
+  cursor: pointer;
+  font-weight: 600;
+  color: #636363;
+}
+.class-scroll-info > .menu > .menuList > li::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background-color: #ff370b;
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  transition: width 0.3s;
+}
+.class-scroll-info > .menu > .menuList > li:hover {
+  color: #000;
+}
+.class-scroll-info > .menu > .menuList > li:hover::after {
+  width: 100%;
+}
+
+/* 클래스 목표 및 주제 */
+.class_s_goal,
+.class_s_goal > .goal {
+  width: 100%;
+}
+.class_s_goal > .goal > .goalList {
+  width: 100%;
+  display: flex;
+  gap: 1vw;
+  background-color: #fafafa;
+  padding: 10px;
+}
+.class_s_goal > .goal > .goalList > li {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+.class_s_goal > .goal > .goalList > li > .img-wrap {
+  position: relative;
+  border-radius: 5px 5px 0 0;
+  height: 14vw;
+  width: 100%;
+  max-height: 178px;
+  background-color: #f3f3f3;
+  box-shadow: 0 1px 2px 1px #c7c7c7;
+  border: 1px solid #e7e7e7;
+  overflow: hidden;
+}
+.class_s_goal > .goal > .goalList > li > .img-wrap::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  max-height: 178px;
+  position: absolute;
+  background: linear-gradient(to top, #00000007 0%, #00000000 90%);
+  bottom: 0;
+  left: 0;
+  filter: contrast();
+}
+.class_s_goal > .goal > .goalList > li > .img-wrap > img {
+  width: 100%;
+}
+.class_s_goal > .goal > .goalList > li > .text-wrap {
+  padding-top: 8px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+}
+.class_s_goal > .goal > .goalList > li > .text-wrap > p {
+  padding-top: 5px;
+  font-weight: 400;
+  font-size: 13px;
+  color: #7a7a7a;
+}
+
+/* 추천 대상 */
+.recommend_age,
+.recommend_age > .recommend {
+  width: 100%;
+}
+.recommend_age > .recommend > .recommendList {
+  width: 100%;
+  background-color: #fafafa;
+  padding: 10px;
+}
+.recommend_age > .recommend > .recommendList > li {
+  border-bottom: 1px solid #dfdfdf;
+  padding: 5px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #383838;
+}
+
+/* 준비물 */
+.supplies_wrap,
+.supplies_wrap > .supplies {
+  width: 100%;
+}
+.supplies_wrap > .supplies > .suppliesList {
+  width: 100%;
+  background-color: #fafafa;
+  padding: 10px;
+}
+.supplies_wrap > .supplies > .suppliesList > li {
+  font-size: 14px;
+}
+
+/* 클래스 소개 */
+.class_itd {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #5f5f5f;
+  height: 1000px;
+}
+/* 클래스 구성 */
+.class_formation,
+.class_formation > .formation {
+  width: 100%;
+}
+.class_formation > .formation > .formationList {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+.class_formation > .formation > .formationList > li {
+  width: calc(100% / 3 - 10px);
+}
+.class_formation > .formation > .formationList > li > .img-wrap {
+  background-color: #5f5f5f;
+  width: 100%;
+  height: 20vw;
+  max-height: 250px;
+}
+/* 커리큘럼 */
+.curriculum_wrap,
+.curriculum_wrap > .curriculum {
+  width: 100%;
+}
+.curriculum_wrap > .curriculum > .curriculumList {
+  width: 100%;
+}
+.curriculum_wrap > .curriculum > .curriculumList > li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-bottom: 2px;
+}
+.curriculum_wrap > .curriculum > .curriculumList > li > .c_left {
+  width: 100%;
+  /* background-color: #e6e6e6; */
+  height: 100%;
+  border-right: 2px solid #000;
+  display: flex;
+  flex-direction: column;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+.curriculum_wrap > .curriculum > .curriculumList > li > .c_left > .img_wrap {
+  width: 100%;
+  max-width: 280px;
+  height: 150px;
+  background-color: #7a7a7a;
+}
+.curriculum_wrap > .curriculum > .curriculumList > li > .c_right {
+  width: 100%;
+  /* background-color: #b4b4b4; */
+  height: 100%;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}

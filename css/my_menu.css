@@ -1,0 +1,583 @@
+@charset "utf-8";
+.my_page {
+  padding-top: 90px;
+}
+/* 닉네임 */
+.log_nicknamr {
+  width: 100%;
+  height: 100px;
+  /* background-color: aqua; */
+}
+/* 메뉴 */
+.my_menu {
+  width: 100%;
+}
+.my_menu > .my_menuList {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-top: 2px solid #000;
+}
+.my_menu > .my_menuList > li {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.my_menu > .my_menuList > li > span > img {
+  opacity: 0.5;
+}
+.my_menu > .my_menuList > li.active > span > img {
+  opacity: 1;
+}
+.my_menu > .my_menuList > li:nth-of-type(1).active > span > img {
+  background: url("../images/icon/my_page/a_project_submit_icon.png") no-repeat center;
+  background-size: contain;
+}
+.my_menu > .my_menuList > li:nth-of-type(2).active > span > img {
+  background: url("../images/icon/my_page/a_check_icon.png") no-repeat center;
+  background-size: contain;
+}
+.my_menu > .my_menuList > li:nth-of-type(3).active > span > img {
+  background: url("../images/icon/my_page/a_comment_icon.png") no-repeat center;
+  background-size: contain;
+}
+.my_menu > .my_menuList > li:nth-of-type(4).active > span > img {
+  background: url("../images/icon/my_page/a_bookmark_list_icon.png") no-repeat center;
+  background-size: contain;
+}
+.my_menu > .my_menuList > li:nth-of-type(5).active > span > img {
+  background: url("../images/icon/my_page/a_pay_icon.png") no-repeat center;
+  background-size: contain;
+}
+.my_menu > .my_menuList > li:nth-of-type(6).active > span > img {
+  background: url("../images/icon/my_page/a_point_icon.png") no-repeat center;
+  background-size: contain;
+}
+.my_menu > .my_menuList > li > span {
+  width: 100%;
+  height: 25px;
+  display: none;
+  position: relative;
+  text-align: center;
+}
+.my_menu > .my_menuList > li > span > img {
+  height: 100%;
+}
+/* 공통 영역========================================================  */
+.scl,
+.sct,
+.qnal,
+.als,
+.mpls,
+.pointL {
+  display: none;
+}
+/* 공통 영역======================================================== */
+.active {
+  display: block;
+}
+.option {
+  width: 100%;
+  height: 50%;
+  /* background-color: rgb(247, 247, 247); */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+.option > select {
+  padding: 2px 10px;
+  border-radius: 50px;
+}
+
+/* 수강중인 목록 ==========================================================================*/
+.scl > .notice {
+  width: 100%;
+  background-color: rgb(247, 247, 247);
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 14px;
+  margin: 7vw 0;
+}
+.scl > .sclList > ul > li {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+.scl > .sclList > ul > li > .top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.scl > .sclList > ul > li > .top > .class_title {
+  font-weight: 500;
+  cursor: pointer;
+}
+.scl > .sclList > ul > li > .top > .class_title > span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #577cfd;
+}
+.scl > .sclList > ul > li > .top > .class_s_day {
+  font-size: 14px;
+}
+.scl > .sclList > ul > li > .bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 14px;
+  align-items: flex-end;
+}
+.scl > .sclList > ul > li > .bottom > .class_s_t {
+  cursor: pointer;
+}
+.scl > .sclList > ul > li > .bottom > .class_sd_day {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ff370b;
+}
+
+/* 과제제출 =================================================================================*/
+.sct > .notice {
+  width: 100%;
+  background-color: rgb(247, 247, 247);
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.sct > .sctList > ul > li {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+.sct > .sctList > ul > li > .top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.sct > .sctList > ul > li > .top > .class_title {
+  font-weight: 500;
+  cursor: pointer;
+}
+.sct > .sctList > ul > li > .top > .class_title > span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff370b;
+}
+.sct > .sctList > ul > li > .top > .class_s_day {
+  font-size: 14px;
+}
+.sct > .sctList > ul > li > .bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 14px;
+  align-items: flex-end;
+}
+.sct > .sctList > ul > li > .bottom > .class_s_t {
+  cursor: pointer;
+}
+.sct > .sctList > ul > li > .bottom > .class_sd_submit {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ff370b;
+  cursor: pointer;
+}
+
+.sct > .sctList > ul > li > .middle {
+  padding: 10px 0;
+}
+.sct > .sctList > ul > li > .middle > .work_title {
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+.sct > .sctList > ul > li > .middle > a {
+  display: flex;
+  background-color: rgb(247, 247, 247);
+  padding: 10px;
+  align-items: center;
+  gap: 10px;
+}
+.sct > .sctList > ul > li > .middle > a > .download_icon {
+  color: #8f8f8f;
+}
+.sct > .sctList > ul > li > .middle > a > .download_title {
+  font-size: 14px;
+  color: #8f8f8f;
+}
+.submit_project_work {
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 #00000010;
+  overflow: hidden;
+  margin: 10px 0;
+  background-color: rgb(0, 0, 0);
+  display: none;
+}
+.submit_project_work > .submit_project_work_wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.submit_project_work > .submit_project_work_wrap > form {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.submit_project_work > .submit_project_work_wrap > form > .form_wrap {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #00000020;
+  background-color: rgb(255, 255, 255);
+}
+.submit_project_work > .submit_project_work_wrap > form > .form_wrap > input {
+  margin-top: 5px;
+}
+.submit_project_work > .submit_project_work_wrap > form > .form_wrap > .p_w_sub_btn {
+  padding: 10px;
+  margin-top: 80px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+.submit_project_work > .submit_project_work_wrap > form > .img_thumbnail {
+  width: 100%;
+  height: 100%;
+  background-color: #577cfd;
+}
+/* 결재수단 ===================================================================================*/
+.mpls {
+  width: 100%;
+}
+.mpls > .mpls_wrap {
+  width: 100%;
+  /* background-color: #8f8f8f; */
+}
+.mpls > .mpls_wrap > .top > .payList {
+  width: 100%;
+  /* background-color: #ff370b; */
+}
+/* 포인트=====================================================================================  */
+.point_wrap {
+  width: 100%;
+  height: 100px;
+  /* background-color: #577cfd; */
+  border-bottom: 1px solid #ccc;
+}
+.point_title {
+  font-weight: 500;
+}
+.point_wrap > .total_h_point {
+  font-size: 40px;
+  font-weight: 500;
+}
+.point_explain {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 0;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.point_explain > p:hover {
+  color: #1f1f1f;
+}
+.point_explain > p {
+  font-size: 15px;
+  color: #6e6e6e;
+}
+.point_explain > .point_icon {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  display: block;
+  opacity: 0.5;
+}
+.point_explain > .point_icon > img {
+  width: 100%;
+}
+/* 포인트 스와이퍼 */
+.sw_point {
+  width: 100%;
+  height: 18.8vw;
+  max-height: 250px;
+  /* background-color: #577cfd; */
+}
+.sw_point .swiper-slide {
+  background-color: #ff370b;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.sw_point .swiper-slide > img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1232px) {
+  .my_page {
+    padding: 90px 15px 0 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .scl,
+  .sct,
+  .pointL {
+    padding: 0 2vw 0 2vw;
+  }
+  .my_menu > .my_menuList > li > span {
+    display: block;
+  }
+  /* 공통영역 ============================================*/
+  .option > select {
+    padding: 0.4px 2vw;
+    border-radius: 50px;
+    font-size: 2.5vw;
+  }
+  /* 공통영역 ============================================*/
+
+  /* 수강중인 목록 */
+  .my_page {
+    padding: 90px 2vw 0 2vw;
+  }
+  .my_menu > .my_menuList {
+    max-width: none;
+    padding-top: 3vw;
+  }
+  .my_menu > .my_menuList > li {
+    font-size: 1.8vw;
+    gap: 1vw;
+    width: 100%;
+  }
+  .scl > .notice {
+    padding: 3vw;
+    font-size: 1.8vw;
+  }
+  .scl > .sclList > ul > li {
+    display: flex;
+    flex-direction: column;
+  }
+  .scl > .sclList > ul > li > .top {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .scl > .sclList > ul > li > .top > .class_title {
+    font-size: 2.3vw;
+  }
+  .scl > .sclList > ul > li > .top > .class_title > span {
+    font-size: 2.3vw;
+  }
+  .scl > .sclList > ul > li > .bottom > .class_s_t {
+    font-size: 2.1vw;
+    color: #696969;
+  }
+  .scl > .sclList > ul > li > .top > .class_s_day {
+    font-size: 2vw;
+    color: #9c9c9c;
+  }
+  .scl > .sclList > ul > li > .bottom > .class_sd_day {
+    font-size: 2.4vw;
+  }
+
+  /* 과제 제출 */
+  .sct > .sctList > ul > li > .top {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+  }
+  .sct > .sctList > ul > li > .middle > a {
+    padding: 1.2vw;
+    align-items: center;
+    gap: 10px;
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+  .sct > .sctList > ul > li > .top > .class_title {
+    font-size: 2.3vw;
+  }
+  .sct > .sctList > ul > li > .top > .class_title > span {
+    font-size: 2.3vw;
+  }
+  .sct > .sctList > ul > li > .middle > .work_title {
+    font-size: 2.3vw;
+  }
+  .sct > .sctList > ul > li > .top > .class_s_day {
+    font-size: 2vw;
+    color: #9c9c9c;
+  }
+  /* 과제 다운로드 */
+  .sct > .sctList > ul > li > .middle {
+    padding: 1vw 0;
+  }
+  .sct > .sctList > ul > li > .middle > a {
+    gap: 1vw;
+  }
+  m .sct > .sctList > ul > li > .middle > a > .download_icon {
+    font-size: 2.3vw;
+  }
+  .sct > .sctList > ul > li > .middle > a > .download_title {
+    font-size: 2vw;
+  }
+  .sct > .sctList > ul > li > .bottom > .class_s_t {
+    font-size: 2.1vw;
+    color: #696969;
+  }
+  .sct > .sctList > ul > li > .bottom > .class_sd_submit {
+    font-size: 2.4vw;
+  }
+  /* 과제 제출란 */
+  .submit_project_work > for {
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 2.5vw;
+  }
+
+  .sw_point {
+    width: 100%;
+    height: 27.1vw;
+    max-height: 250px;
+    /* background-color: #577cfd; */
+  }
+
+  .point_title {
+    margin-top: 10px;
+    font-size: 2vw;
+  }
+  .point_wrap {
+    padding-bottom: 2vw;
+    height: 20vw;
+    max-height: 120px;
+  }
+  .point_wrap > .total_h_point {
+    font-size: 7vw;
+  }
+}
+@media screen and (max-width: 420px) {
+  .log_nicknamr {
+    height: 20vw;
+    max-height: 60px;
+  }
+  .my_menu > .my_menuList > li > span {
+    display: block;
+    width: 100%;
+    height: 8.3vw;
+  }
+  /* ===================================== */
+  .my_menu > .my_menuList {
+    padding: 4vw 0 3vw;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 4vw;
+  }
+  .my_menu > .my_menuList > li {
+    width: calc(100% / 4 - 3vw);
+    font-size: 2.8vw;
+  }
+  /* 수강중인 목록 */
+  .scl > .sclList > ul > li {
+    height: 25vw;
+    max-height: 100px;
+    justify-content: space-between;
+  }
+  .scl > .sclList > ul > li > .top > .class_title {
+    font-size: 3.4vw;
+  }
+  .scl > .sclList > ul > li > .top > .class_title > span {
+    font-size: 3.4vw;
+  }
+  .scl > .sclList > ul > li > .bottom > .class_s_t {
+    font-size: 3vw;
+    color: #696969;
+  }
+  .scl > .sclList > ul > li > .top > .class_s_day {
+    font-size: 2.5vw;
+    color: #9c9c9c;
+  }
+  .scl > .sclList > ul > li > .bottom > .class_sd_day {
+    font-size: 3vw;
+  }
+
+  /* 과제 제출 */
+  .sct > .sctList > ul > li {
+    justify-content: space-between;
+  }
+  .sct > .sctList > ul > li > .top > .class_title {
+    font-size: 3.4vw;
+  }
+  .sct > .sctList > ul > li > .top > .class_title > span {
+    font-size: 3.4vw;
+  }
+  .sct > .sctList > ul > li > .middle > .work_title {
+    font-size: 2.7vw;
+  }
+  .sct > .sctList > ul > li > .top > .class_s_day {
+    font-size: 2.5vw;
+    color: #9c9c9c;
+  }
+  /* 과제 다운로드 */
+  .sct > .sctList > ul > li > .middle {
+    padding: 1vw 0;
+  }
+  .sct > .sctList > ul > li > .middle > a {
+    gap: 1vw;
+    margin-top: 6vw;
+    margin-bottom: 1vw;
+  }
+  .sct > .sctList > ul > li > .middle > a > .download_icon {
+    font-size: 3vw;
+  }
+  .sct > .sctList > ul > li > .middle > a > .download_title {
+    font-size: 2.5vw;
+  }
+  .sct > .sctList > ul > li > .bottom > .class_s_t {
+    font-size: 3vw;
+    color: #696969;
+  }
+  .sct > .sctList > ul > li > .bottom > .class_sd_submit {
+    font-size: 3vw;
+  }
+
+  .point_title {
+    margin-top: 10px;
+    font-size: 3.5vw;
+  }
+  .point_wrap {
+    padding-bottom: 2vw;
+    height: 22vw;
+    max-height: 80px;
+  }
+  .point_wrap > .total_h_point {
+    font-size: 9vw;
+  }
+  .sw_point {
+    width: 100%;
+    height: 50vw;
+    max-height: 250px;
+    /* background-color: #577cfd; */
+  }
+}

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO -->
+    <meta name="author" content="아트로크" />
+    <meta name="title" content="아트로크:: 빠르고 쉬운 실시간 온라인 미술강의 사이트" />
+    <meta name="keywords" content="강의, 온라인강의, 실기강의, 소묘, 미술강사, 입시미술, 취미미술, 미술강의, 입시디자인, 기초디자인, 포토샵, 수공예, 아동미술" />
+    <meta name="description" content="사람과 자연 모두에 건강한 먹을거리와 생활용품을 생산·공급 합니다" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="아트로크:: 빠르고 쉬운 실시간 온라인 미술강의 사이트" />
+    <meta property="og:description" content="사람과 자연 모두에 건강한 먹을거리와 생활용품을 생산·공급 합니다" />
+    <meta property="og:site_name" content="한살림 장보기" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://artroke.vercel.app/" />
+    <meta property="og:image" content="https://artroke.vercel.app/images/logo/logo.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="아트로크:: 빠르고 쉬운 실시간 온라인 미술강의 사이트" />
+    <meta name="twitter:description" content="사람과 자연 모두에 건강한 먹을거리와 생활용품을 생산·공급 합니다" />
+    <meta name="twitter:image" content="https://artroke.vercel.app/images/logo/logo.png" />
+    <link rel="icon" type="image/png" href="images/favicon/favicon-48x48.png" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>아트로크</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/b-banner.css">
+    <!-- js -->
+    <script src="js/header.js"></script>
+    <script src="js/main-b.js"></script>
+    <!-- Swiper 적용 -->
+    <!-- link Swiper's css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <div class="inner">
+          <div class="header-left">
+            <div class="logo">
+              <a href="#">
+                <img src="images/logo/logo.png" alt="로고이미지" />
+              </a>
+            </div>
+            <ul class="menu">
+              <li class="open-cate">
+                <a href="#"> 강의 카테고리<i class="fa-solid fa-angle-down"></i></a>
+              </li>
+              <li>
+                <a href="#">커뮤니티</a>
+              </li>
+              <li>
+                <a href="#">뉴스</a>
+              </li>
+              <li>
+                <a href="#">강사진소개</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-right">
+            <!-- 검색창 -->
+            <div class="search">
+              <i class="fa-solid fa-magnifying-glass" id="searchShow"></i>
+            </div>
+            <form style="display: none" id="searchDelete">
+              <label>
+                <div class="search-move" id="searchMove">
+                  <input type="text" placeholder="검색어를 입력하세요" id="searchBar" />
+                  <i class="fa-solid fa-magnifying-glass" id="searchAfter"></i>
+                  <i class="fa-solid fa-xmark" id="searchXmark"></i>
+                </div>
+              </label>
+              <div id="searchNow">
+                <p>최근 검색어</p>
+                <ul id="popularKeywords">
+                  <p>실시간 인기 검색어</p>
+                  <div id="li">
+                    <li><span>1</span> 프로크리에이트</li>
+                    <li><span>5</span> 피그마</li>
+                  </div>
+                  <div id="li">
+                    <li><span>2</span> 일러스트</li>
+                    <li><span>6</span> 입시미술</li>
+                  </div>
+                  <div id="li">
+                    <li><span>3</span> 소묘</li>
+                    <li><span>7</span> 나무13</li>
+                  </div>
+                  <div id="li">
+                    <li><span>4</span> 아이패드</li>
+                    <li><span>8</span> 이모티콘</li>
+                  </div>
+                </ul>
+              </div>
+            </form>
+            <!-- 로그인 -->
+            <ul class="user-section">
+              <!-- 로그인 버튼 -->
+              <li id="login-btn">
+                <a href="#" id="loginText"> 로그인 </a>
+              </li>
+              <i class="fa-solid fa-user" id="loginIcon"></i>
+              <!-- 로그인했을떄 유저메뉴 -->
+              <li id="user-profile">
+                <!-- 유저 아이디 출력 -->
+              </li>
+            </ul>
+            <!-- 아이콘 클릭 시 나타나는 컨테이너 -->
+            <div id="iconContainer" style="display: none">
+              <!-- 컨테이너 내용 -->
+              <div id="userInfoTop">
+                <div id="userInfo">
+                  <i class="fa-solid fa-chevron-left" id="userInfoDelete"></i>
+                  <div id="userInfoNickName">
+                    <!-- JS로 닉네임 출력 -->
+                  </div>
+                  <i class="fa-solid fa-gear" id="xhqslqkznl"></i>
+                </div>
+                <div id="userInfoSecond">
+                  <i class="fa-solid fa-user"></i>
+                  <div id="userInfoId">
+                    <!-- JS로 아이디 출력 -->
+                  </div>
+                  <div id="userInfoEmail">
+                    <!-- JS로 이메일 출력 -->
+                  </div>
+                </div>
+              </div>
+              <div id="userInfoMid">
+                <div id="userInfoNotice">
+                  <ul>
+                    <li id="notice">알림<i class="fa-solid fa-chevron-down"></i></li>
+                    <div id="line"></div>
+                    <ul id="noticeNone" style="display: none">
+                      <li><p>알림내용</p></li>
+                      <li><p>알림내용</p></li>
+                      <li><p>알림내용</p></li>
+                    </ul>
+                  </ul>
+                  <ul>
+                    <li id="myTeach">나의 강좌<i class="fa-solid fa-chevron-down"></i></li>
+                    <div id="line"></div>
+                    <ul id="teachList" style="display: none">
+                      <li>
+                        수강 강의 이름
+                        <p>다시보기</p>
+                      </li>
+                      <li>
+                        수강 강의 이름
+                        <p>다시보기</p>
+                      </li>
+                    </ul>
+                  </ul>
+                </div>
+                <div id="InterestedList">
+                  <p>관심목록</p>
+                  <div id="line"></div>
+                  <div id="QandA">문의 / 답변</div>
+                </div>
+                <div id="logOut">
+                  <p>로그아웃</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cate-background"></div>
+        <div class="cate-wrap">
+          <div class="cate-box">
+            <div class="inner">
+              <ul class="category">
+                <!-- 일반 강의 카테고리 -->
+                <li class="class-cate-title">일반 강의<i class="fa-solid fa-angle-right"></i></li>
+                <li>
+                  <ul class="class-cate-list">
+                    <li><a href="#">소묘</a></li>
+                    <li><a href="#">수채화</a></li>
+                    <li><a href="#">유화</a></li>
+                    <li><a href="#">아크릴화</a></li>
+                    <li><a href="#">디지털 드로잉</a></li>
+                    <li><a href="#">조소/모델링</a></li>
+                    <li><a href="#">만화/애니메이션</a></li>
+                    <li><a href="#">아동 미술</a></li>
+                    <li><a href="#">공예</a></li>
+                    <li><a href="#">포토샵/일러스트레이터</a></li>
+                    <li><a href="#">이모티콘</a></li>
+                  </ul>
+                </li>
+                <!-- 실기 강의 카테고리 -->
+                <li class="class-cate-title">실기 강의<i class="fa-solid fa-angle-right"></i></li>
+                <li>
+                  <ul class="class-cate-list">
+                    <li><a href="#">소묘</a></li>
+                    <li><a href="#">서양화</a></li>
+                    <li><a href="#">동양화</a></li>
+                    <li><a href="#">디자인</a></li>
+                    <li><a href="#">조소</a></li>
+                    <li><a href="#">만화/애니메이션</a></li>
+                    <li><a href="#">포토샵/일러스트레이터</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- 배너 -->
+      <div class="b-banenr">
+        <div class="swiper sw-Bbanner">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#" class="B-banner-img">
+                <img src="images/b-banner/b-1.png" alt="b안 배너 이미지">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="B-banner-img">
+                <img src="images/b-banner/b-2.png" alt="b안 배너 이미지">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="b-mbanenr">
+        <div class="swiper sw-Bmbanner">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="#" class="B-banner-img">
+                <img src="images/b-banner/b-m1.png" alt="b안 배너 이미지">
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="B-banner-img">
+                <img src="images/b-banner/b-m2.png" alt="b안 배너 이미지">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 인기 실기 강의 -->
+      <div class="practice-class">
+        <div class="inner">
+          <div class="class-top">
+            <h2>인기 실기·입시용 강의</h2>
+            <div class="slide-nav">
+              <a href="t-study_class.html" class="moreBt"> 더보기 <i class="fa-regular fa-plus"></i> </a>
+              <button class="slide-prev">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button class="slide-next">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="class-list" id="data-practiceClass">
+            <!-- <div class="swiper sw-class">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#" class="class-img">
+                    <img src="images/main_ class_img/3.png" alt="" />
+                    <span class="rank">1</span>
+                    <div class="mark">
+                    </div>
+                  </a>
+                  <div class="class-txt-wrap">
+                    <div class="class-title">
+                      <a href="#">
+                        어색한 구도는 안녕! 사물배치로 보여주는 기초 디자인의 정석
+                      </a></div>
+                    <div class="class-instructor-wrap">
+                      <div class="instructor-spec"></div>
+                      <div class="instructor-info">
+                        <div class="class-cate">디자인 실기</div>
+                        <div class="instructor-info-line"></div>
+                        <div class="instructor-name">이 삭</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- 인기 일반 강의 -->
+      <div class="normal-class">
+        <div class="inner">
+          <div class="class-top">
+            <h2>인기 취미·입문용 강의</h2>
+            <div class="slide-nav">
+              <a href="c_study_class.html" class="moreBt"> 더보기 <i class="fa-regular fa-plus"></i> </a>
+              <button class="slide-prev">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button class="slide-next">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="class-list" id="data-normalClass">
+            <!-- <div class="swiper sw-class">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#" class="class-img">
+                    <img src="images/main_ class_img/3.png" alt="" />
+                    <span class="rank">1</span>
+                    <div class="mark">
+                    </div>
+                  </a>
+                  <div class="class-txt-wrap">
+                    <div class="class-title">
+                      <a href="#">
+                        어색한 구도는 안녕! 사물배치로 보여주는 기초 디자인의 정석
+                      </a></div>
+                    <div class="class-instructor-wrap">
+                      <div class="instructor-spec"></div>
+                      <div class="instructor-info">
+                        <div class="class-cate">디자인 실기</div>
+                        <div class="instructor-info-line"></div>
+                        <div class="instructor-name">이 삭</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- 강사 목록 -->
+      <!-- <div class="instructor-list-wrap">
+        <div class="inner">
+          <h2>인기 강사 목록</h2>
+        </div>
+        <div class="sw-inst-wrap">
+          <div class="swiper sw-inst">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="inst-back">
+                  <img src="images/teacher_img/background1.png" alt="" />
+                </div>
+                <div class="inner">
+                  <ul class="inst-list">
+                    <li>
+                      <a href="#">
+                        <img src="" alt="" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="" alt="" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="" alt="" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="" alt="" />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- 배너 -->
+      <!-- <div class="banner">
+        <div class="banner-slide" id="data-banner">
+          <div class="swiper sw-banner">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="#" class="banner-img">
+                  <img src="images/banner/banner1.png" alt="배너 이미지">
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="banner-img">
+                  <img src="images/banner/banner2.png" alt="배너 이미지">
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="banner-img">
+                  <img src="images/banner/banner3.png" alt="배너 이미지">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- 금주의 소식, 수강생 후기 -->
+      <div class="community">
+        <div class="inner">
+          <!-- 금주의 소식 -->
+          <div class="news">
+            <div class="news-top">
+              <h2>금주의 소식</h2>
+              <a href="#" class="moreBt"> 더보기 <i class="fa-regular fa-plus"></i> </a>
+            </div>
+            <ul class="news-wrap" id="data-news">
+              <!-- <li>
+                <h3>아트로크</h3>
+                <div class="news-info">
+                  <a href="#" class="news-title">드로잉 강의(일반강의) 수강신청시 스타터키트 지원</a>
+                  <p class="news-date">2024. 11. 23일 까지</p>
+                </div>
+                <div class="news-more"><a href="#">알아보기</a></div>
+              </li>
+              <li>
+                <h3>아트로크</h3>
+                <div class="news-info">
+                  <a href="#" class="news-title">드로잉 강의(일반강의) 수강신청시 스타터키트 지원</a>
+                  <p class="news-date">2024. 11. 23일 까지</p>
+                </div>
+                <div class="news-more"><a href="#">알아보기</a></div>
+              </li>
+              <li>
+                <h3>아트로크</h3>
+                <div class="news-info">
+                  <a href="#" class="news-title">드로잉 강의(일반강의) 수강신청시 스타터키트 지원</a>
+                  <p class="news-date">2024. 11. 23일 까지</p>
+                </div>
+                <div class="news-more"><a href="#">알아보기</a></div>
+              </li> -->
+            </ul>
+          </div>
+          <!-- 수강생 후기 -->
+          <div class="review">
+            <div class="review-top">
+              <h2>수강생 후기</h2>
+              <div class="slide-nav">
+                <a href="#" class="moreBt"> 더보기 <i class="fa-regular fa-plus"></i> </a>
+                <button class="slide-prev">
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="slide-next">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+            <div class="review-area" id="data-review">
+              <!-- <div class="swiper sw-review">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="#" class="review-wrap">
+                        <div class="review-img">
+                          <img src="images/review/1.png" alt="후기 이미지" />
+                          <div class="review-ev">
+                            <p class="review-user-name">홍선우</p>
+                            <img src="images/review/5stars.png" alt="별점" />
+                          </div>
+                        </div>
+                        <div class="review-txt-wrap">
+                          <div class="review-class">그림과 친해지는 법, 매일 그려보는 라인 드로잉</div>
+                          <div class="review-content">
+                            기초 라인드로잉 강의를 수강한 후, 기본기를 제대로 다질 수 있어 매우 만족스럽습니다. 연필을 잡는 법부터 시작해서 선의 흐름을 어떻게 잡아야 하는지, 각도와 압력에 따른 다양한 표현 방법을 배울 수 있었습니다. 강의가 단계별로 나누어져 있어, 처음에 자신감이 없던 저도 차근차근
+                            실력을 키울 수 있었습니다.
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 공모전 소삭 -->
+      <div class="contest">
+        <div class="inner">
+          <div class="contest-left">
+            <h4 class="contest-left-title">진행중인<br />대회/공모전 소식</h4>
+            <p class="contest-left-info">아트로크에서<br />준비 및 도전을 함께 할 수 있는<br />공모전 리스트입니다!</p>
+            <a href="#" class="contest-more">
+              <p class="contest-more-text">더보기</p>
+              <img src="images/icon/contest-more.png" alt="" />
+            </a>
+          </div>
+          <div class="contest-right" id="data-contest">
+            <div class="swiper sw-contest">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#" class="contests">
+                    <div class="contest-img">
+                      <img src="images/contest/contest_img1.jpg" alt="공모전 이미지" />
+                    </div>
+                    <div class="contest-txt-wrap">
+                      <div class="contest-title">아이디어 디자인 공모전아이디어 디자인 공모전아이디어 디자인 공모전</div>
+                      <div class="contest-date-wrap">
+                        <div class="contest-Dday">D-14</div>
+                        <div class="contest-date">2024.10.06<br />~2024.11.30</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="contests">
+                    <div class="contest-img">
+                      <img src="images/contest/contest_img1.jpg" alt="공모전 이미지" />
+                    </div>
+                    <div class="contest-txt-wrap">
+                      <div class="contest-title">아이디어 디자인 공모전아이디어 디자인 공모전아이디어 디자인 공모전</div>
+                      <div class="contest-date-wrap">
+                        <div class="contest-Dday">D-14</div>
+                        <div class="contest-date">2024.10.06<br />~2024.11.30</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="contests">
+                    <div class="contest-img">
+                      <img src="images/contest/contest_img1.jpg" alt="공모전 이미지" />
+                    </div>
+                    <div class="contest-txt-wrap">
+                      <div class="contest-title">아이디어 디자인 공모전아이디어 디자인 공모전아이디어 디자인 공모전</div>
+                      <div class="contest-date-wrap">
+                        <div class="contest-Dday">D-14</div>
+                        <div class="contest-date">2024.10.06<br />~2024.11.30</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="contests">
+                    <div class="contest-img">
+                      <img src="images/contest/contest_img1.jpg" alt="공모전 이미지" />
+                    </div>
+                    <div class="contest-txt-wrap">
+                      <div class="contest-title">아이디어 디자인 공모전아이디어 디자인 공모전아이디어 디자인 공모전</div>
+                      <div class="contest-date-wrap">
+                        <div class="contest-Dday">D-14</div>
+                        <div class="contest-date">2024.10.06<br />~2024.11.30</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="inner">
+          <div class="ft-top">
+            <div class="ft-top-left">
+              <div class="ft-logo">
+                <a href="#">
+                  <img src="images/logo/logo.png" alt="로고 이미지" />
+                </a>
+              </div>
+              <ul class="intro-list">
+                <li><a href="#"> 회사소개 </a></li>
+                <li class="intro-PI"><a href="#"> 개인정보처리방침 </a></li>
+                <li><a href="#"> 이용약관 </a></li>
+                <li><a href="#"> 이용안내 </a></li>
+              </ul>
+            </div>
+            <div class="ft-top-right">
+              <div class="cs-title">고객 센터</div>
+              <div class="cs-info">오전 10시 ~ 오후 6시 (주말, 공휴일 제외)</div>
+              <div class="cs-btns">
+                <button class="csBtn"><a href="#"> QnA </a></button>
+                <button class="csBtn"><a href="#"> 1:1 문의 </a></button>
+              </div>
+            </div>
+          </div>
+          <div class="ft-bottom">
+            <div class="ft-bot-left">
+              <ul class="company-info">
+                <li>대표 : 가나다</li>
+                <li>주소 : 대구광역시 중구 109-2 4층</li>
+              </ul>
+              <ul class="company-info">
+                <li>이메일 : asd123@artroke.co.kr</li>
+                <li>사업자등록번호 : 123-45-67890</li>
+              </ul>
+            </div>
+            <div class="ft-bot-right">
+              <ul class="sns-list">
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

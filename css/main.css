@@ -1,0 +1,34 @@
+@charset "utf-8";
+@import url("banner.css");
+@import url("classRank.css");
+@import url("instructorList.css");
+@import url("community.css");
+@import url("contest.css");
+@import url("visual.css");
+
+h2{
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1231px) {
+    .inner{
+        max-width: 768px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+}
+@media screen and (max-width: 767px) {
+    .inner{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    h2{
+        font-size: 22px;
+    }
+}
+@media screen and (max-width:480px) {
+    h2{
+        font-size: 18px;
+    }
+}

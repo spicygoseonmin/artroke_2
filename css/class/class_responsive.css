@@ -1,0 +1,73 @@
+@charset "utf-8";
+@media screen and (max-width: 1232px) {
+  .side_padding {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .class-info > .top-info > h1 {
+    font-size: 2.8vw;
+    height: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .class-info > .top-info {
+    margin: 0;
+    height: 8vw;
+  }
+  .class_s_goal > .goal > .goalList {
+    width: 100%;
+    display: flex;
+    gap: 1vw;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .class_s_goal > .goal > .goalList > li {
+    width: calc(50% - 1vw);
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+  }
+  .class_s_goal > .goal > .goalList > li > .img-wrap {
+    position: relative;
+    border-radius: 5px 5px 0 0;
+    height: 27.9vw;
+    width: 100%;
+    max-height: 210px;
+    background-color: #f3f3f3;
+    box-shadow: 0 1px 2px 1px #c7c7c7;
+    border: 1px solid #e7e7e7;
+    overflow: hidden;
+  }
+  .curriculum_wrap > .curriculum > .curriculumList > li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 2px;
+    flex-direction: column;
+  }
+  .curriculum_wrap > .curriculum > .curriculumList > li > .c_left {
+    border-bottom: 2px solid #c7c7c7;
+    border-right: none;
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+}
+@media screen and (max-width: 420px) {
+  /* 공통영역 */
+  .side_padding {
+    padding: 10px;
+  }
+  .bottom-info {
+    flex-direction: column;
+  }
+  .class-info > .top-info {
+    height: 8vw;
+  }
+  .class-info > .top-info > h1 {
+    font-size: 3.3vw;
+    height: auto;
+  }
+}

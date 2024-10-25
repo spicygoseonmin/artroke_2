@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.visual{
+    margin-top: 76px;
+}
+.visual>img{
+    width: 100%;
+}
+.practice-class{
+    position: relative;
+    display: block;
+    margin-top: 50px;
+}
