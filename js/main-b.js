@@ -14,7 +14,7 @@ window.addEventListener("load", function () {
       // 실기강의
       PRACTICE_CLASS = obj.practiceClass;
       showPracticeClass();
-      // 일반강의
+      // // 일반강의
       NORMAL_CLASS = obj.normalClass;
       showNormalClass();
       // 강사 소개
@@ -23,13 +23,13 @@ window.addEventListener("load", function () {
       // showBanner()
       // 금주의 소식
       NEWS = obj.news;
-      showNews()
+      showNews();
       // 수강생 후기
       REVIEW = obj.review;
-      showReview()
+      showReview();
       // 공모전 소식
       CONTEST = obj.contest;
-      showContest()
+      showContest();
     }
   };
   xhttp.open("GET", "data.json");
@@ -260,11 +260,11 @@ window.addEventListener("load", function () {
   // }
   // 금주의 소식
   let NEWS;
-  let newsTag = this.document.getElementById("data-news")
+  let newsTag = this.document.getElementById("data-news");
   // 금주의 소식 화면 출력 기능
-  function showNews(){
+  function showNews() {
     let html = ``;
-    NEWS.forEach(function(item){
+    NEWS.forEach(function (item) {
       let tag = `
       <li>
                 <h3>아트로크</h3>
@@ -274,29 +274,29 @@ window.addEventListener("load", function () {
                 </div>
                 <div class="news-more"><a href="#">알아보기</a></div>
               </li>
-      `
+      `;
       html += tag;
-    })
+    });
     newsTag.innerHTML = html;
-    // 
-    const swBanner = new Swiper(".sw-banner",{
-      slidesPerView:1,
-      loop:true,
-      autoplay:{
-        delay: 5000
-      }
-    })
+    //
+    const swBanner = new Swiper(".sw-banner", {
+      slidesPerView: 1,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+      },
+    });
   }
   // 수강생 후기
   let REVIEW;
-  let reviewTag = this.document.getElementById("data-review")
+  let reviewTag = this.document.getElementById("data-review");
   // 수강생 후기 화면 출력 기능
-  function showReview(){
+  function showReview() {
     let html = `
     <div class="swiper sw-review">
     <div class="swiper-wrapper">
-    `
-    REVIEW.forEach(function(item){
+    `;
+    REVIEW.forEach(function (item) {
       let tag = `
         <div class="swiper-slide">
           <a href="#" class="review-wrap">
@@ -313,18 +313,18 @@ window.addEventListener("load", function () {
             </div>
           </a>
         </div>
-      `
+      `;
       html += tag;
-    })
-    html +=`
+    });
+    html += `
     </div>
     </div>
     `;
     reviewTag.innerHTML = html;
-    // 
+    //
     const swReview = new Swiper(".sw-review", {
-      slidesPerView:1,
-      spaceBetween:10,
+      slidesPerView: 1,
+      spaceBetween: 10,
       navigation: {
         prevEl: ".review .slide-prev",
         nextEl: ".review .slide-next",
@@ -333,40 +333,40 @@ window.addEventListener("load", function () {
   }
   // 공모전 소식
   let CONTEST;
-  let contestTag = this.document.getElementById("data-contest")
+  let contestTag = this.document.getElementById("data-contest");
   // 공모전 소식 화면 출력기능
-  function showContest(){
+  function showContest() {
     let html = `
     <div class="swiper sw-contest">
     <div class="swiper-wrapper">
-    `
-    CONTEST.forEach(function(item){
+    `;
+    CONTEST.forEach(function (item) {
       // console.log(item);
-      
+
       function calculateDDay(targetDate) {
         const today = new Date(); // 현재 날짜
         const target = new Date(targetDate); // 목표 날짜
-        
+
         // 두 날짜 사이의 차이 (밀리초 단위)
         const difference = target - today;
-      
+
         // 차이를 일(day) 단위로 변환
         const daysLeft = Math.ceil(difference / (1000 * 60 * 60 * 24));
         // console.log(daysLeft);
-        
+
         if (daysLeft > 0) {
           return `D-${daysLeft}`;
         } else if (daysLeft === 0) {
-          return 'D-Day';
+          return "D-Day";
         } else {
           return `D+${Math.abs(daysLeft)}`; // 날짜가 지났을 경우
         }
       }
-      const targetDate = item.targetDate
+      const targetDate = item.targetDate;
       // console.log(targetDate);
       // D-Day 계산
-    const dDayText = calculateDDay(targetDate);
-      
+      const dDayText = calculateDDay(targetDate);
+
       let tag = `
       <div class="swiper-slide">
                   <a href="#" class="contests">
@@ -382,42 +382,42 @@ window.addEventListener("load", function () {
                     </div>
                   </a>
                 </div>
-      `
+      `;
       html += tag;
-    })
-    html += `</div></div>`
+    });
+    html += `</div></div>`;
     contestTag.innerHTML = html;
-    const swContest = new Swiper(".sw-contest",{
+    const swContest = new Swiper(".sw-contest", {
       breakpoints: {
         1231: {
           slidesPerView: 4,
           spaceBetween: 10,
         },
-        768:{
+        768: {
           slidesPerView: 2,
           spaceBetween: 10,
         },
-        720:{
+        720: {
           slidesPerView: 3.5,
           spaceBetween: 10,
         },
-        660:{
+        660: {
           slidesPerView: 3.2,
           spaceBetween: 10,
         },
-        600:{
+        600: {
           slidesPerView: 2.8,
           spaceBetween: 10,
         },
-        480:{
+        480: {
           slidesPerView: 2.3,
           spaceBetween: 10,
         },
-        420:{
+        420: {
           slidesPerView: 1.8,
           spaceBetween: 10,
         },
-        320:{
+        320: {
           slidesPerView: 1.5,
           spaceBetween: 10,
         },
@@ -425,15 +425,16 @@ window.addEventListener("load", function () {
         //   slidesPerView: 1.2,
         //   spaceBetween: 10,
         // }
-      }
-    })
+      },
+    });
   }
-  
-  // 
-  const swBbanner = new Swiper(".sw-Bbanner",{
-    loop:true,
-  })
-  const swBmbanner = new Swiper(".sw-Bmbanner",{
-    loop:true,
-  })
+
+  //
+  const swBbanner = new Swiper(".sw-Bbanner", {
+    loop: true,
+  });
+  const swBmbanner = new Swiper(".sw-Bmbanner", {
+    loop: true,
+  });
 });
+//
