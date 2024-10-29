@@ -46,7 +46,7 @@ window.addEventListener("load", function () {
     `;
     PRACTICE_CLASS.forEach(function (item) {
       let tag = `
-              <div class="swiper-slide">
+              <div class="swiper-slide pop_class_li">
         <a href="#" class="pop_class_info">
           <img src="${item.pic}" alt="" />
           <span class="rank">${item.rank}</span>
@@ -154,7 +154,7 @@ window.addEventListener("load", function () {
     `;
     NORMAL_CLASS.forEach(function (item) {
       let tag = `
-              <div class="swiper-slide">
+              <div class="swiper-slide pop_class_li">
         <a href="#" class="pop_class_info">
           <img src="${item.pic}" alt="" />
           <span class="rank">${item.rank}</span>
