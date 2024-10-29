@@ -1,0 +1,13 @@
+diff a/data.json b/data.json	(rejected hunks)
+@@ -19,7 +19,10 @@
+             "pic":"images/main_ class_img/1-2.png",
+             "rank":"2",
+             "link":"#",
+-            "spec":""
++            "spec":"",
++            "price":"214,100원",
++            "level":"중급",
++            "time":"168시간"
+         },
+         {
+             "title":"야! 너두 할수 있어, 1시간 안에 해내는 실기 소묘",

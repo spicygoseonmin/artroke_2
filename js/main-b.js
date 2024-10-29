@@ -41,8 +41,8 @@ window.addEventListener("load", function () {
   // 실기 강의 화면 출력 기능
   function showPracticeClass() {
     let html = `
-    <div class="swiper sw-class PC">
-    <div class="swiper-wrapper">
+    <div class="sw-class PC">
+    <div class="sw-class_wrapper t_sw-class_wrapper">
     `;
     PRACTICE_CLASS.forEach(function (item) {
       let tag = `
@@ -54,17 +54,22 @@ window.addEventListener("load", function () {
                     </div>
                   </a>
                   <div class="class-txt-wrap">
+                                          <div class="class-cate">${item.cate}›</div>
                     <div class="class-title">
                       <a href="#">
                         ${item.title}
                       </a></div>
                     <div class="class-instructor-wrap">
-                      <div class="instructor-spec">${item.spec}</div>
                       <div class="instructor-info">
-                        <div class="class-cate">${item.cate}</div>
-                        <div class="instructor-info-line"></div>
                         <div class="instructor-name">${item.instructor}</div>
+                        <div class="instructor-info-line"></div>
+                      <div class="instructor-level">${item.level}</div>
+                      <div class="instructor-info-line"></div>
+                      <div class="instructor-time">${item.time}</div>
                       </div>
+                    <div class="class-price">
+                    <div class="price">${item.price}</div>
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -76,54 +81,54 @@ window.addEventListener("load", function () {
     </div>
     `;
     practiceClassTag.innerHTML = html;
-    const swClass = new Swiper(".PC", {
-      breakpoints:{
-        1232:{
-          slidesPerView: 4,
-          spaceBetween: 10,
-          slidesPerGroup: 4,
-        },
-        768:{
-          slidesPerView:2.8,
-          spaceBetween: 10,
-          slidesPerGroup: 2,
-        },
-        720:{
-          slidesPerView:2.8,
-          spaceBetween: 10,
-          slidesPerGroup: 2,
-        },
-        600:{
-          slidesPerView:2.5,
-          spaceBetween: 10,
-          slidesPerGroup: 2,
-        },
-        480:{
-          slidesPerView:2.2,
-          spaceBetween: 10,
-          slidesPerGroup: 1,
-        },
-        420:{
-          slidesPerView:1.8,
-          spaceBetween: 10,
-          slidesPerGroup: 1,
-        },
-        360:{
-          slidesPerView:1.5,
-          spaceBetween: 10,
-          slidesPerGroup: 1,
-        },
-        320:{
-          slidesPerView:1.5,
-          spaceBetween: 10,
-          slidesPerGroup: 1,
-        },
-      },
-      navigation: {
-        prevEl: ".practice-class .slide-prev",
-        nextEl: ".practice-class .slide-next",
-      },
-    });
+    // const swClass = new Swiper(".PC", {
+    //   breakpoints:{
+    //     1232:{
+    //       slidesPerView: 4,
+    //       spaceBetween: 10,
+    //       slidesPerGroup: 4,
+    //     },
+    //     768:{
+    //       slidesPerView:2.8,
+    //       spaceBetween: 10,
+    //       slidesPerGroup: 2,
+    //     },
+    //     720:{
+    //       slidesPerView:2.8,
+    //       spaceBetween: 10,
+    //       slidesPerGroup: 2,
+    //     },
+    //     600:{
+    //       slidesPerView:2.5,
+    //       spaceBetween: 10,
+    //       slidesPerGroup: 2,
+    //     },
+    //     480:{
+    //       slidesPerView:2.2,
+    //       spaceBetween: 10,
+    //       slidesPerGroup: 1,
+    //     },
+    //     420:{
+    //       slidesPerView:1.8,
+    //       spaceBetween: 10,
+    //       slidesPerGroup: 1,
+    //     },
+    //     360:{
+    //       slidesPerView:1.5,
+    //       spaceBetween: 10,
+    //       slidesPerGroup: 1,
+    //     },
+    //     320:{
+    //       slidesPerView:1.5,
+    //       spaceBetween: 10,
+    //       slidesPerGroup: 1,
+    //     },
+    //   },
+    //   navigation: {
+    //     prevEl: ".practice-class .slide-prev",
+    //     nextEl: ".practice-class .slide-next",
+    //   },
+    // });
     const mark = this.document.querySelectorAll(".PC .mark");
     mark.forEach(function (item, index) {
       // console.log(item);
@@ -131,6 +136,12 @@ window.addEventListener("load", function () {
       item.addEventListener("click", function () {
         item.classList.toggle("active");
       });
+    });
+    const t_class_btn = document.getElementById("t_class_btn");
+    const t_class_wrap = document.querySelector(".t_sw-class_wrapper");
+    t_class_btn.addEventListener("click", function () {
+      t_class_wrap.classList.add("active");
+      t_class_btn.style.display = "none";
     });
   }
   // -------
@@ -140,8 +151,8 @@ window.addEventListener("load", function () {
   // 일반 강의 화면 출력 기능
   function showNormalClass() {
     let html = `
-    <div class="swiper sw-class NC">
-    <div class="swiper-wrapper">
+    <div class="sw-class NC">
+    <div class="sw-class_wrapper c_sw-class_wrapper">
     `;
     NORMAL_CLASS.forEach(function (item) {
       let tag = `
@@ -153,17 +164,22 @@ window.addEventListener("load", function () {
                     </div>
                   </a>
                   <div class="class-txt-wrap">
+                        <div class="class-cate">${item.cate}›</div>
                     <div class="class-title">
                       <a href="#">
                         ${item.title}
                       </a></div>
                     <div class="class-instructor-wrap">
-                      <div class="instructor-spec">${item.spec}</div>
                       <div class="instructor-info">
-                        <div class="class-cate">${item.cate}</div>
-                        <div class="instructor-info-line"></div>
-                        <div class="instructor-name">${item.instructor}</div>
+                      <div class="instructor-name">${item.instructor}</div>
+                      <div class="instructor-info-line"></div>
+                      <div class="instructor-level">${item.level}</div>
+                      <div class="instructor-info-line"></div>
+                      <div class="instructor-time">${item.time}</div>
                       </div>
+                        <div class="class-price">
+                    <div class="price">${item.price}</div>
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -175,55 +191,55 @@ window.addEventListener("load", function () {
     </div>
     `;
     normalClassTag.innerHTML = html;
-    const swClass = new Swiper(".NC", {
-      breakpoints:{
-        1232:{
-          slidesPerView: 4,
-          spaceBetween: 10,
-          slidesPerGroup: 4,
-        },
-        768:{
-          slidesPerView:2.8,
-          spaceBetween: 10,
-          slidesPerGroup: 2,
-        },
-        720:{
-          slidesPerView:2.8,
-          spaceBetween: 10,
-          slidesPerGroup: 2,
-        },
-        600:{
-          slidesPerView:2.5,
-          spaceBetween: 10,
-          slidesPerGroup: 2,
-        },
-        480:{
-          slidesPerView:2.2,
-          spaceBetween: 10,
-          slidesPerGroup: 1,
-        },
-        420:{
-          slidesPerView:1.8,
-          spaceBetween: 10,
-          slidesPerGroup: 1,
-        },
-        360:{
-          slidesPerView:1.5,
-          spaceBetween: 10,
-          slidesPerGroup: 1,
-        },
-        320:{
-          slidesPerView:1.5,
-          spaceBetween: 10,
-          slidesPerGroup: 1,
-        },
-        
-      },
-      navigation: {
-        prevEl: ".normal-class .slide-prev",
-        nextEl: ".normal-class .slide-next",
-      },
-    });
+    // const swClass = new Swiper(".NC", {
+    //   breakpoints:{
+    //     1232:{
+    //       slidesPerView: 4,
+    //       spaceBetween: 10,
+    //       slidesPerGroup: 4,
+    //     },
+    //     768:{
+    //       slidesPerView:2.8,
+    //       spaceBetween: 10,
+    //       slidesPerGroup: 2,
+    //     },
+    //     720:{
+    //       slidesPerView:2.8,
+    //       spaceBetween: 10,
+    //       slidesPerGroup: 2,
+    //     },
+    //     600:{
+    //       slidesPerView:2.5,
+    //       spaceBetween: 10,
+    //       slidesPerGroup: 2,
+    //     },
+    //     480:{
+    //       slidesPerView:2.2,
+    //       spaceBetween: 10,
+    //       slidesPerGroup: 1,
+    //     },
+    //     420:{
+    //       slidesPerView:1.8,
+    //       spaceBetween: 10,
+    //       slidesPerGroup: 1,
+    //     },
+    //     360:{
+    //       slidesPerView:1.5,
+    //       spaceBetween: 10,
+    //       slidesPerGroup: 1,
+    //     },
+    //     320:{
+    //       slidesPerView:1.5,
+    //       spaceBetween: 10,
+    //       slidesPerGroup: 1,
+    //     },
+
+    //   },
+    //   navigation: {
+    //     prevEl: ".normal-class .slide-prev",
+    //     nextEl: ".normal-class .slide-next",
+    //   },
+    // });
     const mark = this.document.querySelectorAll(".NC .mark");
     mark.forEach(function (item, index) {
       // console.log(item);
@@ -231,6 +247,12 @@ window.addEventListener("load", function () {
       item.addEventListener("click", function () {
         item.classList.toggle("active");
       });
+    });
+    const c_class_btn = document.getElementById("c_class_btn");
+    const c_class_wrap = document.querySelector(".c_sw-class_wrapper");
+    c_class_btn.addEventListener("click", function () {
+      c_class_wrap.classList.add("active");
+      c_class_btn.style.display = "none";
     });
   }
   // 강사 소개

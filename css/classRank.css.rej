@@ -1,0 +1,8 @@
+diff a/css/classRank.css b/css/classRank.css	(rejected hunks)
+@@ -1,5 +1,6 @@
+ @charset "utf-8";
+ /* 더보기 버튼 */
++.class_more_btn_wrap {
+   width: 100%;
+   display: flex;
+   justify-content: center;
