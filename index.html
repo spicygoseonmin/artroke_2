@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YGMM53EGKX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-YGMM53EGKX");
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- SEO -->
@@ -49,10 +60,12 @@
       <!-- 플로팅 버튼 -->
       <div class="floating">
         <ul class="floating-list">
-          <li><a href="login.html">
-            <p>로그인</p>
-            <i class="fa-solid fa-user"></i>
-          </a></li>
+          <li>
+            <a href="login.html">
+              <p>로그인</p>
+              <i class="fa-solid fa-user"></i>
+            </a>
+          </li>
           <li>
             <p>검색</p>
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -62,9 +75,7 @@
             <i class="fa-regular fa-comment-dots"></i>
           </li>
         </ul>
-        <button class="floating-btn">
-          강의보기
-        </button>
+        <button class="floating-btn">강의보기</button>
       </div>
       <!-- 헤더 -->
       <header class="header">
