@@ -46,33 +46,31 @@ window.addEventListener("load", function () {
     `;
     PRACTICE_CLASS.forEach(function (item) {
       let tag = `
-        <div class="swiper-slide">
-                  <a href="#" class="class-img">
-                    <img src="${item.pic}" alt="" />
-                    <span class="rank">${item.rank}</span>
-                    <div class="mark">
-                    </div>
-                  </a>
-                  <div class="class-txt-wrap">
-                                          <div class="class-cate">${item.cate}›</div>
-                    <div class="class-title">
-                      <a href="#">
-                        ${item.title}
-                      </a></div>
-                    <div class="class-instructor-wrap">
-                      <div class="instructor-info">
-                        <div class="instructor-name">${item.instructor}</div>
-                        <div class="instructor-info-line"></div>
-                      <div class="instructor-level">${item.level}</div>
-                      <div class="instructor-info-line"></div>
-                      <div class="instructor-time">${item.time}</div>
-                      </div>
-                    <div class="class-price">
-                    <div class="price">${item.price}</div>
-                    </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="swiper-slide">
+        <a href="#" class="pop_class_info">
+          <img src="${item.pic}" alt="" />
+          <span class="rank">${item.rank}</span>
+          <div class="mark"></div>
+          <div class="class-txt-wrap">
+            <div class="class-cate">${item.cate}›</div>
+            <div class="class-title">
+              ${item.title}
+            </div>
+            <div class="class-instructor-wrap">
+              <div class="instructor-info">
+                <div class="instructor-name">${item.instructor}</div>
+                <div class="instructor-info-line"></div>
+                <div class="instructor-level">${item.level}</div>
+                <div class="instructor-info-line"></div>
+                <div class="instructor-time">${item.time}</div>
+              </div>
+              <div class="class-price">
+                <div class="price">${item.price}</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
         `;
       html += tag;
     });
@@ -156,33 +154,31 @@ window.addEventListener("load", function () {
     `;
     NORMAL_CLASS.forEach(function (item) {
       let tag = `
-        <div class="swiper-slide">
-                  <a href="#" class="class-img">
-                    <img src="${item.pic}" alt="" />
-                    <span class="rank">${item.rank}</span>
-                    <div class="mark">
-                    </div>
-                  </a>
-                  <div class="class-txt-wrap">
-                        <div class="class-cate">${item.cate}›</div>
-                    <div class="class-title">
-                      <a href="#">
-                        ${item.title}
-                      </a></div>
-                    <div class="class-instructor-wrap">
-                      <div class="instructor-info">
-                      <div class="instructor-name">${item.instructor}</div>
-                      <div class="instructor-info-line"></div>
-                      <div class="instructor-level">${item.level}</div>
-                      <div class="instructor-info-line"></div>
-                      <div class="instructor-time">${item.time}</div>
-                      </div>
-                        <div class="class-price">
-                    <div class="price">${item.price}</div>
-                    </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="swiper-slide">
+        <a href="#" class="pop_class_info">
+          <img src="${item.pic}" alt="" />
+          <span class="rank">${item.rank}</span>
+          <div class="mark"></div>
+          <div class="class-txt-wrap">
+            <div class="class-cate">${item.cate}›</div>
+            <div class="class-title">
+              ${item.title}
+            </div>
+            <div class="class-instructor-wrap">
+              <div class="instructor-info">
+                <div class="instructor-name">${item.instructor}</div>
+                <div class="instructor-info-line"></div>
+                <div class="instructor-level">${item.level}</div>
+                <div class="instructor-info-line"></div>
+                <div class="instructor-time">${item.time}</div>
+              </div>
+              <div class="class-price">
+                <div class="price">${item.price}</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
         `;
       html += tag;
     });
