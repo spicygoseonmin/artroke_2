@@ -9,6 +9,52 @@
 h2{
     margin-bottom: 10px;
 }
+.floating{
+    width: 80px;
+    /* height: 300px; */
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    z-index: 100;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.floating-list{
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px;
+}
+.floating-list li{
+    margin-bottom: 15px;
+    cursor: pointer;
+    color: #333;
+}
+.floating-list li a{
+    margin-bottom: 15px;
+    cursor: pointer;
+    color: #333;
+}
+.floating-list li a:hover{
+    color: #ff4c24;
+}
+.floating-list li:hover{
+    color: #ff4c24;
+}
+.floating i{
+    font-size: 25px;
+    padding-top: 5px;
+}
+.floating-btn{
+    width: 100%;
+    border: none;
+    height: 40px;
+    background-color: #ff4c24;
+    color: #fff;
+    cursor: pointer;
+}
 
 @media screen and (max-width: 1231px) {
     .inner{
@@ -25,6 +71,9 @@ h2{
     }
     h2{
         font-size: 22px;
+    }
+    .floating{
+        display: none;
     }
 }
 @media screen and (max-width:480px) {
