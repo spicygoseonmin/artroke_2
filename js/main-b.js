@@ -450,6 +450,10 @@ window.addEventListener("load", function () {
   //
   const swBbanner = new Swiper(".sw-Bbanner", {
     loop: true,
+    autoplay:{
+      delay:5000,
+    },
+    speed:500,
   });
   const swBmbanner = new Swiper(".sw-Bmbanner", {
     loop: true,
