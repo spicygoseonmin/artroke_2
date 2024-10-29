@@ -48,7 +48,7 @@ window.addEventListener("load", function () {
       let tag = `
               <div class="swiper-slide pop_class_li">
         <a href="#" class="pop_class_info">
-          <img src="${item.pic}" alt="" />
+          <img src="${item.pic}" alt="" class="class-pic"/>
           <span class="rank">${item.rank}</span>
           <div class="mark"></div>
           <div class="class-txt-wrap">
@@ -156,7 +156,7 @@ window.addEventListener("load", function () {
       let tag = `
               <div class="swiper-slide pop_class_li">
         <a href="#" class="pop_class_info">
-          <img src="${item.pic}" alt="" />
+          <img src="${item.pic}" alt="" class="class-pic" />
           <span class="rank">${item.rank}</span>
           <div class="mark"></div>
           <div class="class-txt-wrap">
