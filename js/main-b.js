@@ -48,7 +48,7 @@ window.addEventListener("load", function () {
       let tag = `
               <div class="swiper-slide pop_class_li">
         <a href="#" class="pop_class_info">
-          <img src="${item.pic}" alt="" class="class-pic"/>
+          <img src="${item.pic}" alt="실기강의 이미지" class="class-pic"/>
           <span class="rank">${item.rank}</span>
           <div class="mark"></div>
           <div class="class-txt-wrap">
@@ -139,7 +139,11 @@ window.addEventListener("load", function () {
     const t_class_wrap = document.querySelector(".t_sw-class_wrapper");
     t_class_btn.addEventListener("click", function () {
       t_class_wrap.classList.add("active");
-      t_class_btn.style.display = "none";
+      // t_class_btn.style.display = "none";
+      const btnTag = `
+      <a href="t_study_class.html">더보기</a>
+      `;
+      t_class_btn.innerHTML = btnTag;
     });
   }
   // -------
@@ -156,7 +160,7 @@ window.addEventListener("load", function () {
       let tag = `
               <div class="swiper-slide pop_class_li">
         <a href="#" class="pop_class_info">
-          <img src="${item.pic}" alt="" class="class-pic" />
+          <img src="${item.pic}" alt="일반강의 이미지" class="class-pic" />
           <span class="rank">${item.rank}</span>
           <div class="mark"></div>
           <div class="class-txt-wrap">
@@ -248,7 +252,11 @@ window.addEventListener("load", function () {
     const c_class_wrap = document.querySelector(".c_sw-class_wrapper");
     c_class_btn.addEventListener("click", function () {
       c_class_wrap.classList.add("active");
-      c_class_btn.style.display = "none";
+      // c_class_btn.style.display = "none";
+      const btnTag = `
+      <a href="c_study_class.html">더보기</a>
+`;
+      c_class_btn.innerHTML = btnTag;
     });
   }
   // 강사 소개
@@ -450,10 +458,10 @@ window.addEventListener("load", function () {
   //
   const swBbanner = new Swiper(".sw-Bbanner", {
     loop: true,
-    autoplay:{
-      delay:5000,
+    autoplay: {
+      delay: 5000,
     },
-    speed:500,
+    speed: 500,
   });
   const swBmbanner = new Swiper(".sw-Bmbanner", {
     loop: true,
