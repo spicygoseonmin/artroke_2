@@ -74,6 +74,8 @@
 .mpls,
 .pointL {
   display: none;
+  min-height: 500px;
+  position: relative;
 }
 /* 공통 영역======================================================== */
 .active {
@@ -179,6 +181,9 @@
   font-weight: 600;
   color: #ff370b;
 }
+.sct > .sctList > ul > li > .top > .class_title > span.color_done {
+  color: #577cfd;
+}
 .sct > .sctList > ul > li > .top > .class_s_day {
   font-size: 14px;
 }
@@ -197,6 +202,9 @@
   font-weight: 600;
   color: #ff370b;
   cursor: pointer;
+}
+.sct > .sctList > ul > li > .bottom > .class_sd_submit.color_done {
+  color: #577cfd;
 }
 
 .sct > .sctList > ul > li > .middle {
@@ -220,6 +228,8 @@
   font-size: 14px;
   color: #8f8f8f;
 }
+
+/* 과제 제출 */
 .submit_project_work {
   width: 100%;
   height: 300px;
@@ -262,11 +272,91 @@
   border: none;
   border-radius: 5px;
 }
+.submit_project_work > .submit_project_work_wrap > form > .form_wrap > .p_w_sub_btn:hover {
+  background-color: #1f1f1f;
+}
 .submit_project_work > .submit_project_work_wrap > form > .img_thumbnail {
   width: 100%;
   height: 100%;
-  background-color: #577cfd;
+  background-color: #000000;
 }
+
+/* 제출 파일 썸네일 로드 */
+.img_thumbnail {
+  width: 100%;
+  overflow-y: scroll;
+}
+.img_thumbnail > .thumbnail_list {
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 5px;
+}
+.img_thumbnail > .thumbnail_list > li {
+  width: calc(100% / 4 - 4px);
+}
+.img_thumbnail > .thumbnail_list > li > img {
+  width: 100%;
+}
+
+/* 문의 / 답변 목록 =====================================================================================*/
+.ask_wrap {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ask_wrap > .emoji {
+  width: 80px;
+}
+.ask_wrap > .emoji > img {
+  width: 100%;
+  opacity: 0.3;
+}
+.ask_wrap > .b_none_textarea {
+  font-weight: 600;
+  opacity: 0.3;
+}
+.qnal_add_topBtn {
+  position: fixed;
+  background-color: #577cfd;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  right: 10vw;
+  bottom: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+/* 관심목록 =====================================================================================*/
+.bookmark_wrap {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bookmark_wrap > .emoji {
+  width: 80px;
+}
+.bookmark_wrap > .emoji > img {
+  width: 100%;
+  opacity: 0.3;
+}
+.bookmark_wrap > .b_none_textarea {
+  font-weight: 600;
+  opacity: 0.3;
+}
+
 /* 결재수단 ===================================================================================*/
 .mpls {
   width: 100%;
@@ -326,7 +416,7 @@
   /* background-color: #577cfd; */
 }
 .sw_point .swiper-slide {
-  background-color: #ff370b;
+  /* background-color: #ff370b; */
   border-radius: 5px;
   overflow: hidden;
 }
@@ -337,6 +427,9 @@
 @media screen and (max-width: 1232px) {
   .my_page {
     padding: 90px 15px 0 15px;
+  }
+  .sw_point {
+    height: 18.5vw;
   }
 }
 @media screen and (max-width: 768px) {
@@ -459,7 +552,7 @@
 
   .sw_point {
     width: 100%;
-    height: 27.1vw;
+    height: 25.1vw;
     max-height: 250px;
     /* background-color: #577cfd; */
   }
@@ -475,6 +568,14 @@
   }
   .point_wrap > .total_h_point {
     font-size: 7vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .submit_project_work{
+    height: 100%;
+  }
+  .submit_project_work > .submit_project_work_wrap > form {
+    flex-direction: column-reverse;
   }
 }
 @media screen and (max-width: 420px) {
@@ -576,7 +677,7 @@
   }
   .sw_point {
     width: 100%;
-    height: 50vw;
+    height: 43.3vw;
     max-height: 250px;
     /* background-color: #577cfd; */
   }

@@ -149,6 +149,9 @@
 .mobile_menu_list {
   margin-right: 5px;
 }
+.c-class_list > .class_lists {
+  min-height: 452px;
+}
 @media screen and (max-width: 1232px) {
   .c-class_menu {
     padding: 15px;
@@ -202,6 +205,9 @@
   }
   .instructor-info {
     font-size: 1.3vw;
+  }
+  .c-class_list > .class_lists {
+    min-height: 70vw;
   }
   .mark {
     position: absolute;

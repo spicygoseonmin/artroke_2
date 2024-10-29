@@ -38,15 +38,17 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/c_class.css" />
 
-    <script src="js/t-class.js"></script>
+    <script src="js/t-class_js/t-class.js"></script>
+    <script src="js/t-class_js/header.js"></script>
   </head>
   <body>
     <div class="wrap">
       <header class="header">
         <div class="inner">
           <div class="header-left">
+            <i class="fa-solid fa-bars" id="cateBar"></i>
             <div class="logo">
-              <a href="index.html">
+              <a href="#">
                 <img src="images/logo/logo.png" alt="로고이미지" />
               </a>
             </div>
@@ -68,19 +70,112 @@
           <div class="header-right">
             <!-- 검색창 -->
             <div class="search">
-              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-magnifying-glass" id="searchShow"></i>
             </div>
+            <form style="display: none" id="searchDelete">
+              <label>
+                <div class="search-move" id="searchMove">
+                  <input type="text" placeholder="검색어를 입력하세요" id="searchBar" />
+                  <i class="fa-solid fa-magnifying-glass" id="searchAfter"></i>
+                  <i class="fa-solid fa-xmark" id="searchXmark"></i>
+                </div>
+              </label>
+              <div id="searchNow">
+                <p>최근 검색어</p>
+                <p>실시간 인기 검색어</p>
+                <ul id="popularKeywords">
+                  <div id="searchList">
+                    <div id="li">
+                      <li><span>1</span> 프로크리에이트</li>
+                      <li><span>5</span> 피그마</li>
+                    </div>
+                    <div id="li">
+                      <li><span>2</span> 일러스트</li>
+                      <li><span>6</span> 입시미술</li>
+                    </div>
+                    <div id="li">
+                      <li><span>3</span> 소묘</li>
+                      <li><span>7</span> 나무13</li>
+                    </div>
+                    <div id="li">
+                      <li><span>4</span> 아이패드</li>
+                      <li><span>8</span> 이모티콘</li>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+            </form>
             <!-- 로그인 -->
             <ul class="user-section">
               <!-- 로그인 버튼 -->
               <li id="login-btn">
-                <a href="login.html"> 로그인 </a>
+                <a href="#" id="loginText"> 로그인 </a>
               </li>
+              <i class="fa-solid fa-user" id="loginIcon"></i>
+
               <!-- 로그인했을떄 유저메뉴 -->
+              <i class="fa-solid fa-user" style="display: none"></i>
               <li id="user-profile">
                 <!-- 유저 아이디 출력 -->
               </li>
             </ul>
+            <!-- 아이콘 클릭 시 나타나는 컨테이너 -->
+            <div id="iconContainer" style="display: none">
+              <!-- 컨테이너 내용 -->
+              <div id="userInfoTop">
+                <div id="userInfo">
+                  <i class="fa-solid fa-chevron-left" id="userInfoDelete"></i>
+                  <div id="userInfoNickName">
+                    <!-- JS로 닉네임 출력 -->
+                  </div>
+                  <i class="fa-solid fa-gear" id="xhqslqkznl"></i>
+                </div>
+                <div id="userInfoSecond">
+                  <i class="fa-solid fa-user"></i>
+                  <div id="userInfoId">
+                    <!-- JS로 아이디 출력 -->
+                  </div>
+                  <div id="userInfoEmail">
+                    <!-- JS로 이메일 출력 -->
+                  </div>
+                </div>
+              </div>
+              <div id="userInfoMid">
+                <div id="userInfoNotice">
+                  <ul>
+                    <li id="notice">알림<i class="fa-solid fa-chevron-down"></i></li>
+                    <div id="line"></div>
+                    <ul id="noticeNone" style="display: none">
+                      <li><p>알림내용</p></li>
+                      <li><p>알림내용</p></li>
+                      <li><p>알림내용</p></li>
+                    </ul>
+                  </ul>
+                  <ul>
+                    <li id="myTeach">나의 강좌<i class="fa-solid fa-chevron-down"></i></li>
+                    <div id="line"></div>
+                    <ul id="teachList" style="display: none">
+                      <li>
+                        수강 강의 이름
+                        <p>다시보기</p>
+                      </li>
+                      <li>
+                        수강 강의 이름
+                        <p>다시보기</p>
+                      </li>
+                    </ul>
+                  </ul>
+                </div>
+                <div id="InterestedList">
+                  <p>관심목록</p>
+                  <div id="line"></div>
+                  <div id="QandA">문의 / 답변</div>
+                </div>
+                <div id="logOut">
+                  <p>로그아웃</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="cate-background"></div>
@@ -123,6 +218,67 @@
           </div>
         </div>
       </header>
+      <!-- 반응형 강의 카테고리 -->
+      <div id="cateBarClick" style="display: none">
+        <div id="cateBarClickMenuTop">
+          <div id="cateLeft">
+            <img src="images/left.png" alt="강의카테고리 왼쪽화살표" />
+          </div>
+          <h2>강의 카테고리</h2>
+        </div>
+        <div id="cateAll">
+          <ul>
+            <li>
+              <h3 id="cateNomal">
+                일반강의
+                <i class="fa-solid fa-chevron-down"></i>
+              </h3>
+              <div id="cateline"></div>
+              <div id="cateAllList">
+                <ul id="cateNomalListLeft">
+                  <li>소묘</li>
+                  <li>수채화</li>
+                  <li>유화</li>
+                  <li>아크릴화</li>
+                  <li>디지털 드로잉</li>
+                  <li>조소/모델링</li>
+                </ul>
+                <ul id="cateNomalListRight">
+                  <li>만화 / 애니메이션</li>
+                  <li>공예</li>
+                  <li>포토샵 / 일러스트레이터</li>
+                  <li>이모티콘 제작</li>
+                  <li>종이접기</li>
+                  <li>뜨게질</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <h3 id="cateHard">
+                실기강의
+                <i class="fa-solid fa-chevron-down"></i>
+              </h3>
+            </li>
+            <div id="cateline"></div>
+            <li class="catelistHard" style="display: none">소묘</li>
+            <li class="catelistHard" style="display: none">서양화</li>
+            <li class="catelistHard" style="display: none">동양화</li>
+            <li class="catelistHard" style="display: none">디자인</li>
+            <li class="catelistHard" style="display: none">조소</li>
+            <li class="catelistHard" style="display: none">만화/애니메이션</li>
+            <li class="catelistHard" id="catelisthard" style="display: none">포토샵/일러스트레이터</li>
+          </ul>
+          <h3 id="academy">학원소개</h3>
+          <div id="cateline"></div>
+          <h3>커뮤니티</h3>
+          <div id="cateline"></div>
+          <h3>뉴스</h3>
+          <div id="cateline"></div>
+          <h3>강사진소개</h3>
+        </div>
+      </div>
       <div class="c-class">
         <div class="inner">
           <div class="c-class_menu">

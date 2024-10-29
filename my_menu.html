@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://js.tosspayments.com/v1/payment-widget"></script>
+    <script src="https://js.tosspayments.com/v2/standard"></script>
 
     <!-- SEO -->
     <meta name="author" content="아트로크" />
@@ -34,9 +34,11 @@
     <link rel="stylesheet" href="css/my_menu.css" />
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 
-    <script src="js/my_menu.js"></script>
-    <script src="js/my_menu_jq.js"></script>
-    <!-- <script src="js/my_menu_pay.js"></script> -->
+    <script src="js/my_page_js/header.js"></script>
+    <script src="js/my_page_js/my_menu.js"></script>
+    <script src="js/my_page_js/my_menu_jq.js"></script>
+    <script src="js/my_page_js/my_menu_thumbnail.js"></script>
+    <script src="js/my_page_js/my_menu_pay.js"></script>
     <!-- Swiper 적용 -->
     <!-- link Swiper's css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -47,10 +49,10 @@
   </head>
   <body>
     <div class="wrap">
-      <!-- 헤더 -->
       <header class="header">
         <div class="inner">
           <div class="header-left">
+            <i class="fa-solid fa-bars" id="cateBar"></i>
             <div class="logo">
               <a href="#">
                 <img src="images/logo/logo.png" alt="로고이미지" />
@@ -74,16 +76,51 @@
           <div class="header-right">
             <!-- 검색창 -->
             <div class="search">
-              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-magnifying-glass" id="searchShow"></i>
             </div>
+            <form style="display: none" id="searchDelete">
+              <label>
+                <div class="search-move" id="searchMove">
+                  <input type="text" placeholder="검색어를 입력하세요" id="searchBar" />
+                  <i class="fa-solid fa-magnifying-glass" id="searchAfter"></i>
+                  <i class="fa-solid fa-xmark" id="searchXmark"></i>
+                </div>
+              </label>
+              <div id="searchNow">
+                <p>최근 검색어</p>
+                <p>실시간 인기 검색어</p>
+                <ul id="popularKeywords">
+                  <div id="searchList">
+                    <div id="li">
+                      <li><span>1</span> 프로크리에이트</li>
+                      <li><span>5</span> 피그마</li>
+                    </div>
+                    <div id="li">
+                      <li><span>2</span> 일러스트</li>
+                      <li><span>6</span> 입시미술</li>
+                    </div>
+                    <div id="li">
+                      <li><span>3</span> 소묘</li>
+                      <li><span>7</span> 나무13</li>
+                    </div>
+                    <div id="li">
+                      <li><span>4</span> 아이패드</li>
+                      <li><span>8</span> 이모티콘</li>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+            </form>
             <!-- 로그인 -->
             <ul class="user-section">
               <!-- 로그인 버튼 -->
               <li id="login-btn">
                 <a href="#" id="loginText"> 로그인 </a>
               </li>
-              <i class="fa-solid fa-user" id="loginIcon" style="display: none"></i>
+              <i class="fa-solid fa-user" id="loginIcon"></i>
+
               <!-- 로그인했을떄 유저메뉴 -->
+              <i class="fa-solid fa-user" style="display: none"></i>
               <li id="user-profile">
                 <!-- 유저 아이디 출력 -->
               </li>
@@ -113,6 +150,7 @@
                 <div id="userInfoNotice">
                   <ul>
                     <li id="notice">알림<i class="fa-solid fa-chevron-down"></i></li>
+                    <div id="line"></div>
                     <ul id="noticeNone" style="display: none">
                       <li><p>알림내용</p></li>
                       <li><p>알림내용</p></li>
@@ -121,6 +159,7 @@
                   </ul>
                   <ul>
                     <li id="myTeach">나의 강좌<i class="fa-solid fa-chevron-down"></i></li>
+                    <div id="line"></div>
                     <ul id="teachList" style="display: none">
                       <li>
                         수강 강의 이름
@@ -135,6 +174,7 @@
                 </div>
                 <div id="InterestedList">
                   <p>관심목록</p>
+                  <div id="line"></div>
                   <div id="QandA">문의 / 답변</div>
                 </div>
                 <div id="logOut">
@@ -184,6 +224,67 @@
           </div>
         </div>
       </header>
+      <!-- 반응형 강의 카테고리 -->
+      <div id="cateBarClick" style="display: none">
+        <div id="cateBarClickMenuTop">
+          <div id="cateLeft">
+            <img src="images/left.png" alt="강의카테고리 왼쪽화살표" />
+          </div>
+          <h2>강의 카테고리</h2>
+        </div>
+        <div id="cateAll">
+          <ul>
+            <li>
+              <h3 id="cateNomal">
+                일반강의
+                <i class="fa-solid fa-chevron-down"></i>
+              </h3>
+              <div id="cateline"></div>
+              <div id="cateAllList">
+                <ul id="cateNomalListLeft">
+                  <li>소묘</li>
+                  <li>수채화</li>
+                  <li>유화</li>
+                  <li>아크릴화</li>
+                  <li>디지털 드로잉</li>
+                  <li>조소/모델링</li>
+                </ul>
+                <ul id="cateNomalListRight">
+                  <li>만화 / 애니메이션</li>
+                  <li>공예</li>
+                  <li>포토샵 / 일러스트레이터</li>
+                  <li>이모티콘 제작</li>
+                  <li>종이접기</li>
+                  <li>뜨게질</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <h3 id="cateHard">
+                실기강의
+                <i class="fa-solid fa-chevron-down"></i>
+              </h3>
+            </li>
+            <div id="cateline"></div>
+            <li class="catelistHard" style="display: none">소묘</li>
+            <li class="catelistHard" style="display: none">서양화</li>
+            <li class="catelistHard" style="display: none">동양화</li>
+            <li class="catelistHard" style="display: none">디자인</li>
+            <li class="catelistHard" style="display: none">조소</li>
+            <li class="catelistHard" style="display: none">만화/애니메이션</li>
+            <li class="catelistHard" id="catelisthard" style="display: none">포토샵/일러스트레이터</li>
+          </ul>
+          <h3 id="academy">학원소개</h3>
+          <div id="cateline"></div>
+          <h3>커뮤니티</h3>
+          <div id="cateline"></div>
+          <h3>뉴스</h3>
+          <div id="cateline"></div>
+          <h3>강사진소개</h3>
+        </div>
+      </div>
       <!-- 메인 -->
       <div class="my_page">
         <div class="inner">
@@ -244,7 +345,7 @@
                   </li>
                   <li>
                     <div class="top">
-                      <div class="class_title">팀플로 성장하는 발상과 표현 클래스 5기 <span>수강중</span></div>
+                      <div class="class_title">포근포근~ 소중한 애착인형 만들기 <span>수강중</span></div>
                       <div class="class_s_day">2024. 10. 14 ~ 2025. 01. 01</div>
                     </div>
                     <div class="bottom">
@@ -254,7 +355,7 @@
                   </li>
                   <li>
                     <div class="top">
-                      <div class="class_title">팀플로 성장하는 발상과 표현 클래스 5기 <span>수강중</span></div>
+                      <div class="class_title">개체 연습으로 배우는 기초디자인 묘사 <span>수강중</span></div>
                       <div class="class_s_day">2024. 10. 14 ~ 2025. 01. 01</div>
                     </div>
                     <div class="bottom">
@@ -295,7 +396,6 @@
                       <div class="class_title">팀플로 성장하는 발상과 표현 클래스 5기 <span>과제제출 미완</span></div>
                       <div class="class_s_day">2025. 12. 01 까지 제출</div>
                     </div>
-                    <!-- 제출란 -->
                     <div class="middle">
                       <div class="work_title">과제: 식물의 구조를 응용하여 발상과 디자인 스케치 구상하기</div>
                       <a href="#">
@@ -309,14 +409,14 @@
                     </div>
                     <div class="submit_project_work">
                       <div class="submit_project_work_wrap">
-                        <form class="project_work_form" enctype="multipart/form-data">
+                        <form class="project_work_form" enctype="multipart/form-data" onsubmit="return false;">
                           <div class="form_wrap">
                             <label for="title">제목</label>
                             <input type="text" class="title" name="title" required />
                             <label for="memo">메모</label>
                             <input type="text" class="memo" name="memo" />
                             <label for="work">이미지 제출</label>
-                            <input type="file" class="work" name="work" accept="image/*" required />
+                            <input type="file" class="work" name="work" accept="image/*" required onchange="previewImage(this)" multiple />
                             <button type="submit" class="p_w_sub_btn">과제 제출하기</button>
                           </div>
                           <div class="img_thumbnail">
@@ -330,10 +430,9 @@
                   </li>
                   <li>
                     <div class="top">
-                      <div class="class_title">팀플로 성장하는 발상과 표현 클래스 5기 <span>과제제출 미완</span></div>
+                      <div class="class_title">포근포근~ 소중한 애착인형 만들기 <span>과제제출 미완</span></div>
                       <div class="class_s_day">2025. 12. 01 까지 제출</div>
                     </div>
-                    <!-- 제출란 -->
                     <div class="middle">
                       <div class="work_title">과제: 식물의 구조를 응용하여 발상과 디자인 스케치 구상하기</div>
                       <a href="#">
@@ -346,23 +445,31 @@
                       <div class="class_sd_submit">제출하기</div>
                     </div>
                     <div class="submit_project_work">
-                      <form class="project_work_form">
-                        <label for="title">제목</label>
-                        <input type="text" class="title" name="title" required />
-                        <label for="memo">메모</label>
-                        <input type="text" class="memo" name="memo" />
-                        <label for="work">이미지 제출</label>
-                        <input type="file" class="work" name="work" required />
-                        <button type="submit">과제 제출하기</button>
-                      </form>
+                      <div class="submit_project_work_wrap">
+                        <form class="project_work_form" enctype="multipart/form-data" onsubmit="return false;">
+                          <div class="form_wrap">
+                            <label for="title">제목</label>
+                            <input type="text" class="title" name="title" required />
+                            <label for="memo">메모</label>
+                            <input type="text" class="memo" name="memo" />
+                            <label for="work">이미지 제출</label>
+                            <input type="file" class="work" name="work" accept="image/*" required onchange="previewImage(this)" multiple />
+                            <button type="submit" class="p_w_sub_btn">과제 제출하기</button>
+                          </div>
+                          <div class="img_thumbnail">
+                            <ul class="thumbnail_list">
+                              <!-- js 출력 -->
+                            </ul>
+                          </div>
+                        </form>
+                      </div>
                     </div>
                   </li>
                   <li>
                     <div class="top">
-                      <div class="class_title">팀플로 성장하는 발상과 표현 클래스 5기 <span>과제제출 미완</span></div>
+                      <div class="class_title">개체 연습으로 배우는 기초디자인 묘사 <span>과제제출 미완</span></div>
                       <div class="class_s_day">2025. 12. 01 까지 제출</div>
                     </div>
-                    <!-- 제출란 -->
                     <div class="middle">
                       <div class="work_title">과제: 식물의 구조를 응용하여 발상과 디자인 스케치 구상하기</div>
                       <a href="#">
@@ -375,38 +482,66 @@
                       <div class="class_sd_submit">제출하기</div>
                     </div>
                     <div class="submit_project_work">
-                      <form class="project_work_form">
-                        <label for="title">제목</label>
-                        <input type="text" class="title" name="title" required />
-                        <label for="memo">메모</label>
-                        <input type="text" class="memo" name="memo" />
-                        <label for="work">이미지 제출</label>
-                        <input type="file" class="work" name="work" required />
-                        <button type="submit">과제 제출하기</button>
-                      </form>
+                      <div class="submit_project_work_wrap">
+                        <form class="project_work_form" enctype="multipart/form-data" onsubmit="return false;">
+                          <div class="form_wrap">
+                            <label for="title">제목</label>
+                            <input type="text" class="title" name="title" required />
+                            <label for="memo">메모</label>
+                            <input type="text" class="memo" name="memo" />
+                            <label for="work">이미지 제출</label>
+                            <input type="file" class="work" name="work" accept="image/*" required onchange="previewImage(this)" multiple />
+                            <button type="submit" class="p_w_sub_btn">과제 제출하기</button>
+                          </div>
+                          <div class="img_thumbnail">
+                            <ul class="thumbnail_list">
+                              <!-- js 출력 -->
+                            </ul>
+                          </div>
+                        </form>
+                      </div>
                     </div>
                   </li>
                 </ul>
               </div>
             </div>
             <!-- 문의 / 답변 -->
-            <div class="qnal mp"></div>
+            <div class="qnal mp">
+              <div class="qnal_add_topBtn">
+                <i class="fa-solid fa-pencil"></i>
+                <!-- <div class="text">글 작성하기</div> -->
+              </div>
+              <div class="ask_wrap">
+                <div class="emoji">
+                  <img src="images/icon/none_emoji_icon.png" alt="없는_목록_이미지_아이콘" />
+                </div>
+                <div class="b_none_textarea">작성목록이 비어 있습니다.</div>
+              </div>
+            </div>
             <!-- 관심목록 -->
-            <div class="als mp"></div>
+            <div class="als mp">
+              <div class="bookmark_wrap">
+                <div class="emoji">
+                  <img src="images/icon/none_emoji_icon.png" alt="없는_목록_이미지_아이콘" />
+                </div>
+                <div class="b_none_textarea">관심목록이 비어 있습니다.</div>
+              </div>
+            </div>
             <!-- 결재 수단 -->
             <div class="mpls mp">
               <div class="mpls_wrap">
                 <!-- 결재수단 등록 -->
-                <div class="top">
-                  <div class="payList">
-                    <!-- 결제 UI, 이용약관 UI 영역 -->
-                    <div id="payment-method"></div>
-                    <div id="agreement"></div>
-                    <!-- 결제하기 버튼 -->
-                    <button id="payment-button">결재 수단 등록</button>
-                  </div>
+                <!-- 할인 쿠폰 -->
+                <div>
+                  <input type="checkbox" id="coupon-box" />
+                  <label for="coupon-box"> 5,000원 쿠폰 적용 </label>
                 </div>
-                <div class="bottom"></div>
+                <!-- 결제 UI -->
+                <div id="payment-method"></div>
+                <!-- 이용약관 UI -->
+                <div id="agreement"></div>
+                <!-- 결제하기 버튼 -->
+                <button class="button" id="payment-button" style="margin-top: 30px">결제하기</button>
               </div>
             </div>
             <!-- 포인트 -->

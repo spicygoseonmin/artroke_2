@@ -12,22 +12,36 @@
   display: block;
   position: relative;
   background-color: #ff4100;
-  padding: 10px 40px;
+  /* padding: 10px 40px; */
+  height: 39px;
+  width: 116px;
   font-weight: 500;
   color: #fff;
   border-radius: 50px;
   border: none;
   cursor: pointer;
 }
+.class_more_btn_wrap > .class_more_btn > a {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .class_more_btn_wrap > .class_more_btn:hover {
   background-color: #ee1f04;
 }
 
 .t_sw-class_wrapper {
-  height: 305px;
+  height: 321px;
 }
 .c_sw-class_wrapper {
-  height: 305px;
+  height: 321px;
 }
 .t_sw-class_wrapper.active {
   height: 100%;
@@ -82,7 +96,7 @@
 }
 .sw-class > .sw-class_wrapper > .swiper-slide {
   width: calc(100% / 4 - 10px);
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
   overflow: hidden;
   /* box-shadow: 0 0 5px #999; */
   /* border: #ccc solid 1px; */
@@ -216,7 +230,6 @@
   .sw-class > .sw-class_wrapper > .swiper-slide {
     width: calc(100% / 3 - 10px);
     /* height: 210px; */
-    border-radius: 5px;
     overflow: hidden;
     /* box-shadow: 0 0 5px #999; */
     /* border: #ccc solid 1px; */
@@ -239,10 +252,10 @@
     height: 100%;
   }
   .t_sw-class_wrapper {
-    height: 36.3vw;
+    height: 38.3vw;
   }
   .c_sw-class_wrapper {
-    height: 36.3vw;
+    height: 38.3vw;
   }
   .sw-class > .sw-class_wrapper {
     width: 100%;
@@ -256,7 +269,6 @@
   .sw-class > .sw-class_wrapper > .swiper-slide {
     width: calc(100% / 3 - 10px);
     /* height: 28vw; */
-    border-radius: 5px;
     overflow: hidden;
     /* box-shadow: 0 0 5px #999; */
     /* margin: 5px; */
@@ -264,7 +276,20 @@
     margin-bottom: 10px;
   }
   .class-title {
-    font-size: 13px;
+    font-size: 12px;
+  }
+  .class-cate {
+    font-size: 12px;
+    color: #686868;
+  }
+  .instructor-info {
+    font-size: 12px;
+  }
+  .class-price > .price {
+    font-size: 2.4vw;
+  }
+  .class-txt-wrap {
+    padding: 2px 0 5px;
   }
 }
 @media screen and (max-width: 520px) {
@@ -296,7 +321,7 @@
     height: 100%;
   }
   .t_sw-class_wrapper {
-    height: 47.2vw;
+    height: 60.2vw;
   }
   .c_sw-class_wrapper {
     height: 47.2vw;
@@ -312,14 +337,16 @@
   }
   .sw-class > .sw-class_wrapper > .swiper-slide {
     width: calc(100% / 2 - 5px);
-    border-radius: 5px;
     overflow: hidden;
     /* box-shadow: 0 0 5px #999; */
     /* margin: 5px; */
     /* visibility: visible; */
     margin-bottom: 10px;
   }
-
+  .class-cate {
+    font-size: 12px;
+    color: #686868;
+  }
 }
 @media screen and (max-width: 480px) {
   .moreBt {
@@ -356,7 +383,6 @@
   }
   .sw-class > .sw-class_wrapper > .swiper-slide {
     width: calc(100% / 2 - 5px);
-    border-radius: 5px;
     overflow: hidden;
     /* box-shadow: 0 0 5px #999; */
     /* margin: 5px; */
@@ -366,7 +392,6 @@
   .class-title {
     width: 100%;
     font-size: 12px;
-    height: 10vw;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -379,10 +404,11 @@
     width: 100%;
     height: 100%;
   }
-  .class-instructor-wrap {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 5px 5px;
+  .class-price > .price {
+    font-size: 4vw;
+  }
+  .instructor-info-line {
+    height: 12px;
   }
 }
 @media screen and (max-width: 378px) {
@@ -399,5 +425,8 @@
   }
   .instructor-info {
     font-size: 2.8vw;
+  }
+  .instructor-info-line {
+    height: 9px;
   }
 }
