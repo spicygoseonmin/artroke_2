@@ -126,16 +126,16 @@ window.addEventListener("load", function () {
   });
 
   // // 카테고리 메뉴 토글
-  // openCate.addEventListener("click", function () {
-  //   cateBox.classList.toggle("active");
-  //   cateBack.classList.toggle("active");
-  //   searchDelete.style.display = "none";
-  // });
+  openCate.addEventListener("click", function () {
+    cateBox.classList.toggle("active");
+    cateBack.classList.toggle("active");
+    searchDelete.style.display = "none";
+  });
 
-  // cateBack.addEventListener("click", function () {
-  //   cateBack.classList.remove("active");
-  //   cateBox.classList.remove("active");
-  // });
+  cateBack.addEventListener("click", function () {
+    cateBack.classList.remove("active");
+    cateBox.classList.remove("active");
+  });
 
   // 반응형 적용
   function applyResponsiveEffect() {
