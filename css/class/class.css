@@ -1,5 +1,7 @@
 @charset "utf-8";
-
+.wrap > .inner {
+  padding: 0;
+}
 /* 클래스 전체 영역 */
 .omall {
   margin: 100px 0;
@@ -33,6 +35,10 @@
   justify-content: center;
   align-items: center;
   border-radius: 5px;
+  overflow: hidden;
+}
+.swiper-slide > img {
+  height: 100%;
 }
 /* 클래스 메인이미지 이전/ 다음 버튼 */
 .pmBtn,
@@ -42,6 +48,7 @@
   width: 50px !important;
   border-radius: 50%;
   font-size: 30px;
+  box-shadow: 0 0 2px 1px #00000027;
 }
 .pmBtn:hover,
 .nmBtn:hover {
@@ -181,6 +188,7 @@
   width: calc(100% - 30px);
   height: 30px;
   border: 1px solid #ccc;
+  cursor: pointer;
 }
 .class_kit_set > #pakage_list:focus {
   border: 1px solid #999999;
@@ -194,11 +202,12 @@
   width: 100%;
   height: 100%;
   opacity: 0.4;
+  cursor: pointer;
 }
 .i_about_pakage:hover > img {
   width: 100%;
   height: 100%;
-  opacity:1;
+  opacity: 1;
 }
 .bottom-info > .right-info > .btn_wrap {
   width: 100%;
@@ -216,6 +225,9 @@
   color: #fff;
   cursor: pointer;
 }
+.bottom-info > .right-info > .btn_wrap > .pBtn:hover {
+  background-color: #e62006;
+}
 .bottom-info > .right-info > .btn_wrap > .fBtn {
   width: 30%;
   height: 50px;
@@ -227,6 +239,9 @@
   color: #fff;
   position: relative;
   cursor: pointer;
+}
+.bottom-info > .right-info > .btn_wrap > .fBtn:hover {
+  background-color: #292929;
 }
 /* 아이콘 리스트 */
 .etx_icon_button {
@@ -247,9 +262,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 .etx_icon_button > ul > li > button > i {
   font-size: 20px;
+}
+.etx_icon_button > ul > li > button:hover > i {
+  color: #ff370b;
 }
 .etx_icon_button > ul > li > button > span {
   font-size: 11px;
@@ -412,6 +431,12 @@
   width: 100%;
   height: 20vw;
   max-height: 250px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  box-shadow: 0 1px 1px 1px #00000021;
+}
+.class_formation > .formation > .formationList > li > .img-wrap > img {
+  width: 100%;
 }
 /* 커리큘럼 */
 .curriculum_wrap,
@@ -437,6 +462,7 @@
   flex-direction: column;
   padding-right: 10px;
   padding-bottom: 10px;
+  cursor: pointer;
 }
 .curriculum_wrap > .curriculum > .curriculumList > li > .c_left > .img_wrap {
   width: 100%;
@@ -451,4 +477,5 @@
   padding-left: 10px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }

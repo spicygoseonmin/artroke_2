@@ -3,6 +3,12 @@
 .mobile_menu_list {
   display: none;
 }
+.m_c_class_title {
+  font-weight: 600;
+  font-size: 20px;
+  padding: 10px 20px 30px;
+  display: none;
+}
 
 .wrap {
   width: 100%;
@@ -43,10 +49,21 @@
   cursor: pointer;
   color: #757575;
   transition: transform 0.3s;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 .c-class_menu > .fixed_menu_wrap > ul > li:hover {
   color: #000;
   transform: translateX(5px);
+}
+.c-class_menu > .fixed_menu_wrap > ul > li > span {
+  height: 100%;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.c-class_menu > .fixed_menu_wrap > ul > li:hover > span {
+  opacity: 1;
 }
 .fixed_menu_wrap > ul > li.active {
   color: #ff370b;
@@ -85,16 +102,26 @@
   box-shadow: 0 2px 2px 0 #00000010;
   position: relative;
 }
-.c-class_list > .class_lists > ul > li > .img_wrap {
+.c-class_list > .class_lists > ul > li > a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+.c-class_list > .class_lists > ul > li > a > .img_wrap {
   width: 100%;
   height: 14vw;
   max-height: 170px;
   /* background-color: rgb(22, 20, 161); */
   border-radius: 5px 5px 0 0;
   overflow: hidden;
+  position: relative;
+  display: block;
 }
-.c-class_list > .class_lists > ul > li > .img_wrap > img {
+.c-class_list > .class_lists > ul > li > a > .img_wrap > img {
   width: 100%;
+  position: relative;
+  display: block;
 }
 .mark {
   position: absolute;
@@ -109,7 +136,7 @@
   background: url("../images/icon/mark-active.png") no-repeat;
   background-size: cover;
 }
-.c-class_list > .class_lists > ul > li > .text_wrap {
+.c-class_list > .class_lists > ul > li > a > .text_wrap {
   width: 100%;
   height: 6vw;
   max-height: 70px;
@@ -154,7 +181,9 @@
 }
 @media screen and (max-width: 1232px) {
   .c-class_menu {
-    padding: 15px;
+    padding: 15px 0px;
+    width: 250px;
+    margin-right: 10px;
   }
   .class-title {
     font-size: 1.2vw;
@@ -180,9 +209,15 @@
     background: url("../images/icon/mark-active.png") no-repeat;
     background-size: cover;
   }
+  .c-class_list > .class_lists > ul > li > a > .img_wrap {
+    height: 13vw;
+  }
 }
 @media screen and (max-width: 768px) {
   .mobile_menu_list {
+    display: block;
+  }
+  .m_c_class_title {
     display: block;
   }
   .c-class_menu {
@@ -192,11 +227,11 @@
     height: 25vw;
     max-height: 240px;
   }
-  .c-class_list > .class_lists > ul > li > .img_wrap {
+  .c-class_list > .class_lists > ul > li > a > .img_wrap {
     height: 18vw;
     max-height: 170px;
   }
-  .c-class_list > .class_lists > ul > li > .text_wrap {
+  .c-class_list > .class_lists > ul > li > a > .text_wrap {
     height: 6.8vw;
     padding: 0.6vw 1vw 0.7vw;
   }
@@ -226,6 +261,9 @@
   }
 }
 @media screen and (max-width: 420px) {
+  .wrap > .c-class > .inner {
+    padding: 0;
+  }
   .p_or_o_select {
     border-radius: 40px;
     padding: 2px 10px;
@@ -244,11 +282,11 @@
     height: 40vw;
     max-height: 240px;
   }
-  .c-class_list > .class_lists > ul > li > .img_wrap {
+  .c-class_list > .class_lists > ul > li > a > .img_wrap {
     height: 28vw;
     max-height: 170px;
   }
-  .c-class_list > .class_lists > ul > li > .text_wrap {
+  .c-class_list > .class_lists > ul > li > a > .text_wrap {
     height: 12vw;
     padding: 0.6vw 1vw 2vw;
   }

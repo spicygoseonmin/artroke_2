@@ -9,31 +9,33 @@ input {
   padding-left: 30px;
 }
 
-#signUpHeader{
+#signUpHeader {
   width: 100%;
-  height: 180px;
-  background-color: #333;
+  height: 100%;
+  padding: 30px 0;
+  background: url("../images/loginImg.png") no-repeat center;
+  background-size: cover;
   display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
 }
-#signHeaderImg{
-  width: 130px;
-  height: 130px;
+#signHeaderImg {
+  width: 55px;
+  height: 55px;
 }
-#signHeaderImg img{
+#signHeaderImg img {
   width: 100%;
   height: 100%;
 }
-#signHeaderImgInfo{
-  padding-left: 20px;
-  font-size: 30px;
-  font-weight: bold;
-  color: #fff;
+#signHeaderImgInfo {
+  padding-left: 30px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #000;
 }
-#signHeaderImgInfo p:last-child{
-  font-size: 25px;
+#signHeaderImgInfo p:last-child {
+  font-size: 1.1rem;
 }
 
 .container {
@@ -44,7 +46,7 @@ input {
   position: relative;
   display: block;
 }
-.menu li{
+.menu li {
   display: block;
 }
 .header-left {
@@ -64,7 +66,7 @@ input {
   position: relative;
   display: block;
   width: 60%;
-  margin: 100px auto 50px auto;
+  margin: 80px auto 50px auto;
   cursor: pointer;
 }
 #logoImg img {
@@ -78,6 +80,7 @@ input {
   position: relative;
   display: block;
   width: 90%;
+  max-width: 400px;
   height: 45px;
   margin: auto;
   border-radius: 5px;
@@ -92,16 +95,17 @@ input {
   position: relative;
   display: block;
   width: 90%;
-  height: 53px;
+  max-width: 400px;
+  height: 50px;
   margin: auto;
-  background-color: black;
+  margin-bottom: 15px !important;
+  background-color: #ff370b;
   color: white;
   font-size: 20px;
   cursor: pointer;
-  margin-top: 20px;
-  margin-bottom: 31px;
+  margin-bottom: -10px;
   border-radius: 5px;
-  font-weight: bold;
+  font-weight: 500;
   border: 0;
 }
 #login-search {
@@ -110,6 +114,8 @@ input {
   justify-content: space-between;
   margin: auto;
   width: 90%;
+  max-width: 400px;
+  padding: 30px 0;
 }
 #login-search p span {
   margin: 0 7px;
@@ -118,6 +124,7 @@ input {
   display: flex;
   align-items: center;
   margin-left: 5px;
+  font-size: 14px;
 }
 #idSave input {
   margin-right: 10px;
@@ -125,8 +132,8 @@ input {
 /*  */
 #idSave input[type="checkbox"] {
   accent-color: #ff370b;
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
   text-align: center;
 }
 #userInfoFind {
@@ -144,51 +151,61 @@ input {
   justify-content: center;
   cursor: pointer;
   margin-top: 40px;
-  margin-bottom: 50px;
+  margin-bottom: 133px;
 }
 #signUpBtn {
   position: relative;
   display: block;
   margin: auto;
   width: 90%;
-  height: 53px;
-  background-color: #ff370b;
+  max-width: 400px;
+  height: 50px;
+  background-color: black;
   color: #fff;
   border-style: none;
   font-size: 20px;
   cursor: pointer;
   border-radius: 5px;
-  font-weight: bold;
+  font-weight: 500;
 }
-@media screen and (max-width:768px) {
-  #signUpHeader{
+@media screen and (max-width: 768px) {
+  #logoImg {
+    position: relative;
+    display: block;
+    width: 60%;
+    margin: 45px auto 50px auto;
+    cursor: pointer;
+  }
+  #logoImg img {
     width: 100%;
-    height: 120px;
+  }
+  #signUpHeader {
+    width: 100%;
+    padding: 15px;
     background-color: #333;
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
   }
-  #signHeaderImg{
-    width: 90px;
-    height: 90px;
+  #signHeaderImg {
+    width: 40px;
+    height: 40px;
   }
-  #signHeaderImg img{
+  #signHeaderImg img {
     width: 100%;
     height: 100%;
   }
-  #signHeaderImgInfo{
+  #signHeaderImgInfo {
     padding-left: 20px;
-    font-size: 23px;
-    font-weight: bold;
-    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 500;
   }
-  #signHeaderImgInfo p:last-child{
-    font-size: 16px;
+  #signHeaderImgInfo p:last-child {
+    font-size: 0.6rem;
   }
 
-  .menu li{
+  .menu li {
     display: none;
   }
   .header-left {
@@ -197,43 +214,42 @@ input {
     position: relative;
     display: flex;
     align-items: center;
-}
+  }
 }
 
 /* 반응형 */
 @media screen and (max-width: 320px) {
-  #signUpHeader{
+  #signUpHeader {
     width: 100%;
-    height: 70px;
+    padding: 15px;
     background-color: #333;
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
   }
-  #signHeaderImg{
-    width: 50px;
-    height: 50px;
+  #signHeaderImg {
+    width: 30px;
+    height: 30px;
   }
-  #signHeaderImg img{
+  #signHeaderImg img {
     width: 100%;
     height: 100%;
   }
-  #signHeaderImgInfo{
-    padding-left: 10px;
-    font-size: 14px;
-    font-weight: bold;
-    color: #fff;
+  #signHeaderImgInfo {
+    padding-left: 13px;
+    font-size: 13px;
+    font-weight: 500;
   }
-  #signHeaderImgInfo p:last-child{
-    font-size: 11px;
+  #signHeaderImgInfo p:last-child {
+    font-size: 11.5px;
   }
 
   input {
     padding-left: 30px;
   }
   #login-form {
-    width: 95%;
+    width: 85%;
     position: relative;
     display: block;
     margin: auto;
@@ -266,14 +282,13 @@ input {
     width: 90%;
     height: 50px;
     margin: auto;
-    background-color: black;
+    margin-bottom: 15px;
+    background-color: #ff370b;
     color: white;
     font-size: 20px;
     cursor: pointer;
-    margin-top: 10px;
-    margin-bottom: 20px;
     border-radius: 5px;
-    font-weight: bold;
+    font-weight: 500;
   }
   #login-search {
     display: flex;
@@ -325,13 +340,20 @@ input {
     display: block;
     margin: auto;
     width: 90%;
-    height: 53px;
-    background-color: #ff370b;
+    height: 50px;
+    background-color: #000;
     color: #fff;
     border-style: none;
     font-size: 20px;
     cursor: pointer;
     border-radius: 5px;
-    font-weight: bold;
+    font-weight: 500;
+  }
+  #login-search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    width: 90%;
   }
 }
