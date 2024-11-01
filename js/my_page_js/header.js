@@ -4,7 +4,7 @@ window.addEventListener("load", function () {
   const loginIcon = document.getElementById("loginIcon");
   const userInfoNickName = document.getElementById("userInfoNickName");
   const userInfoId = document.getElementById("userInfoId");
- 
+  const userInfoEmail = document.getElementById("userInfoEmail");
   const logOut = document.getElementById("logOut");
   const iconContainer = document.getElementById("iconContainer");
   const userInfo = document.getElementById("userInfo");
@@ -28,28 +28,16 @@ window.addEventListener("load", function () {
   const openCate = document.querySelector(".open-cate");
   const cateBox = document.querySelector(".cate-box");
   const cateBack = document.querySelector(".cate-background");
-  const floatingBtn = this.document.querySelector(".floating-btn");
+
   // 로그인 상태에 따른 UI 업데이트
   const userFind = JSON.parse(localStorage.getItem("userFind"));
 
- 
-  floatingBtn.addEventListener("click", function () {
-    if (userFind) {
-      window.location.href = "c_study_class.html";
-    } else {
-      window.location.href = "login.html";
-    }
-  });
-
-  myTeach.addEventListener("click", function () {
-    window.location.href = "my_menu.html";
-  });
   if (userFind) {
     loginText.style.display = "none";
     loginIcon.style.display = "block";
     userInfoNickName.textContent = `${userFind.usernickname} 님 환영합니다!`;
-    userInfoId.textContent = `아이디 : ${userFind.userName}`;
-   
+    userInfoId.textContent = `UserId : ${userFind.userName}`;
+    userInfoEmail.textContent = `UserEmail : ${userFind.userEmail}`;
   } else {
     loginText.style.display = "inline-block";
     loginIcon.style.display = "none";
@@ -73,7 +61,7 @@ window.addEventListener("load", function () {
     loginIcon.style.display = "none";
     userInfoNickName.textContent = "";
     userInfoId.textContent = "";
-  
+    userInfoEmail.textContent = "";
     iconContainer.style.display = "none";
     alert("로그아웃이 완료되었습니다.");
   });
@@ -125,17 +113,17 @@ window.addEventListener("load", function () {
     });
   });
 
-  // // 카테고리 메뉴 토글
-  // openCate.addEventListener("click", function () {
-  //   cateBox.classList.toggle("active");
-  //   cateBack.classList.toggle("active");
-  //   searchDelete.style.display = "none";
-  // });
+  // 카테고리 메뉴 토글
+  openCate.addEventListener("click", function () {
+    cateBox.classList.toggle("active");
+    cateBack.classList.toggle("active");
+    searchDelete.style.display = "none";
+  });
 
-  // cateBack.addEventListener("click", function () {
-  //   cateBack.classList.remove("active");
-  //   cateBox.classList.remove("active");
-  // });
+  cateBack.addEventListener("click", function () {
+    cateBack.classList.remove("active");
+    cateBox.classList.remove("active");
+  });
 
   // 반응형 적용
   function applyResponsiveEffect() {
@@ -152,25 +140,6 @@ window.addEventListener("load", function () {
       cateBarClick.style.display = "none"; // 카테고리 메뉴도 함께 숨김
     }
   }
-  //외부입력시에도 토글
-  document.addEventListener("click", function (event) {
-    const isClickInsideIconContainer = iconContainer.contains(event.target) || loginIcon.contains(event.target);
-    const isClickInsideSearchDelete = searchDelete.contains(event.target) || searchShow.contains(event.target);
-    const isClickInsideCateBarClick = cateBarClick.contains(event.target) || cateBar.contains(event.target);
-
-    // 각 요소 외부 클릭 시 display: none 처리
-    if (!isClickInsideIconContainer) {
-      iconContainer.style.display = "none";
-    }
-
-    if (!isClickInsideSearchDelete) {
-      searchDelete.style.display = "none";
-    }
-
-    if (!isClickInsideCateBarClick) {
-      cateBarClick.style.display = "none";
-    }
-  });
 
   // 초기 실행 및 리사이즈 이벤트 추가
   applyResponsiveEffect();

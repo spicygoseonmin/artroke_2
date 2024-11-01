@@ -1,0 +1,167 @@
+@charset "utf-8";
+.news {
+  width: 100%;
+}
+.contestBanner {
+  width: 100%;
+  max-width: 1232px;
+  margin: 0 auto;
+  padding-top: 75px;
+}
+.contestBanner img {
+  width: 100%;
+}
+
+/* 공모전 알림 받기 */
+.alarm_contest {
+  width: 100%;
+  background-color: #f5f5f5;
+  box-shadow: inset -1px -1px 1px 1px #ccc;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+.alarm_contest > h2 {
+  font-size: 18px;
+}
+
+/* 공모전 리스트 및 소식 */
+.constest_notice > .title {
+  margin-bottom: 10px;
+}
+.constest_notice > .constest_top > .constest_list_wrap {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.constest_notice > .constest_top > .constest_list_wrap > li {
+  width: calc(100% / 3 - 10px);
+}
+.constest_notice > .constest_top > .constest_list_wrap > li > .contestBox {
+  position: relative;
+}
+.constest_notice > .constest_top > .constest_list_wrap > li > .contestBox > .d_day {
+  position: absolute;
+  background-color: #ff370b;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: 600;
+  z-index: 9;
+}
+
+/* 공모전 이미지 */
+.constest_notice > .constest_top > .constest_list_wrap > li > .contestBox > .contestImg > img {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+/* 공모전 정보 */
+.constest_notice > .constest_top > .constest_list_wrap > li > .contestBox > .contestinfo {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3px 10px;
+  margin-bottom: 30px;
+  border: 1px solid #ccccccb7;
+}
+.constest_notice > .constest_top > .constest_list_wrap > li > .contestBox > .contestinfo > .top {
+  display: flex;
+  justify-content: space-between;
+}
+.constest_notice > .constest_top > .constest_list_wrap > li > .contestBox > .contestinfo > .bottom {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.constest_notice > .constest_top > .constest_list_wrap > li > .contestBox > .contestinfo > .top > .title {
+  font-weight: 600;
+  font-size: 18px;
+}
+.constest_notice > .constest_top > .constest_list_wrap > li > .contestBox > .contestinfo > .top > .age_ap {
+  background-color: #577cfd;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin-top: 4px;
+}
+
+@media screen and (max-width: 1232px) {
+  .news > .inner {
+    padding: 0 30px;
+  }
+  .constest_notice > .constest_top > .constest_list_wrap > li > .contestBox > .contestinfo > .top > .title {
+    font-weight: 600;
+    font-size: 1.6vw;
+    width: calc(80% - 4px);
+  }
+  .constest_notice > .constest_top > .constest_list_wrap > li > .contestBox > .contestinfo > .top > .age_ap {
+    font-size: 1.6vw;
+  }
+  .constest_notice > .constest_top > .constest_list_wrap > li > .contestBox > .contestinfo > .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+@media screen and (max-width: 768px) {
+  .constest_notice > .constest_top > .constest_list_wrap > li > .contestBox > .contestinfo {
+    height: 20vw;
+    max-height: 120px;
+    padding: 0.5vw 1vw;
+  }
+  .constest_notice > .constest_top > .constest_list_wrap > li > .contestBox > .contestinfo > .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+  }
+  .constest_notice > .constest_top > .constest_list_wrap > li > .contestBox > .contestinfo > .top > .title {
+    font-weight: 600;
+    font-size: 2.4vw;
+    width: 100%;
+  }
+  .constest_notice > .constest_top > .constest_list_wrap > li > .contestBox > .contestinfo > .top > .age_ap {
+    font-size: 2vw;
+    margin-top: 3px;
+  }
+  .constest_notice > .constest_top > .constest_list_wrap > li > .contestBox > .contestinfo > .bottom > .c_day {
+    font-size: 2.4vw;
+  }
+  .constest_notice > .constest_top > .constest_list_wrap > li > .contestBox > .contestinfo > .bottom > .t_info {
+    font-size: 2.4vw;
+  }
+}
+@media screen and (max-width: 420px) {
+  .news > .inner {
+    padding: 0 10px;
+  }
+  .constest_notice > .constest_top > .constest_list_wrap > li {
+    width: calc(100% / 2 - 10px);
+  }
+  .constest_notice > .constest_top > .constest_list_wrap > li > .contestBox > .contestinfo {
+    padding: 0.5vw 2vw;
+    height: 26vw;
+    margin-bottom: 10px;
+  }
+  .constest_notice > .constest_top > .constest_list_wrap > li > .contestBox > .contestinfo > .top > .title {
+    font-size: 3.5vw;
+  }
+  .constest_notice > .constest_top > .constest_list_wrap > li > .contestBox > .contestinfo > .bottom > .c_day {
+    font-size: 3.5vw;
+  }
+  .constest_notice > .constest_top > .constest_list_wrap > li > .contestBox > .contestinfo > .bottom > .t_info {
+    font-size: 3.5vw;
+  }
+  .constest_notice > .constest_top > .constest_list_wrap > li > .contestBox > .contestinfo > .top > .age_ap {
+    font-size: 2.5vw;
+    margin-top: 4px;
+    padding: 0.3vw 1vw;
+    border-radius: 2px;
+  }
+}
