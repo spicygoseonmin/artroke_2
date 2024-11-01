@@ -7,7 +7,7 @@
   top: 0;
   height: 76px;
   background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 5px 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 5px 5px 0px;
   z-index: 999;
   border-bottom: #fff solid 1px;
 }
@@ -19,12 +19,12 @@
 }
 .header-left {
   height: 100%;
-  width: 50%;
+  width: 85vw;
   position: relative;
   display: flex;
   align-items: center;
 }
-#cateBar{
+#cateBar {
   display: none;
 }
 .logo {
@@ -126,13 +126,11 @@
   display: flex;
   align-items: center;
   font-weight: 700;
-  width: 130px;
 }
 /*  */
 .search {
-  margin-right: 35px;
+  margin-right: 15px;
   cursor: pointer;
-
   height: 30%;
 }
 .search-move {
@@ -147,15 +145,17 @@
 #searchDelete {
   position: fixed;
   width: 100%;
-  top: 76px;
+  top: 65px;
   left: 0;
   background-color: #fff;
   margin: auto;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  border-radius: 0px 0px 10px 10px;
 }
-
+#loginIcon {
+  font-size: 1.3rem;
+}
 #searchAfter {
   position: absolute;
   right: 50px;
@@ -174,12 +174,11 @@
   display: block;
   left: 0;
   top: 0;
-  margin-left: 80px;
 }
 #searchDelete p {
   text-align: left;
   display: block;
-  margin-left: 36%;
+  margin-left: 33%;
   margin-top: 20px;
   margin-bottom: 40px;
 }
@@ -192,6 +191,7 @@
   margin-left: 33%;
   margin-right: 33%;
   width: 50%;
+  font-size: 1rem;
 }
 #li li {
   padding: 0;
@@ -202,6 +202,7 @@
   color: #ff370b;
 }
 #popularKeywords {
+  width: 100vw;
   line-height: 30px;
 }
 #popularKeywords #li li {
@@ -209,12 +210,6 @@
   width: 100%;
 }
 #popularKeywords p:first-child {
-  text-align: left;
-  display: block;
-  margin-left: 36%;
-  margin-top: 20px;
-  margin-bottom: 30px;
-  position: relative;
 }
 #searchBar {
   position: relative;
@@ -231,10 +226,11 @@
 }
 #searchShow {
   top: 50%;
-  left: 0;
+  left: 50%;
   position: relative;
   display: block;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
+  font-size: 1.3rem;
 }
 #searchXmark {
   position: absolute;
@@ -243,10 +239,11 @@
   right: -30px;
 }
 #iconContainer {
-  width: 100% !important;
+  min-width: 120px;
   position: absolute;
+  display: block;
   top: 76px;
-  right: 30px;
+  right: 0px;
   margin-left: 20px;
   background: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -270,7 +267,7 @@
   padding: 5px 0;
   font-size: 16px;
 }
-#noticeNone li p{
+#noticeNone li p {
   font-size: 14px;
 }
 #teachList {
@@ -283,110 +280,175 @@
 #loginText {
   width: 60px;
 }
+@media screen and (max-width:1232px) {
+  .logo{
+    height: 40%;
+  }
+  .menu{
+    gap: 20px;
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
-  #searchList{
+  .menu{
+    display: none;
+  }
+  #loginIcon {
+    font-size: 1.3rem;
+  }
+  #searchList {
     position: relative;
     display: block;
     left: 0;
     top: 0;
-    margin-left: 66px;
   }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+
   #cateBarClick {
-    width: 768px;
-    height: 100%;
-    position: relative;
-    display: block;
+    display: none; /* 처음에는 숨겨진 상태 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    overflow-y: auto;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.3) 0 5px 5px 0px;
-    border-radius: 5px;
-    z-index: 99999;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* 애니메이션을 위한 트랜지션 */
+    z-index: 9999;
     padding-bottom: 20px;
-    padding-top: 25px;
+    padding-top: 5px;
   }
+
+  #cateBarClick.slide-down {
+    display: block;
+    animation: slideDown 0.5s ease forwards;
+  }
+
+  #cateBarClick.slide-up {
+    animation: slideUp 0.5s ease forwards;
+  }
+
+  #cateBarClick {
+    display: none; /* 처음에는 숨겨진 상태 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 53%;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 5px 5px 0px;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* 애니메이션을 위한 트랜지션 */
+    z-index: 9999;
+    border-radius: 0 0 10px 10px;
+  }
+
+  #cateBarClick.active {
+    display: block; /* 보이도록 설정 */
+    animation: slideDown 0.5s ease forwards; /* slideDown 애니메이션 실행 */
+  }
+
   #cateBarClickMenuTop {
     position: relative;
     display: flex;
     padding-top: 20px;
     margin-bottom: 70px;
-  
   }
-  #cateBarClickMenuTop h2{
+  #cateBarClickMenuTop h2 {
     position: relative;
     left: 40%;
     transform: translateX(-45%);
   }
-  #catelistHard{
+  #catelistHard {
     display: none;
   }
-  .catelistHard{
+  .catelistHard {
     margin-bottom: 5px;
   }
   #cateLeft {
     width: 12px;
     height: 27px;
     padding-top: 7px;
-    margin-left: 40px;
+    margin-left: 20px;
   }
-  #cateAll{
+  #cateAll {
     margin-left: 30px;
+    font-size: clamp(14px, 2vw, 18px);
   }
-  
-  #cateline{
+
+  #cateline {
     border: 0.5px solid #eee;
     margin: 10px 0;
   }
-  #cateNomal{
+  #cateNomal {
     position: relative;
     display: block;
   }
-  #cateNomalListLeft{
+  #cateNomalListLeft {
     display: block;
     float: left;
     width: 100px;
     line-height: 25px;
   }
-  #cateNomalListRight{
+  #cateNomalListRight {
     margin-left: 40%;
     width: 200px;
     line-height: 25px;
   }
-  #cateHardList{
+  #cateHardList {
     display: none;
   }
-  #catelisthard{
+  #catelisthard {
     margin-bottom: 50px;
   }
-  #cateAllList{
+  #cateAllList {
     display: flex;
     position: relative;
     display: none;
     margin-bottom: 50px;
   }
-  #cateLeft img{
+  #cateLeft img {
     width: 100%;
     height: 100%;
-  }
-  #cateBar {
-    position: relative;
-    display: none;
   }
 
   .logo {
     height: 50%;
-    /* margin: auto; */
-    left: 65%;
+    margin: auto;
+    left: 50%;
     display: block;
     position: relative;
-    padding-left: 10px;
+    padding-left: 0px;
   }
   #cateBar {
+    font-size: 1.3rem;
     display: block;
-    padding-left: 40px;
   }
   #searchDelete {
     position: fixed;
     width: 100%;
-    top: 70px;
+    top: 65px;
     left: 0;
     background-color: #fff;
     margin: auto;
@@ -394,23 +456,23 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   .header-left {
-    height: 100%;
-    width: 43%;
+    height: 70%;
+    width: 50%;
     position: relative;
     display: flex;
     align-items: center;
+    margin: auto 0;
   }
   .header-right {
-    position: relative;
     display: flex;
     justify-content: center;
     font-weight: 700;
-    width: 130px;
-
+    width: 10vw;
   }
+
   #searchAfter {
     position: absolute;
-    right: -30px;
+    right: -50px;
     top: 50%;
     transform: translateY(-50%);
     width: 18px;
@@ -424,16 +486,9 @@
   #searchDelete p {
     text-align: left;
     display: block;
-    margin-left: 27%;
+    margin-left: 20%;
     margin-top: 20px;
     margin-bottom: 30px;
-  }
-  #popularKeywords p:first-child {
-    text-align: left;
-    display: block;
-    margin-left: 27%;
-    margin-top: 20px;
-    margin-bottom: 20px;
   }
   #searchNow {
     margin-bottom: 50px;
@@ -459,13 +514,15 @@
   #popularKeywords #li li {
     text-align: left;
     width: 100%;
+    min-width: 130px;
   }
 
   #searchBar {
     position: relative;
     display: block;
     width: 50vw;
-    height: 45px;
+    height: 35px;
+    min-width: 270px;
     background-color: #f6f6f6;
     border-radius: 40px;
     padding-left: 20px;
@@ -473,15 +530,16 @@
     line-height: 40px;
     font-size: 13px;
     border: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 40%;
+    transform: translateX(-40%);
   }
   #searchShow {
     top: 50%;
-    left: 0;
+    left: 50%;
     position: relative;
     display: block;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
+    font-size: 1.3rem;
   }
   #searchXmark {
     position: absolute;
@@ -491,10 +549,10 @@
   }
 
   #iconContainer {
-    width: 768px !important;
-    position: absolute;
+    width: 100vw !important;
+    position: fixed;
     top: 0;
-    right: -31px;
+    right: 0;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: none;
@@ -504,14 +562,14 @@
   #userInfo {
     display: flex !important;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 0 20px;
     margin-top: 25px;
     margin-bottom: 50px;
   }
 
   #userInfoNotice {
     padding-left: 15px;
-    font-size: 18px;
+    font-size: 16px;
   }
   #userInfoSecond {
     width: 100%;
@@ -521,6 +579,7 @@
     text-align: center;
     line-height: 25px;
     font-size: 15px;
+    margin-bottom: 20px;
   }
   #userInfoSecond i {
     font-size: 50px;
@@ -570,7 +629,7 @@
   }
   #InterestedList {
     margin-left: 15px;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 35px;
   }
   #logOut {
@@ -589,7 +648,7 @@
   #userInfoNickName,
   #xhqslqkznl {
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
   }
   #userInfoDelete,
   #xhqslqkznl {
@@ -609,12 +668,15 @@
     display: none !important;
   }
 }
-@media screen and (max-width: 320px) {
 
+@media screen and (max-width: 320px) {
+  #loginIcon {
+    font-size: 1.3rem;
+    padding-top: 5px;
+  }
   #cateBarClick {
-    width: 320px;
-    height: 100%;
-    position: relative;
+    width: 100%;
+    position: fixed;
     display: block;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.3) 0 5px 5px 0px;
@@ -622,81 +684,80 @@
     z-index: 99999;
     padding-bottom: 20px;
     padding-top: 5px;
+    top: 0;
+    height: 50%;
+    overflow-y: auto;
   }
   #cateBarClickMenuTop {
     position: relative;
     display: flex;
     padding-top: 20px;
     margin-bottom: 70px;
-  
   }
-  #cateAll h3{
+  #cateAll h3 {
     font-size: 14px;
   }
-  #cateNomalListLeft li,#cateNomalListRight li{
+  #cateNomalListLeft li,
+  #cateNomalListRight li {
     font-size: 13px;
   }
 
-  .catelistHard{
+  .catelistHard {
     font-size: 14px;
     padding-left: 5px;
   }
-  #cateBarClickMenuTop h2{
+  #cateBarClickMenuTop h2 {
     position: relative;
     left: 40%;
     transform: translateX(-45%);
     padding-top: 5px;
   }
-  #catelistHard{
+  #catelistHard {
     display: none;
   }
   #cateLeft {
-    width: 12px;
-    height: 30px;
+    width: 7px;
+    height: 20px;
     padding-top: 7px;
     margin-left: 15px;
   }
-  #cateAll{
+  #cateAll {
     margin-left: 20px;
   }
-  
-  #cateline{
+
+  #cateline {
     border: 0.5px solid #eee;
     margin: 10px 0;
   }
-  #cateNomal{
+  #cateNomal {
     position: relative;
     display: block;
   }
-  #cateNomalListLeft{
+  #cateNomalListLeft {
     display: block;
     float: left;
     width: 100px;
   }
-  #cateNomalListRight{
-    margin-left:50%;
+  #cateNomalListRight {
+    margin-left: 50%;
     width: 200px;
   }
-  #cateHardList{
+  #cateHardList {
     display: none;
   }
-  #catelisthard{
+  #catelisthard {
     margin-bottom: 50px;
   }
-  #cateAllList{
+  #cateAllList {
     display: flex;
     position: relative;
     display: none;
     margin-bottom: 50px;
     padding-left: 5px;
   }
-  #cateLeft img{
+  #cateLeft img {
     width: 100%;
     height: 100%;
-  }
-  #cateBar {
-    position: relative;
-    display: none;
   }
 
   .container {
@@ -708,10 +769,10 @@
   .logo {
     height: 50%;
     /* margin: auto; */
-    left: 77%;
+    left: 100%;
     display: block;
     position: relative;
-    padding-left: 10px;
+    padding-left: 20px;
   }
   .header-left {
     height: 70%;
@@ -719,15 +780,18 @@
     position: relative;
     display: flex;
     align-items: center;
-    top: 50%;
-    left: 15%;
-    transform: translate(-50%, -50%);
+    /* top: 50%; */
+    left: 7%;
+    transform: translate(-50%);
+    margin: auto 0;
   }
   #cateBar {
     display: block;
     padding: 0;
+    font-size: 1.3rem;
   }
   #searchShow {
+    font-size: 1.3rem;
     top: 60%;
     left: 0;
     position: relative;
@@ -735,12 +799,11 @@
     transform: translateY(-50%);
   }
   .header-right {
-    width: 105px;
-    font-size: 12px;
+    width: 115px;
     right: -30px;
-    gap: 20px;
-    padding-top: 10px;
-    padding-left: 10px;
+    gap: 10px;
+    padding-top: 0px;
+    padding-left: 0px;
     display: flex;
     justify-content: center;
   }
@@ -751,9 +814,9 @@
   }
   #iconContainer {
     width: 320px !important;
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 11px;
+    right: 0;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: none;
@@ -763,7 +826,7 @@
   #userInfo {
     display: flex !important;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 0 30px;
     margin-top: 50px;
     margin-bottom: 30px;
   }
@@ -796,36 +859,30 @@
     border: 0;
   }
   #searchDelete p {
+    font-size: 14px;
     text-align: left;
     display: block;
     margin-left: 10%;
     margin-top: 20px;
     margin-bottom: 17px;
   }
-  #popularKeywords p:first-child {
-    text-align: left;
-    display: block;
-    margin-left: 10%;
-    margin-top: 20px;
-    margin-bottom: 15px;
-  }
   #searchList {
     position: relative;
     display: block;
     left: 0;
     top: 0;
-    margin-left: 25px;
   }
   #li {
     display: flex;
     justify-content: space-between;
-    margin-left: 2%;
+    margin-left: 10%;
     margin-right: 33%;
     width: 100%;
+    font-size: 14px;
   }
   #userInfoNotice {
     padding-left: 15px;
-    font-size: 18px;
+    font-size: 16px;
   }
   #userInfoSecond {
     width: 100%;
@@ -859,7 +916,6 @@
     gap: 20px;
     text-align: center;
     font-size: 12px;
-
   }
 
   #notice {
@@ -883,12 +939,12 @@
   #noticeNone li {
     padding: 3px 0;
   }
-  #noticeNone li p{
+  #noticeNone li p {
     font-size: 12px;
   }
   #InterestedList {
     margin-left: 15px;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 35px;
   }
   #InterestedList p {
@@ -904,13 +960,13 @@
   }
   #userInfoDelete {
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     color: #777777;
   }
   #userInfoNickName,
   #xhqslqkznl {
     text-align: center;
-    font-size: 15px;
+    font-size: 18px;
   }
   #userInfoDelete,
   #xhqslqkznl {

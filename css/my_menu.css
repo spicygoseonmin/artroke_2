@@ -571,7 +571,7 @@
   }
 }
 @media screen and (max-width: 600px) {
-  .submit_project_work{
+  .submit_project_work {
     height: 100%;
   }
   .submit_project_work > .submit_project_work_wrap > form {
