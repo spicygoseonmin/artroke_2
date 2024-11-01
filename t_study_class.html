@@ -43,12 +43,13 @@
   </head>
   <body>
     <div class="wrap">
+      <!-- 헤더 -->
       <header class="header">
         <div class="inner">
           <div class="header-left">
             <i class="fa-solid fa-bars" id="cateBar"></i>
             <div class="logo">
-              <a href="#">
+              <a href="index.html">
                 <img src="images/logo/logo.png" alt="로고이미지" />
               </a>
             </div>
@@ -57,10 +58,10 @@
                 <a href="#"> 강의 카테고리<i class="fa-solid fa-angle-down"></i></a>
               </li>
               <li>
-                <a href="#">커뮤니티</a>
+                <a href="community.html">커뮤니티</a>
               </li>
               <li>
-                <a href="#">뉴스</a>
+                <a href="news.html">뉴스</a>
               </li>
               <li>
                 <a href="#">강사진소개</a>
@@ -112,7 +113,6 @@
                 <a href="#" id="loginText"> 로그인 </a>
               </li>
               <i class="fa-solid fa-user" id="loginIcon"></i>
-
               <!-- 로그인했을떄 유저메뉴 -->
               <i class="fa-solid fa-user" style="display: none"></i>
               <li id="user-profile">
@@ -135,9 +135,6 @@
                   <div id="userInfoId">
                     <!-- JS로 아이디 출력 -->
                   </div>
-                  <div id="userInfoEmail">
-                    <!-- JS로 이메일 출력 -->
-                  </div>
                 </div>
               </div>
               <div id="userInfoMid">
@@ -152,18 +149,8 @@
                     </ul>
                   </ul>
                   <ul>
-                    <li id="myTeach">나의 강좌<i class="fa-solid fa-chevron-down"></i></li>
+                    <li id="myTeach">학습방</li>
                     <div id="line"></div>
-                    <ul id="teachList" style="display: none">
-                      <li>
-                        수강 강의 이름
-                        <p>다시보기</p>
-                      </li>
-                      <li>
-                        수강 강의 이름
-                        <p>다시보기</p>
-                      </li>
-                    </ul>
                   </ul>
                 </div>
                 <div id="InterestedList">
@@ -187,17 +174,16 @@
                 <li class="class-cate-title">일반 강의<i class="fa-solid fa-angle-right"></i></li>
                 <li>
                   <ul class="class-cate-list">
-                    <li><a href="#">소묘</a></li>
-                    <li><a href="#">수채화</a></li>
-                    <li><a href="#">유화</a></li>
-                    <li><a href="#">아크릴화</a></li>
-                    <li><a href="#">디지털 드로잉</a></li>
-                    <li><a href="#">조소/모델링</a></li>
-                    <li><a href="#">만화/애니메이션</a></li>
-                    <li><a href="#">아동 미술</a></li>
-                    <li><a href="#">공예</a></li>
-                    <li><a href="#">포토샵/일러스트레이터</a></li>
-                    <li><a href="#">이모티콘</a></li>
+                    <li><a href="#" onclick="saveCategory('m_1')">소묘</a></li>
+                    <li><a href="#" onclick="saveCategory('m_3')">수채화</a></li>
+                    <li><a href="#" onclick="saveCategory('m_4')">유화</a></li>
+                    <li><a href="#" onclick="saveCategory('m_5')">아크릴화</a></li>
+                    <li><a href="#" onclick="saveCategory('m_6')">디지털 드로잉</a></li>
+                    <li><a href="#" onclick="saveCategory('m_7')">조소/모델링</a></li>
+                    <li><a href="#" onclick="saveCategory('m_8')">만화/애니메이션</a></li>
+                    <li><a href="#" onclick="saveCategory('m_9')">공예</a></li>
+                    <li><a href="#" onclick="saveCategory('m_10')">포토샵/일러스트레이터</a></li>
+                    <li><a href="#" onclick="saveCategory('m_11')">이모티콘</a></li>
                   </ul>
                 </li>
                 <!-- 실기 강의 카테고리 -->

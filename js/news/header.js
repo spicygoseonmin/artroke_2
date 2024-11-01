@@ -4,7 +4,7 @@ window.addEventListener("load", function () {
   const loginIcon = document.getElementById("loginIcon");
   const userInfoNickName = document.getElementById("userInfoNickName");
   const userInfoId = document.getElementById("userInfoId");
- 
+
   const logOut = document.getElementById("logOut");
   const iconContainer = document.getElementById("iconContainer");
   const userInfo = document.getElementById("userInfo");
@@ -32,14 +32,13 @@ window.addEventListener("load", function () {
   // 로그인 상태에 따른 UI 업데이트
   const userFind = JSON.parse(localStorage.getItem("userFind"));
 
- 
-  floatingBtn.addEventListener("click", function () {
-    if (userFind) {
-      window.location.href = "c_study_class.html";
-    } else {
-      window.location.href = "login.html";
-    }
-  });
+  // floatingBtn.addEventListener("click", function () {
+  //   if (userFind) {
+  //     window.location.href = "c_study_class.html";
+  //   } else {
+  //     window.location.href = "login.html";
+  //   }
+  // });
 
   myTeach.addEventListener("click", function () {
     window.location.href = "my_menu.html";
@@ -49,7 +48,6 @@ window.addEventListener("load", function () {
     loginIcon.style.display = "block";
     userInfoNickName.textContent = `${userFind.usernickname} 님 환영합니다!`;
     userInfoId.textContent = `아이디 : ${userFind.userName}`;
-   
   } else {
     loginText.style.display = "inline-block";
     loginIcon.style.display = "none";
@@ -73,7 +71,7 @@ window.addEventListener("load", function () {
     loginIcon.style.display = "none";
     userInfoNickName.textContent = "";
     userInfoId.textContent = "";
-  
+
     iconContainer.style.display = "none";
     alert("로그아웃이 완료되었습니다.");
   });
@@ -126,16 +124,16 @@ window.addEventListener("load", function () {
   });
 
   // // 카테고리 메뉴 토글
-  // openCate.addEventListener("click", function () {
-  //   cateBox.classList.toggle("active");
-  //   cateBack.classList.toggle("active");
-  //   searchDelete.style.display = "none";
-  // });
+  openCate.addEventListener("click", function () {
+    cateBox.classList.toggle("active");
+    cateBack.classList.toggle("active");
+    searchDelete.style.display = "none";
+  });
 
-  // cateBack.addEventListener("click", function () {
-  //   cateBack.classList.remove("active");
-  //   cateBox.classList.remove("active");
-  // });
+  cateBack.addEventListener("click", function () {
+    cateBack.classList.remove("active");
+    cateBox.classList.remove("active");
+  });
 
   // 반응형 적용
   function applyResponsiveEffect() {
