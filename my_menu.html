@@ -49,13 +49,12 @@
   </head>
   <body>
     <div class="wrap">
-      <!-- 헤더 -->
       <header class="header">
         <div class="inner">
           <div class="header-left">
             <i class="fa-solid fa-bars" id="cateBar"></i>
             <div class="logo">
-              <a href="index.html">
+              <a href="#">
                 <img src="images/logo/logo.png" alt="로고이미지" />
               </a>
             </div>
@@ -64,10 +63,10 @@
                 <a href="#"> 강의 카테고리<i class="fa-solid fa-angle-down"></i></a>
               </li>
               <li>
-                <a href="community.html">커뮤니티</a>
+                <a href="#">커뮤니티</a>
               </li>
               <li>
-                <a href="news.html">뉴스</a>
+                <a href="#">뉴스</a>
               </li>
               <li>
                 <a href="#">강사진소개</a>
@@ -119,6 +118,7 @@
                 <a href="#" id="loginText"> 로그인 </a>
               </li>
               <i class="fa-solid fa-user" id="loginIcon"></i>
+
               <!-- 로그인했을떄 유저메뉴 -->
               <i class="fa-solid fa-user" style="display: none"></i>
               <li id="user-profile">
@@ -141,6 +141,9 @@
                   <div id="userInfoId">
                     <!-- JS로 아이디 출력 -->
                   </div>
+                  <div id="userInfoEmail">
+                    <!-- JS로 이메일 출력 -->
+                  </div>
                 </div>
               </div>
               <div id="userInfoMid">
@@ -155,8 +158,18 @@
                     </ul>
                   </ul>
                   <ul>
-                    <li id="myTeach">학습방</li>
+                    <li id="myTeach">나의 강좌<i class="fa-solid fa-chevron-down"></i></li>
                     <div id="line"></div>
+                    <ul id="teachList" style="display: none">
+                      <li>
+                        수강 강의 이름
+                        <p>다시보기</p>
+                      </li>
+                      <li>
+                        수강 강의 이름
+                        <p>다시보기</p>
+                      </li>
+                    </ul>
                   </ul>
                 </div>
                 <div id="InterestedList">
@@ -180,16 +193,17 @@
                 <li class="class-cate-title">일반 강의<i class="fa-solid fa-angle-right"></i></li>
                 <li>
                   <ul class="class-cate-list">
-                    <li><a href="#" onclick="saveCategory('m_1')">소묘</a></li>
-                    <li><a href="#" onclick="saveCategory('m_3')">수채화</a></li>
-                    <li><a href="#" onclick="saveCategory('m_4')">유화</a></li>
-                    <li><a href="#" onclick="saveCategory('m_5')">아크릴화</a></li>
-                    <li><a href="#" onclick="saveCategory('m_6')">디지털 드로잉</a></li>
-                    <li><a href="#" onclick="saveCategory('m_7')">조소/모델링</a></li>
-                    <li><a href="#" onclick="saveCategory('m_8')">만화/애니메이션</a></li>
-                    <li><a href="#" onclick="saveCategory('m_9')">공예</a></li>
-                    <li><a href="#" onclick="saveCategory('m_10')">포토샵/일러스트레이터</a></li>
-                    <li><a href="#" onclick="saveCategory('m_11')">이모티콘</a></li>
+                    <li><a href="#">소묘</a></li>
+                    <li><a href="#">수채화</a></li>
+                    <li><a href="#">유화</a></li>
+                    <li><a href="#">아크릴화</a></li>
+                    <li><a href="#">디지털 드로잉</a></li>
+                    <li><a href="#">조소/모델링</a></li>
+                    <li><a href="#">만화/애니메이션</a></li>
+                    <li><a href="#">아동 미술</a></li>
+                    <li><a href="#">공예</a></li>
+                    <li><a href="#">포토샵/일러스트레이터</a></li>
+                    <li><a href="#">이모티콘</a></li>
                   </ul>
                 </li>
                 <!-- 실기 강의 카테고리 -->
@@ -308,45 +322,72 @@
               <div class="option">
                 <!-- 전체 -->
                 <!-- 수강완료한 강좌 제외 -->
-                <select name="" id="">
-                  <option value="">전체</option>
-                  <option value=""></option>
-                </select>
-                <select name="" id="">
-                  <option value="">전체</option>
-                  <option value="">수강완료한 강좌 제외</option>
-                </select>
+                <div class="select show_all">전체</div>
+                <div class="select">수강완료한 강좌 제외</div>
               </div>
               <div class="sclList">
                 <ul>
                   <li>
-                    <div class="top">
-                      <div class="class_title">팀플로 성장하는 발상과 표현 클래스 5기 <span>수강중</span></div>
-                      <div class="class_s_day">2024. 10. 14 ~ 2025. 01. 01</div>
+                    <div class="img_thumbnail">
+                      <span class="class_live_alarm live_show_color">실시간 수업중</span>
+                      <img src="images/main_ class_img/1-4.png" alt="팀플로 성장하는 발상과 표현 클래스 5기" />
                     </div>
-                    <div class="bottom">
-                      <div class="class_s_t">디자인실기 | 이진수</div>
-                      <div class="class_sd_day">2일 후 수강</div>
+                    <div class="info">
+                      <div class="top">
+                        <div class="class_title">팀플로 성장하는 발상과 표현 클래스 5기 <span>수강중</span></div>
+                        <div class="class_s_day">2024. 10. 14 ~ 2025. 01. 01</div>
+                      </div>
+                      <div class="bottom">
+                        <div class="class_s_t"><a href="#">디자인실기 | 이진수</a></div>
+                        <div class="class_sd_day">실시간 수업중</div>
+                      </div>
+                      <!-- 수강증 발급 및 수강하기 버튼 -->
+                      <div class="listen_btn_wrap">
+                        <div class="certificate">수강증 발급 받기</div>
+                        <div class="play_class">지난회차 다시보기</div>
+                      </div>
                     </div>
                   </li>
                   <li>
-                    <div class="top">
-                      <div class="class_title">포근포근~ 소중한 애착인형 만들기 <span>수강중</span></div>
-                      <div class="class_s_day">2024. 10. 14 ~ 2025. 01. 01</div>
+                    <div class="img_thumbnail">
+                      <span class="class_live_alarm live_none_color">수업 종료</span>
+                      <img src="images/main_ class_img/2-4.png" alt="포근포근~ 소중한 애착인형 만들기" />
                     </div>
-                    <div class="bottom">
-                      <div class="class_s_t">디자인실기 | 이진수</div>
-                      <div class="class_sd_day">2일 후 수강</div>
+                    <div class="info">
+                      <div class="top">
+                        <div class="class_title">포근포근~ 소중한 애착인형 만들기 <span>수강중</span></div>
+                        <div class="class_s_day">2024. 10. 14 ~ 2025. 01. 01</div>
+                      </div>
+                      <div class="bottom">
+                        <div class="class_s_t"><a href="#">디자인실기 | 이진수</a></div>
+                        <div class="class_sd_day">2일 후 수강</div>
+                      </div>
+                      <!-- 수강증 발급 및 수강하기 버튼 -->
+                      <div class="listen_btn_wrap">
+                        <div class="certificate">수강증 발급 받기</div>
+                        <div class="play_class">지난회차 다시보기</div>
+                      </div>
                     </div>
                   </li>
                   <li>
-                    <div class="top">
-                      <div class="class_title">개체 연습으로 배우는 기초디자인 묘사 <span>수강중</span></div>
-                      <div class="class_s_day">2024. 10. 14 ~ 2025. 01. 01</div>
+                    <div class="img_thumbnail">
+                      <span class="class_live_alarm live_none_color">수업 종료</span>
+                      <img src="images/main_ class_img/1-2.png" alt="개체 연습으로 배우는 기초디자인 묘사" />
                     </div>
-                    <div class="bottom">
-                      <div class="class_s_t">디자인실기 | 이진수</div>
-                      <div class="class_sd_day">2일 후 수강</div>
+                    <div class="info">
+                      <div class="top">
+                        <div class="class_title">개체 연습으로 배우는 기초디자인 묘사 <span>수강중</span></div>
+                        <div class="class_s_day">2024. 10. 14 ~ 2025. 01. 01</div>
+                      </div>
+                      <div class="bottom">
+                        <div class="class_s_t"><a href="#">디자인실기 | 이진수</a></div>
+                        <div class="class_sd_day">2일 후 수강</div>
+                      </div>
+                      <!-- 수강증 발급 및 수강하기 버튼 -->
+                      <div class="listen_btn_wrap">
+                        <div class="certificate">수강증 발급 받기</div>
+                        <div class="play_class">지난회차 다시보기</div>
+                      </div>
                     </div>
                   </li>
                 </ul>
@@ -366,14 +407,8 @@
               <div class="option">
                 <!-- 전체 -->
                 <!-- 제출 완료한 과제 제외 -->
-                <select name="" id="">
-                  <option value="">전체</option>
-                  <option value="">남은 제출 기간 순</option>
-                </select>
-                <select name="" id="">
-                  <option value="">전체</option>
-                  <option value="">과제 제출한 강좌 제외</option>
-                </select>
+                <div class="select show_all">전체</div>
+                <div class="select">과제 제출한 강좌 제외</div>
               </div>
               <div class="sctList">
                 <ul>
@@ -518,7 +553,7 @@
               <div class="mpls_wrap">
                 <!-- 결재수단 등록 -->
                 <!-- 할인 쿠폰 -->
-                <div>
+                <div style="display: none">
                   <input type="checkbox" id="coupon-box" />
                   <label for="coupon-box"> 5,000원 쿠폰 적용 </label>
                 </div>
@@ -527,7 +562,7 @@
                 <!-- 이용약관 UI -->
                 <div id="agreement"></div>
                 <!-- 결제하기 버튼 -->
-                <button class="button" id="payment-button" style="margin-top: 30px">결제하기</button>
+                <button class="button" id="payment-button" style="margin-top: 30px">결제수단 등록하기</button>
               </div>
             </div>
             <!-- 포인트 -->

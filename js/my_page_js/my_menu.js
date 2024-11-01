@@ -1,4 +1,16 @@
 window.addEventListener("load", function () {
+  const users = JSON.parse(localStorage.getItem("userFind")) || [];
+  const log_nicknamr = document.querySelector(".log_nicknamr");
+
+  const user_nickname_tag = `
+  <div class="my_info_wrap">
+  <div class="my_menu_user_profile"><img src="images/icon/o_profile.png" alt="기본_프로필_이미지"></div>
+  <div class="my_menu_user_name"><h2>${users.usernickname}</h2>님 환영합니다.</div>
+  </div>
+  <div class="my_preference"><i class="fa-solid fa-gear"></i></div>
+  `;
+  log_nicknamr.innerHTML = user_nickname_tag;
+
   // 포인트 소식 슬라이드 구역
   const sw_point = new Swiper(".sw_point", {
     slidesPerView: 3.4, // 보여지는 슬라이드 개수
