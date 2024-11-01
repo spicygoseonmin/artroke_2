@@ -29,17 +29,29 @@ window.addEventListener("load", function () {
   const cateBox = document.querySelector(".cate-box");
   const cateBack = document.querySelector(".cate-background");
   const floatingBtn = this.document.querySelector(".floating-btn");
+  const floatingLogin = this.document.querySelector(".floating-login")
+  const floatingLoginTxt = this.document.querySelector(".floating-login-txt")
+  const floatingSearch = this.document.querySelector(".floating-search")
   // 로그인 상태에 따른 UI 업데이트
   const userFind = JSON.parse(localStorage.getItem("userFind"));
 
  
-  floatingBtn.addEventListener("click", function () {
+  floatingBtn.addEventListener("click", function (e) {
+    e.preventDefault()
     if (userFind) {
       window.location.href = "c_study_class.html";
     } else {
       window.location.href = "login.html";
     }
   });
+  floatingLogin.addEventListener("click",function(e){
+    e.preventDefault()
+    if (userFind) {
+      window.location.href = "my_menu.html";
+    } else {
+      window.location.href = "login.html";
+    }
+  })
 
   myTeach.addEventListener("click", function () {
     window.location.href = "my_menu.html";
@@ -49,12 +61,14 @@ window.addEventListener("load", function () {
     loginIcon.style.display = "block";
     userInfoNickName.textContent = `${userFind.usernickname} 님 환영합니다!`;
     userInfoId.textContent = `아이디 : ${userFind.userName}`;
-   
+    floatingLoginTxt.textContent = "마이페이지"
+    
   } else {
     loginText.style.display = "inline-block";
     loginIcon.style.display = "none";
     const loginNickName = document.getElementById("loginNickName");
     if (loginNickName) loginNickName.style.display = "none";
+    floatingLoginTxt.textContent = "로그인"
   }
 
   // 로그인 및 로그아웃 이벤트
@@ -76,14 +90,22 @@ window.addEventListener("load", function () {
   
     iconContainer.style.display = "none";
     alert("로그아웃이 완료되었습니다.");
+    location.reload()
   });
 
   // 검색창 토글
+  floatingSearch.addEventListener("click", function(){
+  //  console.log(searchDelete);
+   
+    searchDelete.classList.add("active")
+  })
   searchShow.addEventListener("click", function () {
     searchDelete.style.display = searchDelete.style.display === "block" ? "none" : "block";
-  });
-
-  searchXmark.addEventListener("click", function () {
+      searchDelete.classList.remove("active")
+    });
+    
+    searchXmark.addEventListener("click", function () {
+    searchDelete.classList.remove("active")
     searchDelete.style.display = "none";
     searchShow.style.display = "block";
   });
@@ -130,6 +152,7 @@ window.addEventListener("load", function () {
     cateBox.classList.toggle("active");
     cateBack.classList.toggle("active");
     searchDelete.style.display = "none";
+    searchDelete.classList.remove("active")
   });
 
   cateBack.addEventListener("click", function () {
