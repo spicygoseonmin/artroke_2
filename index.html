@@ -79,12 +79,12 @@
       <div class="floating">
         <ul class="floating-list">
           <li>
-            <a href="login.html">
-              <p>로그인</p>
+            <a href="login.html" class="floating-login">
+              <p class="floating-login-txt">로그인</p>
               <i class="fa-solid fa-user"></i>
             </a>
           </li>
-          <li>
+          <li class="floating-search">
             <p>검색</p>
             <i class="fa-solid fa-magnifying-glass"></i>
           </li>
@@ -125,7 +125,7 @@
             <div class="search">
               <i class="fa-solid fa-magnifying-glass" id="searchShow"></i>
             </div>
-            <form style="display: none" id="searchDelete">
+            <form id="searchDelete">
               <label>
                 <div class="search-move" id="searchMove">
                   <input type="text" placeholder="검색어를 입력하세요" id="searchBar" />
