@@ -25,10 +25,10 @@ window.addEventListener("load", function () {
       showCommuWater();
       // 유화
       COMMU_OIL = obj.oilPainting;
-      showCommuOil()
+      showCommuOil();
       // 아크릴화
       COMMU_ACRYLIC = obj.acrylicization;
-      showCommuAcrylic()
+      showCommuAcrylic();
     }
   };
   xhttp.open("GET", "community.json");
@@ -132,17 +132,17 @@ window.addEventListener("load", function () {
     let html = "";
     COMMU_WATER.forEach(function (item) {
       let tag = `
-        <li>
-                <div class="commu-title-wrap">
-                  <p class="commu-cate">${item.cate}</p>
-                  <p class="commu-title"><a href="#">${item.title}</a></p>
-                </div>
-                <div class="commu-icon">
-                  <p class="commu-chat"><i class="fa-regular fa-comment-dots"></i> ${item.chat}</p>
-                  <p class="commu-view"><i class="fa-regular fa-eye"></i> ${item.view}</p>
-                </div>
-              </li>
-        `;
+          <li>
+                  <div class="commu-title-wrap">
+                    <p class="commu-cate">${item.cate}</p>
+                    <p class="commu-title"><a href="#">${item.title}</a></p>
+                  </div>
+                  <div class="commu-icon">
+                    <p class="commu-chat"><i class="fa-regular fa-comment-dots"></i> ${item.chat}</p>
+                    <p class="commu-view"><i class="fa-regular fa-eye"></i> ${item.view}</p>
+                  </div>
+                </li>
+          `;
       html += tag;
     });
     commuWaterTag.innerHTML = html;

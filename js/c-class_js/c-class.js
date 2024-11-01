@@ -29,25 +29,27 @@ window.addEventListener("load", function () {
   // 일반강의 출력기능======================================
   function show_C_class(sortedClasses = C_CLASS_LIST) {
     let html = `
-      <ul id="c-class_list_ul">
-      `;
+    <ul id="c-class_list_ul">
+    `;
     sortedClasses.forEach(function (item) {
       const tag = `
-              <li>
-                  <div class="img_wrap">
-                     <img src="images/main_ class_img/${item.url}" alt="${item.title}">
-                      <div class="mark"></div>
-                  </div>
-                  <div class="text_wrap">
-                      <div class="class-title">${item.title}</div>
-                      <div class="instructor-info">
-                          <div class="class-cate">${item.description}</div>
-                          <div class="instructor-info-line"></div>
-                          <div class="instructor-name">${item.teacher}</div>
-                      </div>
-                  </div>
-              </li>
-          `;
+            <li>
+                <a href="class.html">
+                <div class="img_wrap">
+                   <img src="images/main_ class_img/${item.url}" alt="${item.title}">
+                    <div class="mark"></div>
+                </div>
+                <div class="text_wrap">
+                    <div class="class-title">${item.title}</div>
+                    <div class="instructor-info">
+                        <div class="class-cate">${item.description}</div>
+                        <div class="instructor-info-line"></div>
+                        <div class="instructor-name">${item.teacher}</div>
+                    </div>
+                </div>
+                </a>
+            </li>
+        `;
       html += tag;
     });
     html += `</ul>`;
@@ -60,7 +62,8 @@ window.addEventListener("load", function () {
       // 전체 버튼을 클릭한 경우 (index가 0이라고 가정)
       if (index === 0) {
         // 전체 강의 리스트를 다시 보여줌
-        show_C_class(C_CLASS_LIST);
+        const sortedClasses = [...C_CLASS_LIST].sort((a, b) => a.rank - b.rank);
+        show_C_class(sortedClasses);
       } else {
         // 필터된 강의 리스트를 보여줌
         const changeClasses = C_CLASS_LIST.filter((a) => a.m_l === index);
@@ -74,9 +77,12 @@ window.addEventListener("load", function () {
     m_btn_m_op.forEach(function (op, index) {
       // 전체 버튼을 클릭한 경우 (index가 0이라고 가정)
       if (m_btn_m.value === index + "_o_menu") {
+        // 필터된 강의 리스트를 보여줌
+        const changeClasses = C_CLASS_LIST.filter((a) => a.m_l === index);
+        show_C_class(changeClasses);
         if (m_btn_m.value === "all") {
-          // 전체 강의 리스트를 다시 보여줌
-          show_C_class(C_CLASS_LIST);
+          const sortedClasses = [...C_CLASS_LIST].sort((a, b) => a.rank - b.rank);
+          show_C_class(sortedClasses);
         } else {
           // 필터된 강의 리스트를 보여줌
           const changeClasses = C_CLASS_LIST.filter((a) => a.m_l === index);
