@@ -136,6 +136,27 @@ h2{
 .notice-wrap p{
     font-weight: 500;
 }
+.floating{
+    position: fixed;
+    width: 180px;
+    height: 45px;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    background-color: #ff310b;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    border-radius: 50px;
+    z-index: 91;
+}
+.write-btn{
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 45px;
+    text-align: center;
+    color: #fff;
+}
 /*  */
 @media screen and (max-width:1231px) {
     .ad-banner .inner{
@@ -190,6 +211,15 @@ h2{
         padding: 7px 15px;
     }
     .menu-item a{
+        font-size: 14px;
+    }
+    .floating{
+        width: 150px;
+        height: 40px;
+        bottom: 10px;
+    }
+    .write-btn{
+        line-height: 40px;
         font-size: 14px;
     }
 }

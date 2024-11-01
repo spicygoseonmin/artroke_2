@@ -41,17 +41,17 @@ window.addEventListener("load", function () {
     COMMU_NOW.forEach(function (item) {
       //   console.log(item);
       let tag = `
-      <li>
-                  <div class="commu-title-wrap">
-                    <p class="commu-cate">${item.cate}</p>
-                    <p class="commu-title"><a href="#">${item.title}</a></p>
-                  </div>
-                  <div class="commu-icon">
-                    <p class="commu-chat"><i class="fa-regular fa-comment-dots"></i> ${item.chat}</p>
-                    <p class="commu-view"><i class="fa-regular fa-eye"></i> ${item.view}</p>
-                  </div>
-                </li>
-      `;
+    <li>
+                <div class="commu-title-wrap">
+                  <p class="commu-cate">${item.cate}</p>
+                  <p class="commu-title"><a href="#">${item.title}</a></p>
+                </div>
+                <div class="commu-icon">
+                  <p class="commu-chat"><i class="fa-regular fa-comment-dots"></i> ${item.chat}</p>
+                  <p class="commu-view"><i class="fa-regular fa-eye"></i> ${item.view}</p>
+                </div>
+              </li>
+    `;
       html += tag;
     });
     commuNowTag.innerHTML = html;
@@ -63,17 +63,17 @@ window.addEventListener("load", function () {
     let html = ``;
     COMMU_WEEK.forEach(function (item) {
       let tag = `
-          <li>
-                  <div class="commu-title-wrap">
-                    <p class="commu-cate">${item.cate}</p>
-                    <p class="commu-title"><a href="#">${item.title}</a></p>
-                  </div>
-                  <div class="commu-icon">
-                    <p class="commu-chat"><i class="fa-regular fa-comment-dots"></i> ${item.chat}</p>
-                    <p class="commu-view"><i class="fa-regular fa-eye"></i> ${item.view}</p>
-                  </div>
-                </li>
-          `;
+        <li>
+                <div class="commu-title-wrap">
+                  <p class="commu-cate">${item.cate}</p>
+                  <p class="commu-title"><a href="#">${item.title}</a></p>
+                </div>
+                <div class="commu-icon">
+                  <p class="commu-chat"><i class="fa-regular fa-comment-dots"></i> ${item.chat}</p>
+                  <p class="commu-view"><i class="fa-regular fa-eye"></i> ${item.view}</p>
+                </div>
+              </li>
+        `;
       html += tag;
     });
     commuWeekTag.innerHTML = html;
@@ -110,17 +110,17 @@ window.addEventListener("load", function () {
     let html = "";
     COMMU_DRAWING.forEach(function (item) {
       let tag = `
-          <li>
-                  <div class="commu-title-wrap">
-                    <p class="commu-cate">${item.cate}</p>
-                    <p class="commu-title"><a href="#">${item.title}</a></p>
-                  </div>
-                  <div class="commu-icon">
-                    <p class="commu-chat"><i class="fa-regular fa-comment-dots"></i> ${item.chat}</p>
-                    <p class="commu-view"><i class="fa-regular fa-eye"></i> ${item.view}</p>
-                  </div>
-                </li>
-          `;
+        <li>
+                <div class="commu-title-wrap">
+                  <p class="commu-cate">${item.cate}</p>
+                  <p class="commu-title"><a href="#">${item.title}</a></p>
+                </div>
+                <div class="commu-icon">
+                  <p class="commu-chat"><i class="fa-regular fa-comment-dots"></i> ${item.chat}</p>
+                  <p class="commu-view"><i class="fa-regular fa-eye"></i> ${item.view}</p>
+                </div>
+              </li>
+        `;
       html += tag;
     });
     commuDrawingTag.innerHTML = html;
@@ -149,46 +149,46 @@ window.addEventListener("load", function () {
   }
   // 유화
   let COMMU_OIL;
-  let commuOilTag = this.document.getElementById("data-commuOil");
-  function showCommuOil() {
-    let html = "";
-    COMMU_OIL.forEach(function (item) {
+  let commuOilTag = this.document.getElementById("data-commuOil")
+  function showCommuOil(){
+    let html = ""
+    COMMU_OIL.forEach(function(item){
       let tag = `
-        <li>
-                  <div class="commu-title-wrap">
-                    <p class="commu-cate">${item.cate}</p>
-                    <p class="commu-title"><a href="#">${item.title}</a></p>
-                  </div>
-                  <div class="commu-icon">
-                    <p class="commu-chat"><i class="fa-regular fa-comment-dots"></i> ${item.chat}</p>
-                    <p class="commu-view"><i class="fa-regular fa-eye"></i> ${item.view}</p>
-                  </div>
-                </li>
-        `;
-      html += tag;
-    });
+      <li>
+                <div class="commu-title-wrap">
+                  <p class="commu-cate">${item.cate}</p>
+                  <p class="commu-title"><a href="#">${item.title}</a></p>
+                </div>
+                <div class="commu-icon">
+                  <p class="commu-chat"><i class="fa-regular fa-comment-dots"></i> ${item.chat}</p>
+                  <p class="commu-view"><i class="fa-regular fa-eye"></i> ${item.view}</p>
+                </div>
+              </li>
+      `
+      html +=tag
+    })
     commuOilTag.innerHTML = html;
   }
   // 아크릴화
   let COMMU_ACRYLIC;
-  let commuAcrylicTag = this.document.getElementById("data-commuAcrylic");
-  function showCommuAcrylic() {
-    let html = "";
-    COMMU_ACRYLIC.forEach(function (item) {
+  let commuAcrylicTag = this.document.getElementById("data-commuAcrylic")
+  function showCommuAcrylic(){
+    let html = ""
+    COMMU_ACRYLIC.forEach(function(item){
       let tag = `
-        <li>
-                  <div class="commu-title-wrap">
-                    <p class="commu-cate">${item.cate}</p>
-                    <p class="commu-title"><a href="#">${item.title}</a></p>
-                  </div>
-                  <div class="commu-icon">
-                    <p class="commu-chat"><i class="fa-regular fa-comment-dots"></i> ${item.chat}</p>
-                    <p class="commu-view"><i class="fa-regular fa-eye"></i> ${item.view}</p>
-                  </div>
-                </li>
-        `;
-      html += tag;
-    });
+      <li>
+                <div class="commu-title-wrap">
+                  <p class="commu-cate">${item.cate}</p>
+                  <p class="commu-title"><a href="#">${item.title}</a></p>
+                </div>
+                <div class="commu-icon">
+                  <p class="commu-chat"><i class="fa-regular fa-comment-dots"></i> ${item.chat}</p>
+                  <p class="commu-view"><i class="fa-regular fa-eye"></i> ${item.view}</p>
+                </div>
+              </li>
+      `
+      html +=tag
+    })
     commuAcrylicTag.innerHTML = html;
   }
 });
