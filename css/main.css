@@ -59,6 +59,9 @@ h2{
     color: #fff;
     cursor: pointer;
 }
+.floating-btn:hover{
+    background-color: #ee1f04;
+}
 
 @media screen and (max-width: 1231px) {
     .inner{
@@ -68,7 +71,7 @@ h2{
     }
     
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .inner{
         padding-left: 20px;
         padding-right: 20px;
