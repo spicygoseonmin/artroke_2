@@ -32,6 +32,47 @@ window.addEventListener("load", function () {
   const floatingLogin = this.document.querySelector(".floating-login")
   const floatingLoginTxt = this.document.querySelector(".floating-login-txt")
   const floatingSearch = this.document.querySelector(".floating-search")
+const iconDownNotice = document.getElementById("iconDownNotice");
+const iconUpNotice = document.getElementById("iconUpNotice");
+
+// 요소 선택
+const iconDownNomal = document.getElementById("iconDownNomal");
+const iconUpNomal = document.getElementById("iconUpNomal");
+
+// 취미강의 토글
+cateNomal.addEventListener("click", function () {
+  // 다운 아이콘이 숨겨져 있으면 표시하고, 표시돼 있으면 숨깁니다.
+  if (iconDownNomal.style.display === "none" || iconDownNomal.style.display === "") {
+    iconDownNomal.style.display = "inline"; // 다운 아이콘 보이기
+    iconUpNomal.style.display = "none";     // 업 아이콘 숨기기
+  } else {
+    iconDownNomal.style.display = "none";   // 다운 아이콘 숨기기
+    iconUpNomal.style.display = "inline";   // 업 아이콘 보이기
+  }
+
+  // 강의 목록 표시/숨김
+  if (cateAllList.style.display === "none" || cateAllList.style.display === "") {
+    cateAllList.style.display = "block"; // 강의 목록 보이기
+  } else {
+    cateAllList.style.display = "none";  // 강의 목록 숨기기
+  }
+});
+
+
+
+
+// 알림 클릭 시 아이콘 토글 및 알림 리스트 표시/숨김
+notice.addEventListener("click", function () {
+  if (iconDownNotice.style.display === "none") {
+    iconDownNotice.style.display = "inline";
+    iconUpNotice.style.display = "none";
+    noticeNone.style.display = "none"; // 알림 내용 숨김
+  } else {
+    iconDownNotice.style.display = "none";
+    iconUpNotice.style.display = "inline";
+    noticeNone.style.display = "block"; // 알림 내용 표시
+  }
+});
   // 로그인 상태에 따른 UI 업데이트
   const userFind = JSON.parse(localStorage.getItem("userFind"));
 
