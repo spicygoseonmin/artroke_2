@@ -1,0 +1,176 @@
+@charset "utf-8";
+
+/*분야별 색 */
+.design-contest {
+  background-color: #577cfd;
+}
+.adult-contest {
+  background-color: #7700ff;
+}
+.youth-contest {
+  background-color: #07e048;
+}
+.kids-contest {
+  background-color: #ffbb00;
+}
+.univer-contest {
+  background-color: #ff4100;
+}
+.illust-contest {
+  background-color: #03dfaf;
+}
+.cartoon-contest {
+  background-color: #ff6600;
+}
+
+.constest_bottom {
+  width: 100%;
+  min-height: 400px;
+}
+.constest_bottom > .title {
+  margin-top: 50px;
+}
+.constest_bottom > .con_menu {
+  width: 100%;
+  padding-top: 20px;
+}
+.constest_bottom > .con_menu > .con_menu_list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.constest_bottom > .con_menu > .con_menu_list > li {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.constest_bottom > .con_menu > .con_menu_list > li.active {
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+
+/* 클릭시 해당하는 대회 정보 나오기 */
+.con_news_list > div {
+  display: none;
+}
+.con_news_list > div > ul {
+  margin-top: 20px;
+  border-top: 2px solid #000;
+}
+.con_news_list > div > ul > li {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+.con_news_list > div > ul > li > a {
+  display: flex;
+  justify-content: space-between;
+}
+.con_news_list > div > ul > li > a > .top {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+.con_news_list > div > ul > li > a > .top > .menu_list_title {
+  /* background-color: #c5c5c5; */
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin-top: 4px;
+}
+.con_news_list > div > ul > li > a > .bottom {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+.con_news_list > div > ul > li > a > .bottom > .d-day {
+  font-weight: 600;
+  color: #ff4100;
+}
+.con_news_list > div.active {
+  display: block;
+}
+.more_btn {
+  text-align: center;
+  display: block;
+  position: relative;
+  background-color: #ff4100;
+  /* padding: 10px 40px; */
+  height: 39px;
+  width: 116px;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  float: right;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1232px) {
+  .constest_bottom > .con_menu > .con_menu_list > li {
+    font-size: 1.6vw;
+  }
+  .con_news_list > div > ul > li > a > .top > .menu_list_title {
+    font-size: 1.6vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .constest_bottom > .title {
+    margin-top: 80px;
+  }
+  .constest_bottom > .con_menu > .con_menu_list > li {
+    font-size: 14px;
+  }
+  .con_news_list > div > ul > li > a > .top {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    flex-direction: column;
+  }
+  .con_news_list > div > ul > li > a > .top > .title {
+    font-weight: 600;
+    font-size: 2.4vw;
+  }
+  .con_news_list > div > ul > li > a > .top > .menu_list_title {
+    font-size: 2vw;
+    margin-top: 3px;
+  }
+  .con_news_list > div > ul > li > a > .bottom {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+    flex-direction: column;
+  }
+  .con_news_list > div > ul > li > a > .bottom > .a-day {
+    font-size: 2.4vw;
+  }
+  .con_news_list > div > ul > li > a > .bottom > .d-day {
+    font-size: 2.4vw;
+  }
+}
+@media screen and (max-width: 420px) {
+  .constest_bottom > .con_menu > .con_menu_list > li {
+    font-size: 12px;
+  }
+  .con_news_list > div > ul > li > a > .top > .title {
+    font-size: 3.5vw;
+  }
+  .con_news_list > div > ul > li > a > .top > .menu_list_title {
+    font-size: 2.5vw;
+    margin-top: 4px;
+    padding: 0.3vw 1vw;
+    border-radius: 2px;
+  }
+  .con_news_list > div > ul > li > a > .bottom > .a-day {
+    font-size: 3.5vw;
+  }
+  .con_news_list > div > ul > li > a > .bottom > .d-day {
+    font-size: 3.5vw;
+  }
+}
