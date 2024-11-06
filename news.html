@@ -74,15 +74,14 @@
               <i class="fa-solid fa-magnifying-glass" id="searchShow"></i>
             </div>
             <form style="display: none" id="searchDelete">
+              <i class="fa-solid fa-xmark" id="searchXmark"></i>
               <label>
                 <div class="search-move" id="searchMove">
                   <input type="text" placeholder="검색어를 입력하세요" id="searchBar" />
                   <i class="fa-solid fa-magnifying-glass" id="searchAfter"></i>
-                  <i class="fa-solid fa-xmark" id="searchXmark"></i>
                 </div>
               </label>
               <div id="searchNow">
-                <p>최근 검색어</p>
                 <p>실시간 인기 검색어</p>
                 <ul id="popularKeywords">
                   <div id="searchList">
@@ -112,7 +111,9 @@
               <li id="login-btn">
                 <a href="#" id="loginText"> 로그인 </a>
               </li>
-              <i class="fa-solid fa-user" id="loginIcon"></i>
+              <div id="loginIcon">
+                <img src="images/icon/o_profile.png" alt="유저 기본 프로필 이미지" />
+              </div>
               <!-- 로그인했을떄 유저메뉴 -->
               <i class="fa-solid fa-user" style="display: none"></i>
               <li id="user-profile">
@@ -171,7 +172,7 @@
             <div class="inner">
               <ul class="category">
                 <!-- 일반 강의 카테고리 -->
-                <li class="class-cate-title"><a href="c_study_class.html">일반 강의</a><i class="fa-solid fa-angle-right"></i></li>
+                <li class="class-cate-title"><a href="c_study_class.html">취미 강의</a><i class="fa-solid fa-angle-right"></i></li>
                 <li>
                   <ul class="class-cate-list">
                     <li><a href="c_study_class.html" onclick="saveCategory('m_1')">소묘</a></li>
@@ -187,7 +188,7 @@
                   </ul>
                 </li>
                 <!-- 실기 강의 카테고리 -->
-                <li class="class-cate-title"><a href="t_study_class.html">실기 강의</a><i class="fa-solid fa-angle-right"></i></li>
+                <li class="class-cate-title"><a href="t_study_class.html">입시 강의</a><i class="fa-solid fa-angle-right"></i></li>
                 <li>
                   <ul class="class-cate-list">
                     <li><a href="t_study_class.html">소묘</a></li>
@@ -216,7 +217,7 @@
           <ul>
             <li>
               <h3 id="cateNomal">
-                일반강의
+                입시강의
                 <i class="fa-solid fa-chevron-down"></i>
               </h3>
               <div id="cateline"></div>
